@@ -1,0 +1,11 @@
+
+{
+  "channels": {
+    "feishu": {
+      "appId": "你的飞书 App ID",
+      "appSecret": "你的飞书 App Secret",
+      "webhook_url": "你的飞书 Webhook URL",
+      "user_id": "ou_9cde50d77f516edcf3a661ca32f83b2a"
+    }
+  }
+}

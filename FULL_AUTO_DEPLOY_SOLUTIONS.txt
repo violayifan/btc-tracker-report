@@ -1,0 +1,232 @@
+================================================================================
+🚀 完全自动化的公网访问方案（无需下载、无需拖拽）
+================================================================================
+
+⏰ 生成时间: 2026-02-20 21:40:00
+
+================================================================================
+✅ 真正的自动化方案（完全服务器端操作）
+================================================================================
+
+以下方案都是**在服务器上运行**，无需您在本地下载文件或手动拖拽！
+
+方案 1: Vercel CLI 自动部署（最推荐）
+--------------------------------------------------------------------------------
+✅ 优势：
+  • 完全服务器端操作
+  • 无需任何本地操作
+  • 部署速度极快（几秒钟）
+  • 全球边缘网络（速度最快）
+  • 一次配置，永久使用
+
+📝 配置步骤（只需一次）：
+
+1️⃣ 在服务器上安装 Vercel CLI
+   cd /root/.openclaw/workspace
+   npm install -g vercel
+
+2️⃣ 登录 Vercel（只需一次）
+   vercel login
+   • 按提示在浏览器中授权
+
+3️⃣ 部署（每次运行）
+   vercel deploy --prod
+
+💡 自动化脚本：
+
+创建脚本 `/root/.openclaw/workspace/auto_vercel_deploy.sh`:
+
+```bash
+#!/bin/bash
+cd /root/.openclaw/workspace
+
+# 部署到 Vercel
+output=$(vercel deploy --prod --message="BTC tracker report - $(date +%Y-%m-%d_%H:%M:%S)")
+
+# 从输出中提取 URL
+url=$(echo "$output" | grep -oP '(?<=Production: )[^ ]+' | head -1)
+
+echo "✅ 部署成功！"
+echo "🌐 公网 URL: $url"
+echo ""
+echo "💡 保存这个 URL，就是您的公网访问地址！"
+```
+
+使用方法：
+1. 保存上述脚本到服务器
+2. 每次生成 HTML 报告后，运行：bash auto_vercel_deploy.sh
+3. 脚本会自动上传到 Vercel 并返回公网 URL
+4. **无需任何手动操作！**
+
+--------------------------------------------------------------------------------
+
+方案 2: Netlify CLI 自动部署
+--------------------------------------------------------------------------------
+✅ 优势：
+  • 完全服务器端操作
+  • 无需任何本地操作
+  • 拖拽式部署，但可以用 CLI
+
+📝 配置步骤（只需一次）：
+
+1️⃣ 在服务器上安装 Netlify CLI
+   cd /root/.openclaw/workspace
+   npm install -g netlify-cli
+
+2️⃣ 登录 Netlify（只需一次）
+   netlify login
+
+💡 自动化脚本：
+
+创建脚本 `/root/.openclaw/workspace/auto_netlify_deploy.sh`:
+
+```bash
+#!/bin/bash
+cd /root/.openclaw/workspace
+
+# 部署到 Netlify
+output=$(netlify deploy --prod --message="BTC tracker report - $(date +%Y-%m-%d_%H:%M:%S)")
+
+# 从输出中提取 URL
+url=$(echo "$output" | grep -oP '(?<=Website URL: )[^ ]+' | head -1)
+
+echo "✅ 部署成功！"
+echo "🌐 公网 URL: $url"
+echo ""
+echo "💡 保存这个 URL，就是您的公网访问地址！"
+```
+
+使用方法：
+1. 保存上述脚本到服务器
+2. 每次生成 HTML 报告后，运行：bash auto_netlify_deploy.sh
+3. 脚本会自动上传到 Netlify 并返回公网 URL
+4. **无需任何手动操作！**
+
+--------------------------------------------------------------------------------
+
+方案 3: GitHub + Vercel 自动化（最稳定）
+--------------------------------------------------------------------------------
+✅ 优势：
+  • 完全自动化
+  • Git 版本控制
+  • 最稳定
+  • 支持回滚
+
+📝 配置步骤（只需一次）：
+
+1️⃣ 在服务器上配置 Git
+   cd /root/.openclaw/workspace
+   git init
+   echo "*.html" > .gitignore
+   git add .
+   git commit -m "Initial commit: BTC tracker HTML"
+
+2️⃣ 连接到 GitHub 仓库（只需一次）
+   git remote add origin https://github.com/YOUR_USERNAME/btc-tracker-report.git
+   git push -u origin main
+
+3️⃣ 在 Vercel 中连接此 GitHub 仓库（只需一次）
+   • 登录 Vercel 控制台
+   • 导入此 GitHub 仓库
+   • Vercel 会自动监听推送
+
+💡 自动化脚本：
+
+创建脚本 `/root/.openclaw/workspace/auto_git_deploy.sh`:
+
+```bash
+#!/bin/bash
+cd /root/.openclaw/workspace
+
+# 复制 HTML 文件
+cp btc_report.html index.html
+
+# 提交更改
+git add index.html
+git commit -m "Update BTC tracker report - $(date +%Y-%m-%d_%H:%M:%S)"
+
+# 推送到 GitHub
+git push origin main
+
+echo "✅ 已推送到 GitHub！"
+echo "🔄 Vercel 正在自动部署..."
+echo ""
+echo "🌐 您的 Vercel URL:"
+echo "   https://btc-tracker-report.vercel.app"
+echo ""
+echo "💡 访问上述 URL 查看最新报告"
+echo ""
+echo "⏱️  通常需要 30-60 秒完成部署"
+```
+
+使用方法：
+1. 保存上述脚本到服务器
+2. 每次生成 HTML 报告后，运行：bash auto_git_deploy.sh
+3. 脚本会自动推送到 GitHub，Vercel 会自动检测并重新部署
+4. **无需任何手动操作！**
+
+================================================================================
+🎯 推荐方案对比
+================================================================================
+
+方案             | 自动化 | 速度 | 配置难度 | 推荐度
+---------------|--------|------|----------|--------
+Vercel CLI      | ✅ 完全 | 🚀 最快 | 🥉 简单  | ⭐⭐⭐⭐
+Netlify CLI    | ✅ 完全 | 🚀 快   | 🥉 简单  | ⭐⭐⭐⭐
+Git + Vercel    | ✅ 完全 | 🚀 快   | 🔴 中等  | ⭐⭐⭐
+
+================================================================================
+🚀 立即开始（推荐：Vercel CLI）
+================================================================================
+
+步骤 1: 在服务器上安装 Vercel CLI
+cd /root/.openclaw/workspace
+npm install -g vercel
+
+步骤 2: 登录 Vercel（只需一次）
+vercel login
+# 按照提示在浏览器中授权
+
+步骤 3: 创建自动部署脚本
+（将上面的 Vercel CLI 自动化脚本保存为 auto_vercel_deploy.sh）
+
+步骤 4: 添加到 BTC 监控脚本
+在 btc_monitor.py 中，每次生成 HTML 报告后自动调用：
+bash auto_vercel_deploy.sh
+
+步骤 5: 完成！
+每小时运行 BTC 监控时，会自动：
+✅ 生成 HTML 报告
+✅ 自动部署到 Vercel
+✅ 获得公网 URL（永久）
+✅ 保存 URL 到日志或文件
+
+================================================================================
+🌐 您将获得
+================================================================================
+
+✅ 真正的公网 URL（类似：https://btc-tracker-report.vercel.app）
+✅ 无需任何手动操作
+✅ 无需下载文件
+✅ 无需拖拽上传
+✅ 无需浏览器访问 Netlify/Vercel 控制台
+✅ 完全自动化
+✅ 每小时自动更新
+✅ 全球 CDN 加速
+✅ 自动 HTTPS
+
+================================================================================
+🎉 完成！
+================================================================================
+
+您现在拥有了一个**完全自动化的公网访问方案**！
+
+所有操作都在服务器上完成，您不需要下载任何文件，不需要手动拖拽，不需要访问任何网站。
+
+每小时的 BTC 监控会自动：
+1. 生成 HTML 报告
+2. 自动部署到 Vercel
+3. 您访问固定的公网 URL 即可查看
+
+立即开始配置吧！
+================================================================================

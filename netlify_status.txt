@@ -1,0 +1,7 @@
+Netlify 部署状态检查
+==================
+
+1. 检查部署目录
+total 20K
+-rw-r--r-- 1 root root 18K Feb 21 21:00 index.html
+cat: /root/.openclaw/workspace/.netlify_deploy/.netlify/state: No such file or directory

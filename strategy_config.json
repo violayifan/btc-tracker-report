@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "last_updated": "2026-02-21T22:00:03.034749",
+  "parameters": {
+    "rsi_threshold_long": {
+      "value": 20,
+      "min": 20,
+      "max": 40,
+      "step": 1,
+      "description": "做多信号 RSI 下限"
+    },
+    "rsi_threshold_short": {
+      "value": 80,
+      "min": 60,
+      "max": 80,
+      "step": 1,
+      "description": "做空信号 RSI 上限"
+    },
+    "trend_confirmation": {
+      "value": true,
+      "description": "是否需要趋势确认"
+    },
+    "sma_alignment": {
+      "value": true,
+      "description": "是否要求均线对齐"
+    },
+    "volatility_filter": {
+      "value": true,
+      "min_volatility": 50,
+      "max_volatility": 200,
+      "description": "波动率过滤"
+    },
+    "risk_level": {
+      "value": "low",
+      "description": "默认风险等级"
+    }
+  },
+  "performance_tracking": {
+    "win_rate_target": 40,
+    "max_drawdown_limit": 15,
+    "min_sharpe_ratio": 0.5
+  }
+}
