@@ -6,17 +6,24 @@
 
 **定时任务设置**：每小时整点自动运行
 ```bash
-0 * * * * /root/.openclaw/workspace/update_btc_report.sh >> /root/.openclaw/workspace/update_btc_report.log 2>&1
+0 * * * * /root/.openclaw/workspace/auto_update.sh >> /root/.openclaw/workspace/auto_update.log 2>&1
 ```
 
 **自动执行内容**：
-1. ✅ 运行 BTC 市场分析
-2. ✅ 生成增强版 HTML 报告
-3. ✅ 部署到 Netlify（网址不变，内容自动更新）
+1. ✅ 运行 BTC 市场分析 (`btc_monitor.py`)
+2. ✅ 更新 Git 仓库
+3. ✅ 提交更改到 Git
+4. ✅ 推送到 GitHub (master 分支)
+5. ✅ GitHub Pages 自动部署
 
 **访问网址**：
-- 永久网址：https://btc-tracker-report.netlify.app
-- 每小时自动更新
+- 🌐 永久网址：https://violayifan.github.io/btc-tracker-report
+- ⏰ 每小时自动更新（刷新页面即可）
+
+**GitHub 仓库**：
+- 仓库地址：https://github.com/violayifan/btc-tracker-report
+- 分支：master
+- 部署方式：GitHub Pages
 
 ---
 
@@ -26,7 +33,7 @@
 
 1. 运行: `python3 /root/.openclaw/workspace/btc_monitor.py`
 2. 读取最新报告: `cat /root/.openclaw/workspace/reports/btc_report_*.txt | tail -1`
-3. 将报告内容发送给用户
+3. 将报告内容发送给用户（**不包含**网址更新，因为手动触发不推送到 GitHub）
 
 ### 回测与绩效分析
 
@@ -35,6 +42,8 @@
 - 生成回测报告（收益率、最大回撤、夏普比率等）
 - 生成净值曲线图并保存到 `/root/.openclaw/workspace/backtest_chart.png`
 - 将回测汇总附加到市场分析报告末尾
+- 更新 `btc_trades.json` 交易记录文件
+- 推送更新到 GitHub，GitHub Pages 自动部署
 
 ### 文件位置
 
@@ -42,6 +51,9 @@
 - 回测报告：`/root/.openclaw/workspace/reports/btc_backtest_report_*.txt`
 - 交易记录：`/root/.openclaw/workspace/btc_trades.json`
 - 净值曲线图：`/root/.openclaw/workspace/backtest_chart.png`
+- 自动更新脚本：`/root/.openclaw/workspace/auto_update.sh`
+- Git 仓库：`/root/.openclaw/workspace` (已初始化，连接到 GitHub)
+- 自动更新日志：`/root/.openclaw/workspace/auto_update.log`
 
 ## 其他检查
 
