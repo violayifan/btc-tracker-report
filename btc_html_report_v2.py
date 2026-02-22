@@ -396,13 +396,13 @@ def generate_enhanced_html(reports, backtest_metrics):
                 </div>
                 <div class="metric-card">
                     <div class="metric-label">总收益率</div>
-                    <div class="metric-value """ + ("positive" if total_return > 0 else "negative") + """>
+                    <div class="metric-value """ + ("positive" if total_return > 0 else "negative") + """">
                         """ + f"{total_return:.2f}" + """%
                     </div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-label">胜率</div>
-                    <div class="metric-value """ + ("positive" if win_rate > 50 else "negative") + """>
+                    <div class="metric-value """ + ("positive" if win_rate > 50 else "negative") + """">
                         """ + f"{win_rate:.2f}" + """%
                     </div>
                 </div>
