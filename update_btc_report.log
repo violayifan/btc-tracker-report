@@ -2750,3 +2750,17 @@ Edge function Logs: https://app.netlify.com/projects/btc-tracker-report/logs/edg
 ✅ 完成
 
 步骤 4: 部署到 Netlify...
+ ›   JSONHTTPError: Forbidden
+
+==============================================
+✅ 更新完成！
+==============================================
+
+🌐 访问网址:
+  https://btc-tracker-report.netlify.app
+
+💡 提示:
+  • 网址保持不变
+  • 内容已自动更新
+  • 可以在浏览器中刷新查看
+
