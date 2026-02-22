@@ -65,7 +65,8 @@ def calculate_backtest_metrics(trades):
         # 添加其他可能需要的指标
         'annualized_return': metrics.get('annualized_return', 0),
         'max_drawdown_duration_hours': metrics.get('max_drawdown_duration_hours', 0),
-        'sharpe_ratio': metrics.get('sharpe_ratio', 0)
+        'sharpe_ratio': metrics.get('sharpe_ratio', 0),
+        'profit_loss_ratio': metrics.get('profit_loss_ratio', 0)
     }
 
 def read_latest_reports():
@@ -115,11 +116,12 @@ def generate_enhanced_html(reports, backtest_metrics):
     max_drawdown = backtest_metrics.get('max_drawdown', 0)
     max_capital = backtest_metrics.get('max_capital', 10000)
     min_capital = backtest_metrics.get('min_capital', 10000)
-    
+
     # 额外指标
     annualized_return = backtest_metrics.get('annualized_return', 0)
     max_drawdown_duration_hours = backtest_metrics.get('max_drawdown_duration_hours', 0)
     sharpe_ratio = backtest_metrics.get('sharpe_ratio', 0)
+    profit_loss_ratio = backtest_metrics.get('profit_loss_ratio', 0)
 
     market_content = reports.get('market', '暂无市场分析报告').replace('\n', '<br>\n')
     backtest_content = reports.get('backtest', '暂无回测报告').replace('\n', '<br>\n')
@@ -413,6 +415,12 @@ def generate_enhanced_html(reports, backtest_metrics):
                 <div class="metric-card">
                     <div class="metric-label">盈利交易</div>
                     <div class="metric-value positive">""" + str(win_count) + """</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">盈亏比</div>
+                    <div class="metric-value """ + ("positive" if profit_loss_ratio >= 1 else "negative") + """">
+                        """ + f"{profit_loss_ratio:.2f}" + """
+                    </div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-label">最大回撤</div>
