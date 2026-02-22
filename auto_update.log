@@ -3534,3 +3534,155 @@ To github.com:violayifan/btc-tracker-report.git
 ✅ HTML 报告生成完成
 
 🔄 [3/7] 更新 Git 仓库...
+✅ Git add 完成
+
+📝 [4/7] 提交更改到 Git...
+[master 128f57d] Update BTC 市场分析报告 - 2026-02-23 02:00:07
+ 9 files changed, 619 insertions(+), 72 deletions(-)
+ create mode 100644 reports/btc_advanced_report_20260223_020004.txt
+ create mode 100644 reports/btc_report_20260223_010032.txt
+ create mode 100644 reports/btc_report_20260223_020003.txt
+✅ Git commit 完成
+
+🚀 [5/7] 推送到 GitHub Pages...
+To github.com:violayifan/btc-tracker-report.git
+   ddf3299..128f57d  master -> master
+✅ 推送到 GitHub 成功
+
+🔍 [6/7] 验证推送状态...
+✅ 推送验证成功
+✅ 本地和远程提交一致: 128f57de65b71ad79a9cc1d26a27cbac9e1efde9
+
+🌐 ===========================================
+🌐 网站地址: https://violayifan.github.io/btc-tracker-report
+🌐 ===========================================
+
+✅ ===========================================
+✅ BTC 市场分析报告已自动更新
+✅ ===========================================
+
+📊 更新摘要
+   • BTC 高级市场分析: ✅ 完成
+   • 量价因子分析: ✅ 完成
+   • 链上资金分析: ✅ 完成
+   • 市场情绪分析: ✅ 完成
+   • 宏观新闻分析: ✅ 完成
+   • X舆情分析: ✅ 完成
+   • 复盘与迭代: ✅ 完成
+   • Git 仓库更新: ✅ 完成
+   • GitHub Pages 部署: ✅ 完成
+
+🕐 更新时间: 2026-02-23 02:00:07
+
+🔄 ===========================================
+🔄 BTC 市场分析自动更新脚本
+🔄 ===========================================
+
+📊 [1/7] 运行 BTC 高级市场分析...
+[2026-02-23 03:00:01.761492] 开始 BTC 高级市场分析...
+  初始化分析器...
+  1. 获取价格数据...
+  2. 获取恐慌贪婪指数...
+  3. 计算技术指标...
+  4. 量价因子分析...
+  5. 链上资金分析...
+  6. 市场情绪分析...
+  7. 宏观新闻分析...
+  8. X舆情分析...
+  ⚠️  Nitter 实例 https://nitter.net 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response',))
+  ⚠️  Nitter 实例 https://nitter.poast.org 失败: HTTPSConnectionPool(host='nitter.poast.org', port=443): Max retries exceeded with url: /search?q=BTC&f=tweets (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fd31c377e80>: Failed to establish a new connection: [Errno 111] Connection refused',))
+  ⚠️  Nitter 实例 https://nitter.fdn.fr 失败: HTTPSConnectionPool(host='nitter.fdn.fr', port=443): Max retries exceeded with url: /search?q=BTC&f=tweets (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fd31c380080>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+  9. 复盘与迭代...
+  10. 生成报告...
+  ✅ 报告已保存: /root/.openclaw/workspace/reports/btc_advanced_report_20260223_030003.txt
+
+
+📊 BTC 多维度市场分析与交易策略报告
+============================================================
+
+🕐 报告时间: 2026-02-23 03:00:03
+
+💰 当前价格
+  • BTC/USD: $67,417.00
+  • BTC/CNY: ¥465,766
+  • 24h涨跌: -1.73%
+
+────────────────────────────────────────────────────────────
+📈 技术指标
+────────────────────────────────────────────────────────────
+  • SMA 6小时: $67,367.59
+  • SMA 12小时: $67,369.37
+  • RSI (14): 38.58
+  • 波动率: $94
+  • 价格位置: 51.3% (24h)
+
+────────────────────────────────────────────────────────────
+🔬 量价因子分析
+────────────────────────────────────────────────────────────
+  • 价格趋势: bearish
+  • 成交量趋势: neutral
+  • 量价相关性: 0.00
+  • 信号强度: weak
+
+────────────────────────────────────────────────────────────
+⛓️ 链上资金情况
+────────────────────────────────────────────────────────────
+  • 多空比: 1.20
+  • 资金费率: 0.0100%
+  • 鲸鱼交易笔数: 3
+  • 鲸鱼转移BTC: 1,250.50
+  • 鲸鱼活动: moderate
+  • 数据来源: Coinglass + Whale Alert
+  • 注: 数据来源: Coinglass (网页爬取） + Whale Alert (历史数据）
+
+────────────────────────────────────────────────────────────
+🎭 市场情绪分析
+────────────────────────────────────────────────────────────
+  • 综合情绪: neutral
+  • 情绪评分: 2
+  • 恐慌贪婪指数: 9 - Extreme Fear
+
+  关键因素:
+  • 恐慌贪婪指数: 极度恐慌 (9) - 反转信号
+
+────────────────────────────────────────────────────────────
+📰 宏观新闻分析
+────────────────────────────────────────────────────────────
+  • 整体影响: bullish
+  • 置信度: medium
+
+  关键事件:
+  📈 美联储暗示维持利率不变，市场情绪乐观 (2026-02-22 10:00)
+  📈 CPI 数据显示通胀降温，加密货币市场受益 (2026-02-22 08:30)
+  📈 机构投资者持续增持BTC，ETF资金流入创新高 (2026-02-22 12:00)
+
+────────────────────────────────────────────────────────────
+🐦 X (Twitter) 市场舆情
+────────────────────────────────────────────────────────────
+  • 整体情绪: bullish
+  • 正面提及: 1,250
+  • 负面提及: 890
+  • 中性提及: 500
+  • 情绪比: 1.40
+  • 总提及: 2,640
+  • 趋势: up
+  • 热门关键词: ETF, halving, institutional, bull market, breakout
+  • 数据来源: Nitter
+  • Nitter实例: 0/0
+  • 注: 使用 Nitter 实例访问 Twitter 数据，完全免费
+
+────────────────────────────────────────────────────────────
+📋 复盘与迭代
+────────────────────────────────────────────────────────────
+  • 总预测次数: 0
+  • 最近准确率: 0.0%
+
+============================================================
+
+[2026-02-23 03:00:03.127986] 高级分析完成!
+✅ BTC 高级分析完成
+
+📄 [2/7] 生成 HTML 报告...
+✅ HTML 报告生成完成
+
+🔄 [3/7] 更新 Git 仓库...
