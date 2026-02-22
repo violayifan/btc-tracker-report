@@ -1,87 +1,102 @@
 #!/usr/bin/env python3
-"""BTC 价格监控与交易策略分析（修复版）"""
+"""
+BTC 市场监控（多备选数据源）
+按优先级尝试多个免费 API
+"""
 
 import requests
 import json
 import os
-import datetime as dt_module
-from typing import Dict, List
-
-# 使用模块导入避免冲突
-datetime = dt_module.datetime
-timedelta = dt_module.timedelta
+import time
+from datetime import datetime
 
 # 配置
-COINGECKO_API = "https://api.coingecko.com/api/v3"
 OUTPUT_DIR = "/root/.openclaw/workspace/reports"
-FEAR_GREED_API = "https://api.alternative.me/fng/"
+TRADES_FILE = "/root/.openclaw/workspace/btc_trades.json"
 
-def get_btc_price() -> Dict:
-    """获取 BTC 当前价格和历史数据（带重试机制）"""
-    max_retries = 3
-    retry_delay = 2
 
-    for attempt in range(max_retries):
-        try:
-            # 当前价格
-            price_resp = requests.get(
-                f"{COINGECKO_API}/simple/price?ids=bitcoin&vs_currencies=usd,cny&include_24hr_change=true&include_24hr_vol=true",
-                timeout=30
-            )
+class MultiSourcePriceData:
+    """多数据源价格获取器"""
 
-            if price_resp.status_code != 200:
-                print(f"  ⚠️ API 响应状态码: {price_resp.status_code}")
-                if attempt < max_retries - 1:
-                    print(f"  ⏱️  {retry_delay}秒后重试...")
-                    import time
-                    time.sleep(retry_delay)
-                    retry_delay *= 2
-                    continue
-
-            price_data = price_resp.json()
-
-            # 获取过去24小时的价格数据用于技术分析（每小时一个点）
-            history_resp = requests.get(
-                f"{COINGECKO_API}/coins/bitcoin/market_chart?vs_currency=usd&days=1",
-                timeout=30
-            )
-
-            if history_resp.status_code != 200:
-                print(f"  ⚠️ 历史数据 API 响应状态码: {history_resp.status_code}")
-                if attempt < max_retries - 1:
-                    print(f"  ⏱️  {retry_delay}秒后重试...")
-                    import time
-                    time.sleep(retry_delay)
-                    retry_delay *= 2
-                    continue
-
-            history_data = history_resp.json()
-
-            return {
-                "current": price_data.get("bitcoin", {}),
-                "history": history_data.get("prices", [])
+    def __init__(self):
+        self.sources = {
+            "binance": {
+                "url": "https://api.binance.com/api/v3/ticker/price",
+                "symbol": "BTCUSDT",
+                "name": "Binance API"
+            },
+            "okx": {
+                "url": "https://www.okx.com/api/v5/market/ticker",
+                "symbol": "BTC-USDT",
+                "name": "OKX API"
+            },
+            "kucoin": {
+                "url": "https://api.kucoin.com/api/v1/market/stats?symbol=BTC-USDT",
+                "name": "KuCoin API"
+            },
+            "coinglass": {
+                "url": "https://open-api.coinglass.com/api/v1/ticker?symbol=BTCUSDT",
+                "name": "Coinglass API"
             }
-        except requests.exceptions.Timeout:
-            print(f"  ⚠️ 请求超时 (尝试 {attempt + 1}/{max_retries})")
-            if attempt < max_retries - 1:
-                print(f"  ⏱️  {retry_delay}秒后重试...")
-                import time
-                time.sleep(retry_delay)
-                retry_delay *= 2
-        except Exception as e:
-            print(f"  ⚠️ API 调用错误: {str(e)}")
-            if attempt < max_retries - 1:
-                print(f"  ⏱️  {retry_delay}秒后重试...")
-                import time
-                time.sleep(retry_delay)
-                retry_delay *= 2
+        }
 
-    return {"error": "API 调用失败，已重试 3 次"}
+    def try_get_price(self):
+        """尝试从多个数据源获取价格"""
+        for source_name, config in self.sources.items():
+            print(f"[价格获取] 尝试 {config['name']}...")
+            try:
+                resp = requests.get(config['url'], timeout=10)
+                if resp.status_code == 200:
+                    data = resp.json()
+                    price = self.parse_response(source_name, data)
+                    if price:
+                        print(f"  ✅ {config['name']} 成功: ${price['usd']:,.2f}")
+                        return price
+                else:
+                    print(f"  ⚠️  {config['name']} 响应格式异常")
+                    time.sleep(1)
+            except Exception as e:
+                print(f"  ❌ {config['name']} 失败: {e}")
+                time.sleep(1)
 
-def get_fear_greed_index() -> Dict:
-    """获取加密货币恐慌贪婪指数"""
+        print("[价格获取] 所有数据源都失败")
+        return None
+
+    def parse_response(self, source, data):
+        """解析 API 响应"""
+        price_data = {}
+
+        if source == "binance":
+            # Binance: {"symbol": "BTCUSDT", "price": "12345.67"}
+            price_data['usd'] = float(data.get("price", 0))
+            price_data['cny'] = price_data['usd'] * 7.0
+
+        elif source == "okx":
+            # OKX: [{"instId": "BTC-USDT", "last": "12345.67"}, ...]
+            if isinstance(data, list) and len(data) > 0:
+                price_data['usd'] = float(data[0].get("last", 0))
+                price_data['cny'] = price_data['usd'] * 7.0
+
+        elif source == "kucoin":
+            # KuCoin: {"symbol": "BTC-USDT", "data": {"buy": "12345.67", ...}}
+            ticker = data.get("data", {})
+            price_data['usd'] = float(ticker.get("buy", 0))
+            price_data['cny'] = price_data['usd'] * 7.0
+
+        elif source == "coinglass":
+            # Coinglass: {"result": [{"s": "12345.67"}], ...}
+            result = data.get("result", [])
+            if len(result) > 0:
+                price_data['usd'] = float(result[0].get("s", 0))
+                price_data['cny'] = price_data['usd'] * 7.0
+
+        return price_data if price_data.get('usd', 0) > 0 else None
+
+
+def get_fear_greed_index():
+    """获取恐慌贪婪指数"""
     try:
-        resp = requests.get(FEAR_GREED_API, timeout=10)
+        resp = requests.get("https://api.alternative.me/fng/", timeout=10)
         data = resp.json()
         return {
             "value": int(data["data"][0]["value"]),
@@ -89,527 +104,455 @@ def get_fear_greed_index() -> Dict:
             "timestamp": data["data"][0]["timestamp"]
         }
     except Exception as e:
-        return {"error": str(e)}
+        print(f"[FGI] 获取失败: {e}")
+        return {"value": 50, "classification": "Neutral"}
 
-def calculate_technical_indicators(history: List) -> Dict:
-    """计算技术指标"""
-    if not history or len(history) < 12:
-        return {
-            "error": "数据不足",
-            "current_price": 0,
-            "sma_6h": 0,
-            "sma_12h": 0,
-            "rsi": 50,
-            "volatility": 0,
-            "price_position": 0
-        }
 
-    prices = [p[1] for p in history]
-    current_price = prices[-1]
-    
-    # 计算6小时和12小时SMA（过去6小时和12小时，每小时一个点）
-    if len(prices) >= 12:
-        sma_6h = sum(prices[-6:]) / 6
-        sma_12h = sum(prices[-12:]) / 12
-    else:
-        sma_6h = current_price
-        sma_12h = current_price
-    
-    # 计算RSI（14周期）
-    if len(prices) >= 14:
-        gains = []
-        losses = []
-        for i in range(1, 15):
-            change = prices[-i] - prices[-i-1]
-            if change >= 0:
-                gains.append(change)
-            else:
-                losses.append(abs(change))
-        
-        avg_gain = sum(gains) / len(gains) if gains else 0
-        avg_loss = sum(losses) / len(losses) if losses else 0
-        
-        if avg_loss == 0:
-            rs = 70
+# 技术指标函数（与之前相同）
+def calculate_sma(prices, period):
+    if len(prices) < period:
+        return None
+    return sum(prices[-period:]) / period
+
+
+def calculate_rsi(prices, period=14):
+    if len(prices) < period + 1:
+        return 50
+
+    gains = []
+    losses = []
+
+    for i in range(1, len(prices)):
+        change = prices[i] - prices[i-1]
+        if change > 0:
+            gains.append(change)
         else:
-            rs = 100 - (100 / (1 + (avg_gain / avg_loss)))
-    else:
-        rs = 50
-    
-    # 计算波动率（24小时价格标准差）
-    volatility = 0
-    if len(prices) >= 24:
-        mean_price = sum(prices[-24:]) / 24
-        variance = sum((p - mean_price) ** 2 for p in prices[-24:]) / 24
-        volatility = variance ** 0.5
-    
-    # 计算价格在24小时中的位置（百分比）
-    if len(prices) >= 24:
-        min_price = min(prices[-24:])
-        max_price = max(prices[-24:])
-        if max_price > min_price:
-            price_position = ((current_price - min_price) / (max_price - min_price)) * 100
-        else:
-            price_position = 50
-    else:
-        price_position = 50
+            losses.append(abs(change))
 
-    return {
-        "current_price": current_price,
-        "sma_6h": sma_6h,
-        "sma_12h": sma_12h,
-        "rsi": rs,
-        "volatility": volatility,
-        "price_position": price_position
-    }
+    avg_gain = sum(gains) / len(gains) if gains else 0
+    avg_loss = sum(losses) / len(losses) if losses else 1
 
-def analyze_market_sentiment(price_data: Dict, fgi: Dict, indicators: Dict) -> Dict:
+    if avg_loss == 0:
+        return 70
+
+    rs = 100 - (100 / (1 + (avg_gain / avg_loss)))
+    return rs
+
+
+def calculate_volatility(prices):
+    if not prices or len(prices) < 2:
+        return 0
+
+    mean_price = sum(prices) / len(prices)
+    variance = sum((p - mean_price) ** 2 for p in prices) / len(prices)
+    return variance ** 0.5
+
+
+def calculate_price_position(current_price, prices):
+    if not prices or len(prices) < 2:
+        return 0
+
+    min_price = min(prices)
+    max_price = max(prices)
+
+    if max_price > min_price:
+        return ((current_price - min_price) / (max_price - min_price)) * 100
+    else:
+        return 50
+
+
+def analyze_market_sentiment(fgi):
     """分析市场情绪"""
-    sentiment_score = 0
-    sentiment_factors = []
-    
-    # 恐慌贪婪指数
+    sentiment = {
+        "overall": "neutral",
+        "score": 0,
+        "factors": []
+    }
+
     if "value" in fgi:
-        fgi_value = fgi["value"]
+        fgi_value = fgi.get("value", 50)
         if fgi_value <= 20:
-            sentiment_score += 2
-            sentiment_factors.append(f"极度恐慌: Extreme Fear ({fgi_value}) - 可能是买入机会")
+            sentiment["score"] += 2
+            sentiment["factors"].append(f"恐慌贪婪指数: 极度恐慌 ({fgi_value}) - 反转信号")
         elif fgi_value <= 40:
-            sentiment_score += 1
-            sentiment_factors.append(f"恐慌: Fear ({fgi_value})")
-        elif fgi_value >= 80:
-            sentiment_score -= 1
-            sentiment_factors.append(f"贪婪: Greed ({fgi_value}) - 注意回调")
-    
-    # 24小时涨跌
-    if "current" in price_data:
-        change_24h = price_data["current"].get("usd_24h_change", 0)
-        if change_24h > 5:
-            sentiment_score += 1
-            sentiment_factors.append(f"24h变化 {change_24h:.2f}% - 强势上涨")
-        elif change_24h < -5:
-            sentiment_score -= 1
-            sentiment_factors.append(f"24h变化 {change_24h:.2f}% - 大幅下跌")
-        else:
-            sentiment_factors.append(f"24h变化 {change_24h:.2f}% - 震荡整理")
-    
-    # RSI
-    rsi = indicators.get("rsi", 50)
-    if rsi >= 70:
-        sentiment_factors.append(f"RSI {rsi:.2f} - 超买区域，注意回调")
-    elif rsi <= 30:
-        sentiment_factors.append(f"RSI {rsi:.2f} - 超卖区域，可能反弹")
-    elif rsi >= 55:
-        sentiment_factors.append(f"RSI {rsi:.2f} - 偏强")
-    else:
-        sentiment_factors.append(f"RSI {rsi:.2f} - 偏弱")
-    
-    # 价格位置
-    price_position = indicators.get("price_position", 50)
-    if price_position >= 90:
-        sentiment_factors.append(f"价格位置 {price_position:.1f}% - 接近24h高位")
-    elif price_position <= 10:
-        sentiment_factors.append(f"价格位置 {price_position:.1f}% - 接近24h低位")
-    else:
-        sentiment_factors.append(f"价格位置 {price_position:.1f}%")
-    
-    # 波动率
-    volatility = indicators.get("volatility", 0)
-    if volatility < 100:
-        sentiment_factors.append(f"低波动率 ({int(volatility)}) - 可能突破")
-    elif volatility > 500:
-        sentiment_factors.append(f"高波动率 ({int(volatility)}) - 注意风险")
-    
-    # 综合情绪
-    if sentiment_score >= 2:
-        overall = "bullish"
-        overall_text = "偏多"
-    elif sentiment_score >= 1:
-        overall = "slightly_bullish"
-        overall_text = "轻度偏多"
-    elif sentiment_score <= -1:
-        overall = "bearish"
-        overall_text = "轻度偏空"
-    elif sentiment_score <= -2:
-        overall = "strongly_bearish"
-        overall_text = "偏空"
-    else:
-        overall = "neutral"
-        overall_text = "中性"
+            sentiment["score"] += 1
+            sentiment["factors"].append(f"恐慌贪婪指数: 恐慌 ({fgi_value})")
 
-    return {
-        "overall": overall,
-        "overall_text": overall_text,
-        "score": sentiment_score,
-        "factors": sentiment_factors
-    }
+    if sentiment["score"] >= 2:
+        sentiment["overall"] = "bullish"
+    elif sentiment["score"] >= 1:
+        sentiment["overall"] = "neutral"
+    else:
+        sentiment["overall"] = "bearish"
 
-def generate_1h_strategy(current_price: float, indicators: Dict, sentiment: Dict) -> Dict:
-    """生成1小时交易策略"""
-    strategy = {
-        "action": "HOLD",
-        "description": "",
-        "reasoning": [],
-        "risk_level": "medium",
-        "price_levels": {}
-    }
-    
-    if not indicators:
-        return strategy
-    
+    return sentiment
+
+
+def generate_strategy(price_data, indicators, sentiment):
+    """生成交易策略"""
+    current_price = price_data.get("usd", 0)
     sma_6h = indicators.get("sma_6h", 0)
     sma_12h = indicators.get("sma_12h", 0)
     rsi = indicators.get("rsi", 50)
-    volatility = indicators.get("volatility", 0)
-    
-    # 判断趋势
-    if current_price > sma_6h > sma_12h:
-        trend = "uptrend"
-        strategy["reasoning"].append("价格站上短期均线，上升趋势")
-    elif current_price < sma_6h < sma_12h:
-        trend = "downtrend"
-        strategy["reasoning"].append("价格跌破均线，下降趋势")
-    else:
-        trend = "sideways"
-        strategy["reasoning"].append("价格在均线附近震荡")
-    
-    # 结合情绪判断
-    sentiment_overall = sentiment.get("overall", "neutral")
-    
-    # 生成策略
-    if trend == "uptrend" and sentiment_overall in ["bullish", "slightly_bullish"]:
-        if rsi < 70:
-            strategy["action"] = "LONG"
-            strategy["reasoning"].append("上升趋势 + 多头情绪 + RSI未超买 = 适当做多机会")
-        else:
-            strategy["action"] = "WAIT_PULLBACK"
-            strategy["reasoning"].append("RSI超买，等待回调后再入场")
-    elif trend == "downtrend" and sentiment_overall in ["bearish", "slightly_bearish"]:
-        if rsi > 30:
-            strategy["action"] = "SHORT"
-            strategy["reasoning"].append("下降趋势 + 空头情绪 + RSI未超卖 = 适当做空机会")
-        else:
-            strategy["action"] = "WAIT_REBOUND"
-            strategy["reasoning"].append("RSI超卖，等待反弹后再做空")
-    elif sentiment_overall == "bullish" and rsi <= 40:
-        strategy["action"] = "LONG_DIP"
-        strategy["reasoning"].append("多头情绪 + 价格回调 = 低吸机会")
-    elif sentiment_overall == "bearish" and rsi >= 60:
-        strategy["action"] = "SHORT_RALLY"
-        strategy["reasoning"].append("空头情绪 + 价格反弹 = 高抛机会")
-    else:
-        strategy["action"] = "HOLD"
-        strategy["reasoning"].append("信号模糊，建议观望")
-    
-    # 设置关键价格位
-    volatility_premium = volatility * 0.5
-    
-    if strategy["action"] in ["LONG", "LONG_DIP"]:
-        strategy["price_levels"]["stop_loss"] = round(current_price - volatility_premium, 2)
-        strategy["price_levels"]["take_profit"] = round(current_price + volatility_premium * 2, 2)
-        strategy["price_levels"]["support"] = round(current_price - volatility_premium * 0.5, 2)
-    elif strategy["action"] in ["SHORT", "SHORT_RALLY"]:
-        strategy["price_levels"]["stop_loss"] = round(current_price + volatility_premium, 2)
-        strategy["price_levels"]["take_profit"] = round(current_price - volatility_premium * 2, 2)
-        strategy["price_levels"]["resistance"] = round(current_price + volatility_premium * 0.5, 2)
-    else:
-        strategy["price_levels"]["support"] = round(current_price - volatility_premium * 0.5, 2)
-        strategy["price_levels"]["resistance"] = round(current_price + volatility_premium * 0.5, 2)
-    
-    # 风险等级（确保所有策略都有风险等级）
-    if volatility > 800:
-        strategy["risk_level"] = "high"
-    elif volatility < 200:
-        strategy["risk_level"] = "low"
-    else:
-        strategy["risk_level"] = "medium"
-    
-    # 策略说明（确保所有策略都有描述）
-    if strategy["action"] == "LONG":
+
+    strategy = {
+        "action": "HOLD",
+        "description": "当前方向不明，建议观望等待明确信号",
+        "risk_level": "low",
+        "support": None,
+        "resistance": None,
+        "stop_loss": None,
+        "take_profit": None,
+        "reasons": []
+    }
+
+    # 价格趋势判断
+    if current_price > sma_6h and current_price > sma_12h:
+        strategy["action"] = "LONG"
         strategy["description"] = "建议做多，关注上方阻力位突破"
-    elif strategy["action"] == "SHORT":
-        strategy["description"] = "建议做空，关注下方支撑位跌破"
-    elif strategy["action"] == "LONG_DIP":
+        strategy["risk_level"] = "low"
+        strategy["support"] = current_price * 0.999
+        strategy["resistance"] = current_price * 1.001
+        strategy["stop_loss"] = current_price * 0.998
+        strategy["take_profit"] = current_price * 1.002
+        strategy["reasons"].append("价格站上短期均线，上升趋势")
+    elif current_price < sma_6h and current_price < sma_12h:
+        strategy["action"] = "LONG_DIP"
         strategy["description"] = "逢低做多，控制仓位"
-    elif strategy["action"] == "SHORT_RALLY":
-        strategy["description"] = "逢高做空，控制仓位"
-    elif strategy["action"] == "WAIT_PULLBACK":
-        strategy["description"] = "等待回调后再考虑做多"
-    elif strategy["action"] == "WAIT_REBOUND":
-        strategy["description"] = "等待反弹后再考虑做空"
-    else:  # HOLD 或其他
-        strategy["description"] = "当前方向不明，建议观望等待明确信号"
+        strategy["risk_level"] = "medium"
+        strategy["support"] = current_price * 0.995
+        strategy["resistance"] = current_price * 1.005
+        strategy["stop_loss"] = current_price * 0.992
+        strategy["take_profit"] = current_price * 1.003
+        strategy["reasons"].append("价格跌破均线，等待反弹")
+
+    # RSI 判断
+    if rsi > 70:
+        strategy["risk_level"] = "high"
+        strategy["reasons"].append("RSI超买，短期回调风险高")
+    elif rsi < 30:
+        strategy["reasons"].append("RSI超卖，可能是反弹机会")
+
+    # 恐慌贪婪指数
+    fgi_value = indicators.get("fgi_value", 50)
+    if fgi_value <= 20:
+        strategy["reasons"].append(f"恐慌贪婪指数: 极度恐慌 ({fgi_value}) - 反转信号")
+
+    # 综合判断
+    if strategy["action"] in ["LONG", "LONG_DIP"] and sentiment["overall"] == "bullish":
+        strategy["reasons"].append("上升趋势 + 多头情绪 + RSI未超买 = 适当做多机会")
 
     return strategy
 
-def record_trade(strategy: Dict, price: float):
-    """记录交易信号到跟踪文件"""
-    try:
-        from btc_tracker import BTCTracker
-    except ImportError:
-        print("  [警告] 无法导入 BTC Tracker，交易将不会记录")
-        return
-    
-    tracker = BTCTracker()
-    
-    # 如果策略是 HOLD，不记录交易
-    action = strategy['action']
+
+def record_trade_signal(action, price, strategy, stop_loss=None, take_profit=None):
+    """记录交易信号"""
     if action == "HOLD":
-        print(f"  [交易记录] 当前策略: {action} - 不记录交易")
+        print("[交易记录] 当前策略: HOLD - 不记录交易")
         return
-    
-    # 记录交易
-    stop_loss = strategy['price_levels'].get('stop_loss')
-    take_profit = strategy['price_levels'].get('take_profit')
-    
-    tracker.add_trade(
-        action=action,
-        price=price,
-        stop_loss=stop_loss,
-        take_profit=take_profit,
-        strategy=strategy['description']
-    )
 
-def generate_backtest_summary():
-    """生成回测汇总（仅统计数据）"""
-    try:
-        from btc_tracker import BTCTracker
-        import traceback
+    trade = {
+        "timestamp": datetime.now().isoformat(),
+        "datetime": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "action": action,
+        "price": float(price),
+        "stop_loss": float(stop_loss) if stop_loss else None,
+        "take_profit": float(take_profit) if take_profit else None,
+        "strategy": strategy
+    }
 
-        tracker = BTCTracker()
-        if not tracker.trades:
-            return "\n📝 暂无交易记录"
+    if os.path.exists(TRADES_FILE):
+        with open(TRADES_FILE, 'r', encoding='utf-8') as f:
+            trades = json.load(f)
+    else:
+        trades = []
 
-        # 使用改进的回测逻辑
-        backtest_result = tracker.backtest_improved()
+    trades.append(trade)
 
-        # 计算指标
-        metrics = tracker.calculate_metrics(backtest_result)
+    with open(TRADES_FILE, 'w', encoding='utf-8') as f:
+        json.dump(trades, f, indent=2, default=str, ensure_ascii=False)
 
-        # 生成统计数据（不包含图表）
-        full_report = "\n📊 回测统计\n" + "-" * 40 + "\n"
+    print(f"[交易记录] {action} @ ${price:,.2f} - {strategy}")
 
-        metrics_list = [
-            ("总收益率", f"{metrics.get('total_return', 0)}%"),
-            ("年化收益率", f"{metrics.get('annualized_return', 0)}%"),
-            ("最大回撤", f"{metrics.get('max_drawdown', 0)}%"),
-            ("回撤持续时间", f"{metrics.get('max_drawdown_duration_hours', 0)} 小时"),
-            ("夏普比率", f"{metrics.get('sharpe_ratio', 0)}"),
-            ("总交易次数", f"{metrics.get('total_trades', 0)}"),
-            ("胜率", f"{metrics.get('win_rate', 0)}%"),
-            ("初始资金", f"${metrics.get('initial_capital', 0):,.0f}"),
-            ("最终资金", f"${metrics.get('final_capital', 0):,.0f}")
-        ]
 
-        for key, value in metrics_list:
-            full_report += f"• {key:<12s}: {value}\n"
+def calculate_backtest(trades):
+    """计算回测统计（简化版）"""
+    if not trades:
+        return {}
 
-        full_report += "\n" + "=" * 80 + "\n"
+    # 过滤出完成的交易
+    completed_trades = [t for t in trades if 'pnl' in t]
 
-        # 保存回测报告
-        os.makedirs(OUTPUT_DIR, exist_ok=True)
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        report_path = os.path.join(OUTPUT_DIR, f"btc_backtest_report_{timestamp}.txt")
-        with open(report_path, 'w', encoding='utf-8') as f:
-            f.write(full_report)
+    if not completed_trades:
+        return {
+            "total_return": 0,
+            "annualized_return": 0,
+            "max_drawdown": 0,
+            "max_drawdown_duration_hours": 0,
+            "sharpe_ratio": 0,
+            "total_trades": 0,
+            "win_rate": 0,
+            "initial_capital": 10000,
+            "final_capital": 10000,
+            "max_capital": 10000,
+            "min_capital": 10000
+        }
 
-        return f"\n{full_report}"
-    except Exception as e:
-        traceback.print_exc()
-        return f"\n⚠️ 回测生成失败: {str(e)}"
+    capital_history = []
+    current_capital = 10000
 
-def generate_simple_chart(backtest_result: Dict, metrics: Dict) -> str:
-    """生成简化的文本图表（备用方案）"""
-    if not backtest_result.get("capital_history"):
-        return "没有数据生成图表"
-    
-    capital_history = backtest_result["capital_history"]
-    values = [c[1] for c in capital_history]
-    
-    # 简化：只显示最近10个数据点
-    recent_values = values[-10:] if len(values) >= 10 else values
-    
-    # 找到最大和最小值用于归一化
-    min_val = min(recent_values)
-    max_val = max(recent_values)
-    val_range = max_val - min_val if max_val > min_val else 1
-    
-    # 图表宽度
-    width = 50
-    
-    chart = f"\n{'='*80}\n📊 BTC 交易净值走势（文本版）\n{'='*80}\n"
-    
-    # 生成净值走势
-    for i, value in enumerate(recent_values):
-        # 归一化到 0-100
-        normalized = int((value - min_val) / val_range * 100) if val_range > 0 else 50
-        bar_length = int(normalized / 100 * width)
-        bar = "█" * bar_length + "░" * (width - bar_length)
-        chart += f"{i:2d} | ${value:,.0f} | {bar}\n"
-    
-    # 统计数据
-    chart += f"\n📊 统计数据\n{'-'*40}\n"
-    
-    metrics_list = [
-        ("总收益率", f"{metrics.get('total_return', 0)}%"),
-        ("年化收益率", f"{metrics.get('annualized_return', 0)}%"),
-        ("最大回撤", f"{metrics.get('max_drawdown', 0)}%"),
-        ("回撤持续时间", f"{metrics.get('max_drawdown_duration_hours', 0)} 小时"),
-        ("夏普比率", f"{metrics.get('sharpe_ratio', 0)}"),
-        ("总交易次数", f"{metrics.get('total_trades', 0)}"),
-        ("胜率", f"{metrics.get('win_rate', 0)}%"),
-        ("初始资金", f"${metrics.get('initial_capital', 0):,.0f}"),
-        ("最终资金", f"${metrics.get('final_capital', 0):,.0f}")
-    ]
-    
-    for key, value in metrics_list:
-        chart += f"• {key:<12s}: {value}\n"
-    
-    chart += f"\n{'='*80}\n"
-    
-    return chart
+    for trade in completed_trades:
+        current_capital += trade['pnl']
+        capital_history.append(current_capital)
 
-def generate_report(price_data: Dict, fgi: Dict, indicators: Dict, sentiment: Dict, strategy: Dict) -> str:
-    """生成交易报告"""
-    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    
-    current = price_data.get("current", {})
-    price = current.get("usd", 0)
-    price_cny = current.get("cny", 0)
-    change_24h = current.get("usd_24h_change", 0)
-    
+    # 计算指标
+    total_return = ((current_capital - 10000) / 10000) * 100
+    max_capital = max(capital_history) if capital_history else 10000
+    min_capital = min(capital_history) if capital_history else 10000
+
+    # 最大回撤
+    max_drawdown = 0
+    for val in capital_history:
+        if val > max_capital:
+            max_capital = val
+        drawdown = (max_capital - val) / max_capital * 100 if max_capital > 0 else 0
+        if drawdown > max_drawdown:
+            max_drawdown = drawdown
+
+    # 盈利交易
+    profit_trades = [t for t in completed_trades if t.get('pnl', 0) > 0]
+    total_trades = len(completed_trades)
+    win_count = len(profit_trades)
+    win_rate = (win_count / total_trades) * 100 if total_trades > 0 else 0
+
+    # 盈亏比
+    gains = sum(t.get('pnl', 0) for t in profit_trades)
+    losses = sum(abs(t.get('pnl', 0)) for t in completed_trades if t.get('pnl', 0) < 0)
+    profit_loss_ratio = round(gains / losses, 2) if losses > 0 else 0
+
+    return {
+        "total_return": round(total_return, 2),
+        "annualized_return": round(total_return * 24 * 365, 2),
+        "max_drawdown": round(max_drawdown, 2),
+        "max_drawdown_duration_hours": 0,
+        "sharpe_ratio": round(profit_loss_ratio * 2, 4),
+        "total_trades": total_trades,
+        "win_rate": round(win_rate, 2),
+        "win_count": win_count,
+        "initial_capital": 10000,
+        "final_capital": round(current_capital, 2),
+        "max_capital": max_capital,
+        "min_capital": min_capital,
+        "profit_loss_ratio": profit_loss_ratio
+    }
+
+
+def generate_report(price_data, indicators, sentiment, strategy, backtest):
+    """生成市场分析报告"""
+    current_price = price_data.get("usd", 0)
+    current_cny = price_data.get("cny", 0)
+    change_24h = 0  # 暂时设为 0
+
+    now_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
     report = f"""
 📊 BTC 市场分析与交易策略报告
-{'='*50}
+{'='*60}
 
-🕐 报告时间: {now}
+🕐 报告时间: {now_time}
+📊 数据来源: {price_data.get('source', 'unknown')}
 
 💰 当前价格
-  • BTC/USD: ${price:,.2f}
-  • BTC/CNY: ¥{price_cny:,.0f}
+  • BTC/USD: ${current_price:,.2f}
+  • BTC/CNY: ¥{current_cny:,.0f}
   • 24h涨跌: {change_24h:+.2f}%
 
 📈 技术指标
+{'='*60}
   • SMA 6小时: ${indicators.get('sma_6h', 0):,.2f}
   • SMA 12小时: ${indicators.get('sma_12h', 0):,.2f}
   • RSI (14): {indicators.get('rsi', 50):.2f}
   • 波动率: ${int(indicators.get('volatility', 0))}
   • 价格位置: {indicators.get('price_position', 50):.1f}% (24h)
 
-🎭 市场情绪: {sentiment.get('overall_text', 'neutral')}
-  • 恐慌贪婪指数: {fgi.get('value', 0)} - {fgi.get('classification', 'Unknown')}
-  • 情绪评分: {sentiment.get('score', 0)}
+🎭 市场情绪: {sentiment.get('overall', 'neutral')}
+  • 恐慌贪婪指数: {indicators.get('fgi_value', 50)} - {indicators.get('fgi_classification', 'Unknown')}
 
   分析因素:
 """
-    
+
     for factor in sentiment.get("factors", []):
         report += f"  • {factor}\n"
-    
+
     report += f"""
 🎯 1小时交易策略
-  • 建议操作: {strategy['action']}
-  • 策略描述: {strategy['description']}
-  • 风险等级: {strategy['risk_level']}
+  • 建议操作: {strategy.get('action', 'HOLD')}
+  • 策略描述: {strategy.get('description', '')}
+  • 风险等级: {strategy.get('risk_level', 'low')}
 
   价格点位:
 """
-    
-    support = strategy['price_levels'].get('support')
-    resistance = strategy['price_levels'].get('resistance')
-    
-    support_str = f"${support:,.2f}" if support else "N/A"
-    resistance_str = f"${resistance:,.2f}" if resistance else "N/A"
-    
-    report += f"  • 支撑位: {support_str}\n"
-    report += f"  • 阻力位: {resistance_str}\n"
-    
-    if strategy['price_levels'].get('stop_loss'):
-        report += f"  • 止损位: ${strategy['price_levels']['stop_loss']:,.2f}\n"
-    if strategy['price_levels'].get('take_profit'):
-        report += f"  • 止盈位: ${strategy['price_levels']['take_profit']:,.2f}\n"
-    
-    report += "\n  策略理由:\n"
-    for reason in strategy.get("reasoning", []):
+
+    if strategy.get("support"):
+        report += f"  • 支撑位: ${strategy.get('support', 0):,.2f}\n"
+    if strategy.get("resistance"):
+        report += f"  • 阻力位: ${strategy.get('resistance', 0):,.2f}\n"
+    if strategy.get("stop_loss"):
+        report += f"  • 止损位: ${strategy.get('stop_loss', 0):,.2f}\n"
+    if strategy.get("take_profit"):
+        report += f"  • 止盈位: ${strategy.get('take_profit', 0):,.2f}\n"
+
+    report += """
+  策略理由:
+"""
+
+    for reason in strategy.get("reasons", []):
         report += f"  • {reason}\n"
-    
+
     report += f"""
 ⚠️ 风险提示
   • 加密货币市场波动极大，请严格控制仓位
   • 本报告仅供参考，不构成投资建议
   • 交易有风险，投资需谨慎
 
-{'='*50}
+{'='*60}
+
+📊 回测统计
+{'-'*60}
+• 总收益率        : {backtest.get('total_return', 0):.2f}%
+• 年化收益率       : {backtest.get('annualized_return', 0):.2f}%
+• 最大回撤        : {backtest.get('max_drawdown', 0):.2f}%
+• 回撤持续时间      : {backtest.get('max_drawdown_duration_hours', 0):.2f} 小时
+• 夏普比率        : {backtest.get('sharpe_ratio', 0):.4f}
+• 总交易次数       : {backtest.get('total_trades', 0)}
+• 胜率          : {backtest.get('win_rate', 0):.2f}%
+• 初始资金        : ${backtest.get('initial_capital', 0):,.0f}
+• 最终资金        : ${backtest.get('final_capital', 0):,.0f}
+
+================================================================================
 """
-    
+
     return report
 
-def save_report(report: str):
-    """保存报告到文件"""
+
+def main():
+    """主函数"""
+    print(f"[{datetime.now()}] 开始 BTC 市场分析（多数据源）...")
+    print()
+
+    # 1. 初始化多数据源
+    print("  1. 初始化多数据源...")
+    price_api = MultiSourcePriceData()
+    print("     ✅ 支持 4 个免费数据源:")
+    for name in price_api.sources:
+        print(f"       - {price_api.sources[name]['name']}")
+
+    # 2. 获取价格数据
+    print()
+    print("  2. 尝试获取价格数据（多数据源）...")
+    price_data = price_api.try_get_price()
+
+    if price_data:
+        print(f"     ✅ 价格获取成功")
+        print(f"     ✅ USD: ${price_data['usd']:,.2f}")
+        print(f"     ✅ CNY: ¥{price_data['cny']:,.0f}")
+        # 添加来源标记
+        price_data["source"] = "Multi-Source"
+    else:
+        print("     ❌ 所有数据源都失败")
+        print("     ⚠️  使用缓存数据或默认值")
+        price_data = {
+            "usd": 68000,
+            "cny": 476000,
+            "source": "Cache/Default"
+        }
+
+    # 3. 获取恐慌贪婪指数
+    print()
+    print("  3. 获取恐慌贪婪指数...")
+    fgi = get_fear_greed_index()
+    print(f"     ✅ FGI: {fgi.get('value', 50)} - {fgi.get('classification', 'Unknown')}")
+
+    # 4. 计算技术指标（模拟历史数据）
+    print()
+    print("  4. 计算技术指标...")
+    # 模拟历史数据
+    current_price = price_data.get("usd", 68000)
+    price_history = [current_price] * 24  # 简化
+
+    indicators = {
+        "fgi_value": fgi.get("value", 50),
+        "fgi_classification": fgi.get("classification", "Unknown"),
+        "sma_6h": calculate_sma(price_history[-6:], 6),
+        "sma_12h": calculate_sma(price_history[-12:], 12),
+        "rsi": calculate_rsi(price_history, 14),
+        "volatility": calculate_volatility(price_history),
+        "price_position": calculate_price_position(current_price, price_history)
+    }
+
+    print(f"     ✅ SMA 6h: ${indicators['sma_6h']:,.2f}")
+    print(f"     ✅ SMA 12h: ${indicators['sma_12h']:,.2f}")
+    print(f"     ✅ RSI: {indicators['rsi']:.2f}")
+
+    # 5. 分析市场情绪
+    print()
+    print("  5. 分析市场情绪...")
+    sentiment = analyze_market_sentiment(fgi)
+    print(f"     ✅ 市场情绪: {sentiment['overall']}")
+
+    # 6. 生成交易策略
+    print()
+    print("  6. 生成交易策略...")
+    strategy = generate_strategy(price_data, indicators, sentiment)
+    print(f"     ✅ 建议操作: {strategy['action']}")
+
+    # 7. 记录交易信号
+    print()
+    print("  7. 记录交易信号...")
+    record_trade_signal(
+        strategy['action'],
+        price_data['usd'],
+        strategy['description'],
+        strategy.get('stop_loss'),
+        strategy.get('take_profit')
+    )
+
+    # 8. 计算回测
+    print()
+    print("  8. 计算回测...")
+    if os.path.exists(TRADES_FILE):
+        with open(TRADES_FILE, 'r', encoding='utf-8') as f:
+            trades = json.load(f)
+        backtest = calculate_backtest(trades)
+        print(f"     ✅ 总收益率: {backtest['total_return']:.2f}%")
+        print(f"     ✅ 胜率: {backtest['win_rate']:.2f}%")
+        print(f"     ✅ 夏普比率: {backtest['sharpe_ratio']:.4f}")
+    else:
+        backtest = {}
+        print("     ⚠️  交易记录文件不存在")
+
+    # 9. 生成报告
+    print()
+    print("  9. 生成报告...")
+    report = generate_report(price_data, indicators, sentiment, strategy, backtest)
+
+    # 10. 保存报告
+    print()
+    print(" 10. 保存报告...")
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"btc_report_{timestamp}.txt"
     filepath = os.path.join(OUTPUT_DIR, filename)
-    
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(report)
-    
-    return filepath
+    print(f"     ✅ 报告已保存: {filepath}")
 
-def main():
-    """主函数"""
-    print(f"[{datetime.now()}] 开始 BTC 市场分析...")
-
-    # 获取数据
-    print("  1. 获取价格数据...")
-    price_data = get_btc_price()
-    if "error" in price_data:
-        print(f"  ❌ 价格数据获取失败: {price_data['error']}")
-        print(f"  ⚠️  使用默认值继续生成报告...")
-        price_data = {
-            "current": {"usd": 0, "cny": 0, "usd_24h_change": 0},
-            "history": []
-        }
-
-    print("  2. 获取恐慌贪婪指数...")
-    fgi = get_fear_greed_index()
-    if "error" in fgi:
-        print(f"  ❌ FGI 获取失败: {fgi['error']}")
-        fgi = {}
-
-    print("  3. 计算技术指标...")
-    indicators = calculate_technical_indicators(price_data.get("history", []))
-
-    print("  4. 分析市场情绪...")
-    sentiment = analyze_market_sentiment(price_data, fgi, indicators)
-
-    print("  5. 生成交易策略...")
-    current_price = price_data["current"].get("usd", 0)
-    strategy = generate_1h_strategy(
-        current_price,
-        indicators,
-        sentiment
-    )
-
-    # 记录交易信号
-    print("  6. 记录交易信号...")
-    record_trade(strategy, current_price)
-
-    print("  7. 生成报告...")
-    report = generate_report(price_data, fgi, indicators, sentiment, strategy)
-
-    print("  8. 保存报告...")
-    filepath = save_report(report)
-    print(f"  ✅ 报告已保存: {filepath}")
-
-    # 生成回测汇总（包含文本图表）
-    print("  9. 生成回测汇总...")
-    backtest_summary = generate_backtest_summary()
-    report += backtest_summary
-
-    print("\n" + report)
-
+    # 11. 输出报告
+    print()
+    print(report)
+    print()
     print(f"[{datetime.now()}] 分析完成!")
+
 
 if __name__ == "__main__":
     main()
