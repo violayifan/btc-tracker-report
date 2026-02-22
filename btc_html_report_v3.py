@@ -34,8 +34,15 @@ def read_advanced_reports():
 
 
 def read_trades_data():
-    """读取交易记录数据"""
+    """读取交易记录数据（读取清理后的数据）"""
     try:
+        # 优先读取清理后的数据
+        clean_file = os.path.join(WORKSPACE, "btc_trades_clean.json")
+        if os.path.exists(clean_file):
+            with open(clean_file, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        
+        # 如果清理后的数据不存在，读取原始数据
         with open(TRADES_FILE, 'r', encoding='utf-8') as f:
             return json.load(f)
     except Exception as e:
