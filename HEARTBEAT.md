@@ -1,6 +1,6 @@
 # HEARTBEAT.md - 定时任务清单
 
-## BTC 市场分析（每小时自动运行）
+## BTC 高级市场分析（每小时自动运行）
 
 ### 自动化流程（Cron 定时任务）
 
@@ -10,11 +10,17 @@
 ```
 
 **自动执行内容**：
-1. ✅ 运行 BTC 市场分析 (`btc_monitor.py`)
-2. ✅ 更新 Git 仓库
-3. ✅ 提交更改到 Git
-4. ✅ 推送到 GitHub (master 分支)
-5. ✅ GitHub Pages 自动部署
+1. ✅ 运行 BTC 高级市场分析 (`btc_advanced_monitor.py`)
+2. ✅ 量价因子分析
+3. ✅ 链上资金分析
+4. ✅ 市场情绪分析
+5. ✅ 宏观新闻分析
+6. ✅ X舆情分析
+7. ✅ 复盘与迭代
+8. ✅ 更新 Git 仓库
+9. ✅ 提交更改到 Git
+10. ✅ 推送到 GitHub (master 分支)
+11. ✅ GitHub Pages 自动部署
 
 **访问网址**：
 - 🌐 永久网址：https://violayifan.github.io/btc-tracker-report
@@ -31,8 +37,9 @@
 
 当收到包含 "执行 BTC 市场分析与交易策略报告" 的系统事件时：
 
-1. 运行: `python3 /root/.openclaw/workspace/btc_monitor.py`
-2. 读取最新报告: `cat /root/.openclaw/workspace/reports/btc_report_*.txt | tail -1`
+1. 运行: `python3 /root/.openclaw/workspace/btc_monitor.py`（基础分析）
+   或 `python3 /root/.openclaw/workspace/btc_advanced_monitor.py`（高级分析）
+2. 读取最新报告: `cat /root/.openclaw/workspace/reports/btc_advanced_report_*.txt | tail -1`
 3. 将报告内容发送给用户（**不包含**网址更新，因为手动触发不推送到 GitHub）
 
 ### 回测与绩效分析
