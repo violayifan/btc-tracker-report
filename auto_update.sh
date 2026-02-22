@@ -10,21 +10,21 @@ echo ""
 # 进入工作目录
 cd /root/.openclaw/workspace
 
-# 运行 BTC 市场分析
-echo "📊 [1/6] 运行 BTC 市场分析..."
-python3 /root/.openclaw/workspace/btc_monitor.py
+# 运行 BTC 高级市场分析
+echo "📊 [1/7] 运行 BTC 高级市场分析..."
+python3 /root/.openclaw/workspace/btc_advanced_monitor.py
 
 if [ $? -ne 0 ]; then
-    echo "❌ BTC 市场分析失败"
+    echo "❌ BTC 高级分析失败"
     echo "❌ 更新终止"
     exit 1
 fi
 
-echo "✅ BTC 市场分析完成"
+echo "✅ BTC 高级分析完成"
 echo ""
 
 # 生成 HTML 报告
-echo "📄 [2/6] 生成 HTML 报告..."
+echo "📄 [2/7] 生成 HTML 报告..."
 python3 /root/.openclaw/workspace/btc_html_report_v2.py > /dev/null 2>&1 &
 HTML_PID=$!
 
@@ -47,7 +47,7 @@ echo "✅ HTML 报告生成完成"
 echo ""
 
 # 更新 Git 仓库
-echo "🔄 [3/6] 更新 Git 仓库..."
+echo "🔄 [3/7] 更新 Git 仓库..."
 
 # 强制添加所有更改
 git add -A
@@ -62,7 +62,7 @@ echo "✅ Git add 完成"
 echo ""
 
 # 提交更改
-echo "📝 [4/6] 提交更改到 Git..."
+echo "📝 [4/7] 提交更改到 Git..."
 TIMESTAMP=$(date +%Y-%m-%d\ %H:%M:%S)
 git commit -m "Update BTC 市场分析报告 - $TIMESTAMP"
 
@@ -76,7 +76,7 @@ echo "✅ Git commit 完成"
 echo ""
 
 # 推送到 GitHub
-echo "🚀 [5/6] 推送到 GitHub Pages..."
+echo "🚀 [5/7] 推送到 GitHub Pages..."
 git push origin master
 
 if [ $? -ne 0 ]; then
@@ -89,7 +89,7 @@ echo "✅ 推送到 GitHub 成功"
 echo ""
 
 # 验证推送
-echo "🔍 [6/6] 验证推送状态..."
+echo "🔍 [6/7] 验证推送状态..."
 LOCAL_COMMIT=$(git rev-parse master)
 REMOTE_COMMIT=$(git rev-parse origin/master)
 
@@ -114,7 +114,13 @@ echo "✅ ==========================================="
 echo ""
 
 echo "📊 更新摘要"
-echo "   • BTC 市场分析: ✅ 完成"
+echo "   • BTC 高级市场分析: ✅ 完成"
+echo "   • 量价因子分析: ✅ 完成"
+echo "   • 链上资金分析: ✅ 完成"
+echo "   • 市场情绪分析: ✅ 完成"
+echo "   • 宏观新闻分析: ✅ 完成"
+echo "   • X舆情分析: ✅ 完成"
+echo "   • 复盘与迭代: ✅ 完成"
 echo "   • Git 仓库更新: ✅ 完成"
 echo "   • GitHub Pages 部署: ✅ 完成"
 echo ""
