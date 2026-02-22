@@ -385,5 +385,23 @@
     "stop_loss": 67931.07,
     "take_profit": 68125.87,
     "strategy": "逢低做多，控制仓位"
+  },
+  {
+    "timestamp": "2026-02-22T08:00:10.492949",
+    "datetime": "2026-02-22 08:00:10",
+    "action": "LONG_DIP",
+    "price": 67996,
+    "stop_loss": 67931.07,
+    "take_profit": 68125.87,
+    "strategy": "逢低做多，控制仓位"
+  },
+  {
+    "timestamp": "2026-02-22T09:00:04.814081",
+    "datetime": "2026-02-22 09:00:04",
+    "action": "LONG_DIP",
+    "price": 67892,
+    "stop_loss": 67851.27,
+    "take_profit": 67973.46,
+    "strategy": "逢低做多，控制仓位"
   }
 ]
