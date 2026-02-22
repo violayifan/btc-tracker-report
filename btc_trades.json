@@ -421,5 +421,14 @@
     "stop_loss": null,
     "take_profit": null,
     "strategy": "等待回调后再考虑做多"
+  },
+  {
+    "timestamp": "2026-02-22T10:00:09.152008",
+    "datetime": "2026-02-22 10:00:09",
+    "action": "WAIT_PULLBACK",
+    "price": 68111,
+    "stop_loss": null,
+    "take_profit": null,
+    "strategy": "等待回调后再考虑做多"
   }
 ]
