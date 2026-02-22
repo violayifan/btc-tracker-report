@@ -25,7 +25,7 @@ echo ""
 
 # 生成 HTML 报告
 echo "📄 [2/7] 生成 HTML 报告..."
-python3 /root/.openclaw/workspace/btc_html_report_v2.py > /dev/null 2>&1 &
+python3 /root/.openclaw/workspace/btc_html_report_v3.py > /dev/null 2>&1 &
 HTML_PID=$!
 
 # 等待 HTML 生成完成
