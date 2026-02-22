@@ -34,20 +34,44 @@ def read_advanced_reports():
 
 
 def read_trades_data():
-    """读取交易记录数据（读取清理后的数据）"""
+    """读取交易记录数据（读取修正后的数据）"""
     try:
-        # 优先读取清理后的数据
-        clean_file = os.path.join(WORKSPACE, "btc_trades_clean.json")
-        if os.path.exists(clean_file):
-            with open(clean_file, 'r', encoding='utf-8') as f:
-                return json.load(f)
+        # 优先读取修正后的数据（开平仓逻辑）
+        corrected_file = os.path.join(WORKSPACE, "btc_trades_corrected.json")
+        if os.path.exists(corrected_file):
+            with open(corrected_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                completed_trades = data.get('completed_trades', [])
+                print(f"[HTML] 使用修正后的交易数据: {len(completed_trades)} 笔")
+                # 构建资金历史
+                if completed_trades:
+                    capital_history = [
+                        [datetime.strptime(t['entry_time'], "%Y-%m-%d %H:%M:%S"), t['capital']]
+                        for t in completed_trades
+                    ]
+                else:
+                    capital_history = []
+                return {
+                    "completed_trades": completed_trades,
+                    "capital_history": capital_history,
+                    "data_source": "corrected"
+                }
         
-        # 如果清理后的数据不存在，读取原始数据
+        # 如果修正后的数据不存在，读取原始数据
+        print(f"[HTML] 修正后的数据不存在，读取原始数据...")
         with open(TRADES_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
+            return {
+                "completed_trades": json.load(f),
+                "capital_history": [],
+                "data_source": "original"
+            }
     except Exception as e:
         print(f"[警告] 读取交易数据失败: {e}")
-        return []
+        return {
+            "completed_trades": [],
+            "capital_history": [],
+            "data_source": "error"
+        }
 
 
 def calculate_backtest_metrics(trades):
@@ -78,13 +102,15 @@ def calculate_backtest_metrics(trades):
             }
 
         initial_capital = 10000
-        current_capital = initial_capital
-        capital_history = []
+    current_capital = initial_capital
+    capital_history = []
 
-        for trade in completed_trades:
-            pnl = trade.get("pnl", 0)
-            current_capital += pnl
-            capital_history.append([datetime.now(), current_capital])
+    # 使用修正后的交易数据（开平仓逻辑）
+    for trade in completed_trades:
+        pnl = trade.get("pnl", 0)
+        capital = trade.get("capital", current_capital)
+        capital_history.append([datetime.strptime(trade.get('entry_time', datetime.now().strftime("%Y-%m-%d %H:%M:%S")), "%Y-%m-%d %H:%M:%S"), capital])
+        current_capital = capital
 
         total_return = ((current_capital - initial_capital) / initial_capital) * 100
 

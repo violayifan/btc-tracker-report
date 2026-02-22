@@ -1,0 +1,49 @@
+{
+  "completed_trades": [
+    {
+      "entry_time": "2026-02-20 17:58:01",
+      "exit_time": "2026-02-20 17:58:01",
+      "position": "LONG",
+      "entry_price": 68000,
+      "exit_price": 68500,
+      "exit_reason": "signal_reverse",
+      "pnl": 7.35,
+      "capital": 10007.35,
+      "strategy": "测试数据"
+    },
+    {
+      "entry_time": "2026-02-20 17:58:01",
+      "exit_time": "2026-02-20 17:58:01",
+      "position": "SHORT",
+      "entry_price": 68500,
+      "exit_price": 68000,
+      "exit_reason": "signal_reverse",
+      "pnl": 7.3,
+      "capital": 10014.66,
+      "strategy": "测试数据"
+    },
+    {
+      "entry_time": "2026-02-20 17:58:01",
+      "exit_time": "2026-02-20 17:58:01",
+      "position": "LONG",
+      "entry_price": 68000,
+      "exit_price": 67900,
+      "exit_reason": "signal_reverse",
+      "pnl": -1.47,
+      "capital": 10013.18,
+      "strategy": "测试数据"
+    },
+    {
+      "entry_time": "2026-02-20 17:58:01",
+      "exit_time": "2026-02-20 18:01:25",
+      "position": "SHORT",
+      "entry_price": 67900,
+      "exit_price": 68186,
+      "exit_reason": "signal_reverse",
+      "pnl": -4.22,
+      "capital": 10008.97,
+      "strategy": "建议做多，关注上方阻力位突破"
+    }
+  ],
+  "final_capital": 10008.96720446177
+}

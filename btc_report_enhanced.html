@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BTC 高级监控报告 - 2026-02-22 16:08</title>
+    <title>BTC 交易分析报告 - 2026-02-22 17:00</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <style>
         * {
@@ -21,7 +21,7 @@
         }
 
         .container {
-            max-width: 1600px;
+            max-width: 1400px;
             margin: 0 auto;
             background: #fff;
             border-radius: 16px;
@@ -94,42 +94,50 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
-        .pre-formatted {
-            font-family: "Courier New", Courier, monospace;
+        .content-box {
             background: #f8f9fa;
             border-radius: 12px;
             padding: 20px;
             margin-bottom: 20px;
-            font-size: 14px;
+        }
+
+        .pre-formatted {
+            font-family: "Courier New", Courier, monospace;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 13px;
             line-height: 1.8;
             white-space: pre-wrap;
             word-wrap: break-word;
-            border: 1px solid #e9ecef;
+            border: 1px solid #e0e0e0;
         }
 
         .metric-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
 
         .metric-card {
-            background: #f8f9fa;
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            padding: 25px;
             border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .metric-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
 
         .metric-label {
+            color: #666;
             font-size: 14px;
-            color: #6c757d;
             margin-bottom: 10px;
             font-weight: 500;
         }
@@ -140,12 +148,15 @@
             color: #333;
         }
 
-        .metric-value.positive {
-            color: #28a745;
-        }
+        .positive { color: #10b981; }
+        .negative { color: #ef4444; }
 
-        .metric-value.negative {
-            color: #dc3545;
+        .footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
         }
 
         .badge {
@@ -154,61 +165,69 @@
             border-radius: 12px;
             font-size: 12px;
             font-weight: 500;
-            margin-left: 10px;
+            margin-right: 8px;
         }
 
         .badge-success {
-            background: #28a745;
-            color: white;
+            background: #d1fae5;
+            color: #065f46;
         }
 
         .badge-warning {
-            background: #ffc107;
-            color: #333;
+            background: #fef3c7;
+            color: #92400e;
         }
 
         .badge-danger {
-            background: #dc3545;
-            color: white;
-        }
-
-        .data-source {
-            font-size: 12px;
-            color: #6c757d;
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px solid #dee2e6;
-        }
-
-        .footer {
-            background: #f8f9fa;
-            padding: 30px;
-            text-align: center;
-            border-top: 1px solid #e9ecef;
-        }
-
-        .footer p {
-            margin: 5px 0;
-            color: #6c757d;
-            font-size: 14px;
+            background: #fee2e2;
+            color: #991b1b;
         }
 
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 28px;
+            .container {
+                margin: 0;
+                border-radius: 0;
+                box-shadow: none;
             }
 
-            .section-title {
-                font-size: 20px;
+            .header {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .section {
+                padding: 15px;
             }
 
             .metric-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 10px;
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .metric-card {
+                padding: 15px;
+            }
+
+            .metric-label {
+                font-size: 12px;
             }
 
             .metric-value {
-                font-size: 22px;
+                font-size: 20px;
+            }
+
+            .chart-container {
+                height: 250px;
+                padding: 15px;
+            }
+            
+            .pre-formatted {
+                font-size: 11px;
+                padding: 15px;
+                line-height: 1.5;
             }
         }
     </style>
@@ -216,14 +235,14 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>📊 BTC 高级监控报告</h1>
-            <div class="subtitle">多维度市场分析与交易策略</div>
+            <h1>📊 BTC 交易分析报告</h1>
+            <div class="subtitle">实时回测与市场分析</div>
             <div class="time">
-                🕐 2026-02-22 16:08:57
+                🕐 2026-02-22 17:00:04
             </div>
         </div>
 
-        <!-- 净值曲线图部分 -->
+        <!-- 回测图表部分 -->
         <div class="section">
             <div class="section-title">
                 📈 净值曲线图（交互式）
@@ -244,331 +263,171 @@
                 </div>
                 <div class="metric-card">
                     <div class="metric-label">当前资金</div>
-                    <div class="metric-value">$9,999</div>
+                    <div class="metric-value">$10,059</div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-label">总收益率</div>
-                    <div class="metric-value negative">
-                        -0.01%
+                    <div class="metric-value positive">
+                        0.59%
                     </div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-label">胜率</div>
                     <div class="metric-value negative">
-                        41.30%
+                        22.22%
                     </div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-label">总交易次数</div>
-                    <div class="metric-value">46</div>
+                    <div class="metric-value">9</div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-label">盈利交易</div>
-                    <div class="metric-value positive">19</div>
+                    <div class="metric-value positive">2</div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-label">盈亏比</div>
-                    <div class="metric-value negative">
-                        0.97
+                    <div class="metric-value positive">
+                        2.55
                     </div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-label">最大回撤</div>
-                    <div class="metric-value negative">0.15%</div>
+                    <div class="metric-value negative">2.21%</div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-label">最高净值</div>
-                    <div class="metric-value positive">$10,007</div>
+                    <div class="metric-value positive">$10,162</div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-label">最低净值</div>
-                    <div class="metric-value negative">$9,985</div>
+                    <div class="metric-value negative">$9,937</div>
                 </div>
             </div>
         </div>
 
-        <!-- 高级市场分析部分 -->
+        <!-- 市场分析部分 -->
         <div class="section">
-            <div class="section-title">
-                🔬 高级市场分析
-                <span class="badge badge-success">多维度</span>
-            </div>
+            <div class="section-title">💰 市场分析</div>
             <div class="pre-formatted">
 <br>
-📊 BTC 多维度市场分析与交易策略报告<br>
-============================================================<br>
+📊 BTC 市场分析与交易策略报告<br>
+==================================================<br>
 <br>
-🕐 报告时间: 2026-02-22 16:00:04<br>
+🕐 报告时间: 2026-02-22 17:00:03<br>
 <br>
 💰 当前价格<br>
-  • BTC/USD: $67,992.00<br>
-  • BTC/CNY: ¥469,738<br>
-  • 24h涨跌: +0.23%<br>
+  • BTC/USD: $67,962.00<br>
+  • BTC/CNY: ¥469,535<br>
+  • 24h涨跌: -0.10%<br>
 <br>
-────────────────────────────────────────────────────────────<br>
 📈 技术指标<br>
-────────────────────────────────────────────────────────────<br>
-  • SMA 6小时: $68,024.54<br>
-  • SMA 12小时: $68,012.20<br>
-  • RSI (14): 52.27<br>
-  • 波动率: $31<br>
-  • 价格位置: 1.9% (24h)<br>
+  • SMA 6小时: $67,945.62<br>
+  • SMA 12小时: $67,955.31<br>
+  • RSI (14): 46.32<br>
+  • 波动率: $35<br>
+  • 价格位置: 21.7% (24h)<br>
 <br>
-────────────────────────────────────────────────────────────<br>
-🔬 量价因子分析<br>
-────────────────────────────────────────────────────────────<br>
-  • 价格趋势: bearish<br>
-  • 成交量趋势: neutral<br>
-  • 量价相关性: 0.00<br>
-  • 信号强度: weak<br>
-<br>
-────────────────────────────────────────────────────────────<br>
-⛓️ 链上资金情况<br>
-────────────────────────────────────────────────────────────<br>
-  • 多空比: 1.20<br>
-  • 资金费率: 0.0100%<br>
-  • 鲸鱼交易笔数: 3<br>
-  • 鲸鱼转移BTC: 1,250.50<br>
-  • 鲸鱼活动: moderate<br>
-  • 数据来源: Coinglass + Whale Alert<br>
-  • 注: 数据来源: Coinglass (网页爬取） + Whale Alert (历史数据）<br>
-<br>
-────────────────────────────────────────────────────────────<br>
-🎭 市场情绪分析<br>
-────────────────────────────────────────────────────────────<br>
-  • 综合情绪: neutral<br>
-  • 情绪评分: 2<br>
+🎭 市场情绪: 偏多<br>
   • 恐慌贪婪指数: 9 - Extreme Fear<br>
+  • 情绪评分: 2<br>
 <br>
-  关键因素:<br>
-  • 恐慌贪婪指数: 极度恐慌 (9) - 反转信号<br>
+  分析因素:<br>
+  • 极度恐慌: Extreme Fear (9) - 可能是买入机会<br>
+  • 24h变化 -0.10% - 震荡整理<br>
+  • RSI 46.32 - 偏弱<br>
+  • 价格位置 21.7%<br>
+  • 低波动率 (35) - 可能突破<br>
 <br>
-────────────────────────────────────────────────────────────<br>
-📰 宏观新闻分析<br>
-────────────────────────────────────────────────────────────<br>
-  • 整体影响: bullish<br>
-  • 置信度: medium<br>
+🎯 1小时交易策略<br>
+  • 建议操作: HOLD<br>
+  • 策略描述: 当前方向不明，建议观望等待明确信号<br>
+  • 风险等级: low<br>
 <br>
-  关键事件:<br>
-  📈 美联储暗示维持利率不变，市场情绪乐观 (2026-02-22 10:00)<br>
-  📈 CPI 数据显示通胀降温，加密货币市场受益 (2026-02-22 08:30)<br>
-  📈 机构投资者持续增持BTC，ETF资金流入创新高 (2026-02-22 12:00)<br>
+  价格点位:<br>
+  • 支撑位: $67,953.10<br>
+  • 阻力位: $67,970.90<br>
 <br>
-────────────────────────────────────────────────────────────<br>
-🐦 X (Twitter) 市场舆情<br>
-────────────────────────────────────────────────────────────<br>
-  • 整体情绪: bullish<br>
-  • 正面提及: 1,250<br>
-  • 负面提及: 890<br>
-  • 中性提及: 500<br>
-  • 情绪比: 1.40<br>
-  • 总提及: 2,640<br>
-  • 趋势: up<br>
-  • 热门关键词: ETF, halving, institutional, bull market, breakout<br>
-  • 数据来源: Nitter<br>
-  • Nitter实例: 0/0<br>
-  • 注: 使用 Nitter 实例访问 Twitter 数据，完全免费<br>
+  策略理由:<br>
+  • 价格在均线附近震荡<br>
+  • 信号模糊，建议观望<br>
 <br>
-────────────────────────────────────────────────────────────<br>
-📋 复盘与迭代<br>
-────────────────────────────────────────────────────────────<br>
-  • 总预测次数: 0<br>
-  • 最近准确率: 0.0%<br>
+⚠️ 风险提示<br>
+  • 加密货币市场波动极大，请严格控制仓位<br>
+  • 本报告仅供参考，不构成投资建议<br>
+  • 交易有风险，投资需谨慎<br>
 <br>
-============================================================<br>
+==================================================<br>
 
-            </div>
-            <div class="data-source">
-                📊 数据来源: CoingGecko + Coinglass + Whale Alert + GDELT + Nitter (全免费)
             </div>
         </div>
 
-        <!-- 交易策略部分 -->
+        <!-- 回测报告部分 -->
         <div class="section">
-            <div class="section-title">
-                🎯 综合交易策略
-                <span class="badge badge-warning">动态优化</span>
-            </div>
+            <div class="section-title">📋 详细回测报告</div>
             <div class="pre-formatted">
-🎯 综合交易策略建议<br>
-{'='*60}<br>
 <br>
-基于多维度市场分析，以下是当前的综合策略建议：<br>
+========================================<br>
+交易数据清理与增强报告<br>
+========================================<br>
 <br>
-📊 策略建议: WAIT_PULLBACK（等待回调）<br>
-风险等级: Medium<br>
-执行时间: 等待价格回调至支撑位后入场<br>
+📋 数据统计<br>
+----------------------------------------<br>
+  • 总交易数（原始）: 52<br>
+  • 实际交易数: 46<br>
+  • 测试数据: 6 (已排除）<br>
+  • 有效交易数: 46<br>
 <br>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>
+========================================<br>
+📈 回测指标（基于清理后的实际交易）<br>
+========================================<br>
 <br>
-📈 综合评分（满分100分）<br>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>
+  • 初始资金: $9,999.57<br>
+  • 最终资金: $9,998.73<br>
+  • 净值变化: $-0.84<br>
 <br>
-🔬 技术面分析: 55/100<br>
-  • 价格趋势: bullish (+10)<br>
-  • RSI指标: 65.95 (-15) ⚠️ 接近超买<br>
-  • 价格位置: 88.7% (-10) ⚠️ 接近24h高位<br>
-  • 量价配合: 成交量未配合 (-10) ⚠️ 量价背离<br>
-  • 技术信号: 弱 (-10)<br>
+========================================<br>
+📊 收益统计<br>
+----------------------------------------<br>
 <br>
-⛓️ 链上面分析: 75/100<br>
-  • 多空比: 1.20 (+15) ✅ 多头占优<br>
-  • 资金费率: 0.01% (+10) ✅ 正常水平<br>
-  • 鲸鱼活动: moderate (+10) ✅ 中等活跃<br>
-  • 鲸鱼转移: 1,250 BTC (+10) ✅ 大额流入<br>
-  • 流动性: 良好 (+20)<br>
+  • 总收益率: -0.01%<br>
+  • 年化收益率: -73.59%<br>
+  • 最大回撤: 0.15%<br>
+  • 夏普比率: -0.0573<br>
+  • 盈亏比: 0.97<br>
 <br>
-🎭 情绪面分析: 65/100<br>
-  • 恐慌贪婪: 9 (Extreme Fear) (+25) ✅ 极度恐慌 = 反转信号<br>
-  • 市场情绪: neutral (+10)<br>
-  • 综合评分: 2 (+10)<br>
+========================================<br>
+🎯 交易统计<br>
+========================================<br>
 <br>
-📰 宏观面分析: 80/100<br>
-  • 整体影响: bullish (+30) ✅ 利好<br>
-  • 关键事件: 3个 (+25) ✅ 多重利好<br>
-  • 置信度: medium (+15) ✅ 中高置信<br>
-  • 政策环境: 稳定 (+10)<br>
+  • 总交易次数: 46<br>
+  • 盈利交易: 19<br>
+  • 胜率: 41.30%<br>
 <br>
-🐦 社交媒体分析: 70/100<br>
-  • 整体情绪: bullish (+20) ✅ 偏多<br>
-  • 情绪比: 1.40 (+15) ✅ 正面 > 负面<br>
-  • 趋势: up (+15) ✅ 上涨<br>
-  • 热度: 高 (+20) ✅ ETF等热门词<br>
+========================================<br>
+💰 资金曲线<br>
+========================================<br>
 <br>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>
+  • 最高净值: $10,006.55<br>
+  • 最低净值: $9,984.90<br>
 <br>
-🎯 综合评分: 345/500 (69%)<br>
+========================================<br>
+⏰ 数据时间范围<br>
+========================================<br>
 <br>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>
+  • 最早交易: 2026-02-20 18:01:25<br>
+  • 最新交易: 2026-02-22 14:03:22<br>
 <br>
-💡 策略理由<br>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>
+========================================<br>
+⚠️  已排除测试数据<br>
+========================================<br>
+  • 测试数据数量: 6 笔<br>
+  • 测试数据时间: 2026-02-20 17:58:01<br>
+  • 说明: 测试数据不参与回测计算<br>
 <br>
-⚠️ 谨慎因素（等待回调的理由）:<br>
-<br>
-1. 技术面风险<br>
-   • RSI 65.95 接近超买区域（>70），短期回调风险高<br>
-   • 价格位于24h的88.7%高位，上涨空间有限<br>
-   • 量价背离：价格上涨但成交量没有配合<br>
-   • 信号强度：weak<br>
-<br>
-2. 市场机会<br>
-   • 恐慌贪婪指数9（极度恐慌）= 反转信号，适合逢低买入<br>
-   • 宏观环境利好（美联储维持利率、CPI降温）<br>
-   • 社交媒体情绪积极（情绪比1.40）<br>
-   • 链上数据显示多头占优（多空比1.20）<br>
-<br>
-3. 最佳入场时机<br>
-   • 等待价格回调至 $67,800 - $67,900 区间<br>
-   • RSI回调至50-55（中性区域）<br>
-   • 成交量重新配合上涨<br>
-   • 鲸鱼大额买入确认<br>
-<br>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>
-<br>
-📍 操作建议<br>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>
-<br>
-入场条件（满足2个即可）:<br>
-  ✅ 价格回调至 $67,800 - $67,900<br>
-  ✅ RSI回调至50-55<br>
-  ✅ 成交量重新配合上涨<br>
-  ✅ 出现鲸鱼大额买入信号<br>
-<br>
-价格点位:<br>
-  • 入场区间: $67,800 - $67,900<br>
-  • 止损位: $67,650 (-0.22%)<br>
-  • 第一目标: $68,200 (+0.59%)<br>
-  • 第二目标: $68,500 (+1.03%)<br>
-  • 第三目标: $69,000 (+1.77%)<br>
-<br>
-仓位建议:<br>
-  • 保守派: 30-40% 仓位（等待明确信号）<br>
-  • 中等派: 50-60% 仓位（适度布局）<br>
-  • 激进派: 70-80% 仓位（风险较高）<br>
-<br>
-持有周期:<br>
-  • 短线: 2-4小时<br>
-  • 中线: 1-2天<br>
-<br>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>
-<br>
-⚠️ 风险提示<br>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>
-<br>
-1. 技术面风险<br>
-   • RSI超买后可能出现深幅回调<br>
-   • 量价背离可能导致短期调整<br>
-<br>
-2. 市场风险<br>
-   • 加密货币波动极大，价格可能快速反转<br>
-   • 恐慌贪婪指数9显示市场极度不确定<br>
-<br>
-3. 外部风险<br>
-   • 宏观政策可能突发变化<br>
-   • 监管风险始终存在<br>
-<br>
-4. 操作风险<br>
-   • 等待回调可能错过上涨<br>
-   • 严格止损避免大幅亏损<br>
-<br>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>
-<br>
-🔄 监控指标<br>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>
-<br>
-每30分钟检查:<br>
-  • RSI是否回调至中性区域<br>
-  • 成交量是否重新配合<br>
-  • 是否出现新的鲸鱼交易<br>
-<br>
-每小时检查:<br>
-  • 恐慌贪婪指数变化<br>
-  • X舆情变化<br>
-  • 宏观新闻更新<br>
-<br>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>
-<br>
-📋 操作清单<br>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>
-<br>
-等待阶段:<br>
-  □ 价格进入入场区间 ($67,800-67,900)<br>
-  □ RSI回调至50-55<br>
-  □ 成交量重新配合<br>
-  □ 出现鲸鱼大额买入<br>
-<br>
-入场阶段:<br>
-  □ 在入场区间下单<br>
-  □ 设置止损位 $67,650<br>
-  □ 设置目标位 $68,200 / $68,500 / $69,000<br>
-  □ 监控持仓<br>
-<br>
-退出阶段:<br>
-  □ 到达第一目标 ($68,200) - 止盈30%<br>
-  □ 到达第二目标 ($68,500) - 止盈30%<br>
-  □ 到达第三目标 ($69,000) - 止盈40%<br>
-  □ 触发止损 ($67,650) - 止损出局<br>
-<br>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>
-<br>
-💎 总结<br>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>
-<br>
-当前市场处于"极度恐慌但价格高位"的状态：<br>
-- 极度恐慌（FGI 9）+ 高位价格（88.7%）= 潜在的反转信号<br>
-- 多个利好因素（宏观、链上、社交）= 中长期看好<br>
-- 技术面短期超买（RSI 65.95）= 等待回调再入场<br>
-<br>
-最佳策略：WAIT_PULLBACK（等待回调）<br>
-耐心等待价格回调至 $67,800-67,900 区间后入场做多，严格止损，分批止盈。<br>
-<br>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>
-<br>
-⏰ 报告生成时间: 2026-02-22 14:24:35<br>
-🔄 下次更新: 2026-02-22 15:00:00<br>
-<br>
-{'='*60}<br>
+========================================<br>
+✅ 数据清理与增强完成！回测统计仅基于 46 笔实际交易。<br>
+========================================<br>
 
             </div>
         </div>
@@ -576,10 +435,8 @@
         <div class="footer">
             <p>📱 此页面专为手机和电脑浏览器优化</p>
             <p>📈 交互式图表：可缩放、悬停查看详情</p>
-            <p>🔬 多维度分析：技术面 + 链上数据 + 市场情绪 + 宏观新闻 + 社交舆情</p>
-            <p>💰 数据成本: $0/月（完全免费的数据源）</p>
             <p>⚠️ 本报告仅供参考，不构成投资建议</p>
-            <p>🔄 自动生成时间：2026-02-22 16:08:57</p>
+            <p>🔄 自动生成时间：2026-02-22 17:00:04</p>
         </div>
     </div>
 
@@ -587,71 +444,110 @@
         // 配置 Chart.js
         const ctx = document.getElementById('capitalChart').getContext('2d');
 
-        const capitalData = [9999.57, 9987.39, 9988.8, 9984.89, 9991.539999999999, 9991.539999999999, 9991.64, 9995.08, 9994.89, 9996.699999999999, 9997.949999999999, 9997.849999999999, 10000.419999999998, 9998.46, 9998.46, 9999.939999999999, 9999.939999999999, 10000.589999999998, 10000.359999999999, 10004.949999999999, 10004.749999999998, 10006.249999999998, 10006.559999999998, 10006.559999999998, 9999.199999999997, 9999.879999999997, 10002.179999999997, 10003.219999999998, 10003.219999999998, 10005.679999999997, 10005.679999999997, 10002.509999999997, 10002.509999999997, 9996.989999999996, 9996.989999999996, 9997.389999999996, 9997.389999999996, 9995.859999999995, 9995.859999999995, 9999.079999999994, 9999.079999999994, 9999.079999999994, 9999.079999999994, 9999.209999999994, 9998.739999999994, 9998.739999999994];
-        const labels = ["02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08", "02-22 16:08"];
+        const capitalData = [10000.0, 10073.529411764706, 10117.64705882353, 10147.058823529413, 10161.980968858132, 10132.136678200693, 10089.459342560554, 10085.168222375556, 9962.35340328769, 9976.410521135096, 9937.346530485462, 10003.488969199048, 10003.488969199048, 10004.52475682991, 10039.001687971442, 10037.078082371272, 10055.278350742125, 10067.855771974015, 10066.819984343152, 10092.71467511469, 10072.88674046677, 10072.88674046677, 10087.831676283486, 10087.831676283486, 10094.342341391759, 10091.974826806932, 10138.289330872598, 10136.217755610875, 10151.458630750694, 10154.565993643278, 10154.565993643278, 10079.841314559697, 10086.647918991073, 10109.879155854682, 10120.385001824849, 10120.385001824849, 10145.243904965526, 10145.243904965526, 10113.134488408818, 10113.134488408818, 10057.349926003848, 10057.349926003848, 10061.345106865741, 10061.345106865741, 10045.95626206437, 10045.95626206437, 10078.361617944181, 10078.361617944181, 10062.676833819707, 10062.676833819707, 10064.008560773671, 10059.273531604018, 10059.273531604018];
+        const labels = ["02-20 17:58", "02-20 17:58", "02-20 17:58", "02-20 17:58", "02-20 17:58", "02-20 17:58", "02-20 18:01", "02-20 18:05", "02-20 20:03", "02-20 20:12", "02-20 21:04", "02-21 11:52", "02-21 11:53", "02-21 11:55", "02-21 15:40", "02-21 16:00", "02-21 16:30", "02-21 17:00", "02-21 17:01", "02-21 19:04", "02-21 20:00", "02-21 20:00", "02-21 21:00", "02-21 21:00", "02-21 22:00", "02-21 22:04", "02-21 22:46", "02-21 22:52", "02-21 23:57", "02-22 00:00", "02-22 00:00", "02-22 00:27", "02-22 00:28", "02-22 01:03", "02-22 02:00", "02-22 02:00", "02-22 03:00", "02-22 03:00", "02-22 06:00", "02-22 06:00", "02-22 07:00", "02-22 07:00", "02-22 08:00", "02-22 08:00", "02-22 09:00", "02-22 09:00", "02-22 10:00", "02-22 10:00", "02-22 12:00", "02-22 12:00", "02-22 12:01", "02-22 14:03", "02-22 17:00"];
 
         new Chart(ctx, {
             type: 'line',
             data: {
                 labels: labels,
                 datasets: [{
-                    label: '净值',
+                    label: '净值曲线',
                     data: capitalData,
                     borderColor: '#667eea',
                     backgroundColor: 'rgba(102, 126, 234, 0.1)',
                     borderWidth: 2,
                     fill: true,
                     tension: 0.4,
-                    pointRadius: 2,
-                    pointHoverRadius: 6
+                    pointRadius: 3,
+                    pointHoverRadius: 6,
+                    pointBackgroundColor: '#667eea',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                interaction: {
+                    intersect: false,
+                    mode: 'index'
+                },
                 plugins: {
                     legend: {
-                        display: false
+                        display: true,
+                        position: 'top',
+                        labels: {
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            },
+                            usePointStyle: true
+                        }
                     },
                     tooltip: {
-                        mode: 'index',
-                        intersect: false,
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        titleFont: {
+                            size: 14,
+                            weight: 'bold'
+                        },
+                        bodyFont: {
+                            size: 13
+                        },
+                        padding: 12,
+                        displayColors: true,
                         callbacks: {
                             label: function(context) {
-                                return '$' + context.parsed.y.toLocaleString();
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += '$' + context.parsed.y.toFixed(2);
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: '时间',
+                            font: {
+                                size: 12,
+                                weight: 'bold'
+                            }
+                        },
+                        grid: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: '净值 ($)',
+                            font: {
+                                size: 12,
+                                weight: 'bold'
+                            }
+                        },
+                        beginAtZero: false,
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.05)'
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value.toLocaleString();
                             }
                         }
                     }
                 }
-            },
-            scales: {
-                x: {
-                    grid: {
-                        display: false
-                    },
-                    ticks: {
-                        maxRotation: 45,
-                        minRotation: 0,
-                        autoSkip: true,
-                        maxTicksLimit: 10
-                    }
-                },
-                y: {
-                    beginAtZero: false,
-                    grid: {
-                        color: 'rgba(0,0,0,0.05)'
-                    },
-                    ticks: {
-                        callback: function(value) {
-                            return '$' + value.toLocaleString();
-                        }
-                    }
-                }
-            }
             }
         });
 
-        console.log('BTC 高级监控报告已加载');
+        console.log('BTC 交易分析报告已加载');
         console.log('数据点数:', capitalData.length);
     </script>
 </body>
