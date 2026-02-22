@@ -448,5 +448,14 @@
     "stop_loss": 67964.96,
     "take_profit": 68085.08,
     "strategy": "建议做多，关注上方阻力位突破"
+  },
+  {
+    "timestamp": "2026-02-22T12:01:11.301909",
+    "datetime": "2026-02-22 12:01:11",
+    "action": "LONG",
+    "price": 68014,
+    "stop_loss": 67973.96,
+    "take_profit": 68094.09,
+    "strategy": "建议做多，关注上方阻力位突破"
   }
 ]
