@@ -17,28 +17,66 @@ OUTPUT_DIR = "/root/.openclaw/workspace/reports"
 FEAR_GREED_API = "https://api.alternative.me/fng/"
 
 def get_btc_price() -> Dict:
-    """获取 BTC 当前价格和历史数据"""
-    try:
-        # 当前价格
-        price_resp = requests.get(
-            f"{COINGECKO_API}/simple/price?ids=bitcoin&vs_currencies=usd,cny&include_24hr_change=true&include_24hr_vol=true",
-            timeout=10
-        )
-        price_data = price_resp.json()
+    """获取 BTC 当前价格和历史数据（带重试机制）"""
+    max_retries = 3
+    retry_delay = 2
 
-        # 获取过去24小时的价格数据用于技术分析（每小时一个点）
-        history_resp = requests.get(
-            f"{COINGECKO_API}/coins/bitcoin/market_chart?vs_currency=usd&days=1",
-            timeout=10
-        )
-        history_data = history_resp.json()
+    for attempt in range(max_retries):
+        try:
+            # 当前价格
+            price_resp = requests.get(
+                f"{COINGECKO_API}/simple/price?ids=bitcoin&vs_currencies=usd,cny&include_24hr_change=true&include_24hr_vol=true",
+                timeout=30
+            )
 
-        return {
-            "current": price_data.get("bitcoin", {}),
-            "history": history_data.get("prices", [])
-        }
-    except Exception as e:
-        return {"error": str(e)}
+            if price_resp.status_code != 200:
+                print(f"  ⚠️ API 响应状态码: {price_resp.status_code}")
+                if attempt < max_retries - 1:
+                    print(f"  ⏱️  {retry_delay}秒后重试...")
+                    import time
+                    time.sleep(retry_delay)
+                    retry_delay *= 2
+                    continue
+
+            price_data = price_resp.json()
+
+            # 获取过去24小时的价格数据用于技术分析（每小时一个点）
+            history_resp = requests.get(
+                f"{COINGECKO_API}/coins/bitcoin/market_chart?vs_currency=usd&days=1",
+                timeout=30
+            )
+
+            if history_resp.status_code != 200:
+                print(f"  ⚠️ 历史数据 API 响应状态码: {history_resp.status_code}")
+                if attempt < max_retries - 1:
+                    print(f"  ⏱️  {retry_delay}秒后重试...")
+                    import time
+                    time.sleep(retry_delay)
+                    retry_delay *= 2
+                    continue
+
+            history_data = history_resp.json()
+
+            return {
+                "current": price_data.get("bitcoin", {}),
+                "history": history_data.get("prices", [])
+            }
+        except requests.exceptions.Timeout:
+            print(f"  ⚠️ 请求超时 (尝试 {attempt + 1}/{max_retries})")
+            if attempt < max_retries - 1:
+                print(f"  ⏱️  {retry_delay}秒后重试...")
+                import time
+                time.sleep(retry_delay)
+                retry_delay *= 2
+        except Exception as e:
+            print(f"  ⚠️ API 调用错误: {str(e)}")
+            if attempt < max_retries - 1:
+                print(f"  ⏱️  {retry_delay}秒后重试...")
+                import time
+                time.sleep(retry_delay)
+                retry_delay *= 2
+
+    return {"error": "API 调用失败，已重试 3 次"}
 
 def get_fear_greed_index() -> Dict:
     """获取加密货币恐慌贪婪指数"""
@@ -521,26 +559,30 @@ def save_report(report: str):
 def main():
     """主函数"""
     print(f"[{datetime.now()}] 开始 BTC 市场分析...")
-    
+
     # 获取数据
     print("  1. 获取价格数据...")
     price_data = get_btc_price()
     if "error" in price_data:
         print(f"  ❌ 价格数据获取失败: {price_data['error']}")
-        return
-    
+        print(f"  ⚠️  使用默认值继续生成报告...")
+        price_data = {
+            "current": {"usd": 0, "cny": 0, "usd_24h_change": 0},
+            "history": []
+        }
+
     print("  2. 获取恐慌贪婪指数...")
     fgi = get_fear_greed_index()
     if "error" in fgi:
         print(f"  ❌ FGI 获取失败: {fgi['error']}")
         fgi = {}
-    
+
     print("  3. 计算技术指标...")
     indicators = calculate_technical_indicators(price_data.get("history", []))
-    
+
     print("  4. 分析市场情绪...")
     sentiment = analyze_market_sentiment(price_data, fgi, indicators)
-    
+
     print("  5. 生成交易策略...")
     current_price = price_data["current"].get("usd", 0)
     strategy = generate_1h_strategy(
@@ -548,25 +590,25 @@ def main():
         indicators,
         sentiment
     )
-    
+
     # 记录交易信号
     print("  6. 记录交易信号...")
     record_trade(strategy, current_price)
-    
+
     print("  7. 生成报告...")
     report = generate_report(price_data, fgi, indicators, sentiment, strategy)
-    
+
     print("  8. 保存报告...")
     filepath = save_report(report)
     print(f"  ✅ 报告已保存: {filepath}")
-    
+
     # 生成回测汇总（包含文本图表）
     print("  9. 生成回测汇总...")
     backtest_summary = generate_backtest_summary()
     report += backtest_summary
-    
+
     print("\n" + report)
-    
+
     print(f"[{datetime.now()}] 分析完成!")
 
 if __name__ == "__main__":
