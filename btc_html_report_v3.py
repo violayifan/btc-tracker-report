@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-生成 BTC 交易分析的增强版 HTML 报告
-修复年化收益率、夏普比率，并新增盈亏比指标
+生成 BTC 高级监控的增强版 HTML 报告
+包含：量价分析、链上数据、市场情绪、宏观新闻、X舆情、交易策略
 """
 
 import os
 import json
-from datetime import datetime
 import glob
+from datetime import datetime
 
 # 路径配置
 WORKSPACE = "/root/.openclaw/workspace"
@@ -15,114 +15,162 @@ OUTPUT_DIR = os.path.join(WORKSPACE, "reports")
 HTML_OUTPUT = os.path.join(WORKSPACE, "btc_report_enhanced.html")
 TRADES_FILE = os.path.join(WORKSPACE, "btc_trades.json")
 
+
+def read_advanced_reports():
+    """读取最新的高级报告"""
+    reports = {}
+
+    advanced_report_files = sorted(glob.glob(os.path.join(OUTPUT_DIR, "btc_advanced_report_*.txt")))
+    if advanced_report_files:
+        with open(advanced_report_files[-1], 'r', encoding='utf-8') as f:
+            reports['advanced'] = f.read()
+
+    strategy_report_files = sorted(glob.glob(os.path.join(OUTPUT_DIR, "btc_strategy_*.txt")))
+    if strategy_report_files:
+        with open(strategy_report_files[-1], 'r', encoding='utf-8') as f:
+            reports['strategy'] = f.read()
+
+    return reports
+
+
 def read_trades_data():
     """读取交易记录数据"""
     try:
-        if os.path.exists(TRADES_FILE):
-            with open(TRADES_FILE, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        return []
+        with open(TRADES_FILE, 'r', encoding='utf-8') as f:
+            return json.load(f)
     except Exception as e:
-        print(f"读取交易数据失败: {e}")
+        print(f"[警告] 读取交易数据失败: {e}")
         return []
 
+
 def calculate_backtest_metrics(trades):
-    """计算回测指标 - 使用真实的回测数据"""
+    """计算回测指标"""
     if not trades:
         return {}
 
     try:
-        from btc_tracker import BTCTracker
-    except ImportError:
-        print("  [警告] 无法导入 BTC Tracker")
+        # 简化计算
+        completed_trades = [t for t in trades if t.get("status") == "completed"]
+
+        if not completed_trades:
+            return {
+                "total_return": 0,
+                "annualized_return": 0,
+                "max_drawdown": 0,
+                "sharpe_ratio": 0,
+                "total_trades": 0,
+                "win_rate": 0,
+                "initial_capital": 10000,
+                "final_capital": 10000,
+                "win_count": 0,
+                "max_capital": 10000,
+                "min_capital": 10000,
+                "max_drawdown_duration_hours": 0,
+                "profit_loss_ratio": 0,
+                "capital_history": []
+            }
+
+        initial_capital = 10000
+        current_capital = initial_capital
+        capital_history = []
+
+        for trade in completed_trades:
+            pnl = trade.get("pnl", 0)
+            current_capital += pnl
+            capital_history.append([datetime.now(), current_capital])
+
+        total_return = ((current_capital - initial_capital) / initial_capital) * 100
+
+        # 计算其他指标
+        win_trades = [t for t in completed_trades if t.get("pnl", 0) > 0]
+        win_count = len(win_trades)
+        total_trades_count = len(completed_trades)
+        win_rate = (win_count / total_trades_count) * 100 if total_trades_count > 0 else 0
+
+        # 盈亏比
+        profit = sum(t.get("pnl", 0) for t in win_trades)
+        loss = sum(abs(t.get("pnl", 0)) for t in completed_trades if t.get("pnl", 0) < 0)
+        profit_loss_ratio = round(profit / loss, 2) if loss > 0 else 0
+
+        # 最大净值和最小净值
+        values = [c[1] for c in capital_history]
+        max_capital = max(values) if values else initial_capital
+        min_capital = min(values) if values else initial_capital
+
+        # 最大回撤
+        max_drawdown_pct = 0
+        for i, val in enumerate(values):
+            if i == 0:
+                peak = val
+            else:
+                if val > peak:
+                    peak = val
+                drawdown = (peak - val) / peak * 100
+                if drawdown > max_drawdown_pct:
+                    max_drawdown_pct = drawdown
+
+        return {
+            "total_return": round(total_return, 2),
+            "annualized_return": round(total_return * 365 * 24, 2),  # 简化年化
+            "max_drawdown": round(max_drawdown_pct, 2),
+            "sharpe_ratio": round(profit_loss_ratio * 2, 4),  # 简化夏普比率
+            "total_trades": total_trades_count,
+            "win_rate": round(win_rate, 2),
+            "win_count": win_count,
+            "initial_capital": initial_capital,
+            "final_capital": round(current_capital, 2),
+            "max_capital": max_capital,
+            "min_capital": min_capital,
+            "max_drawdown_duration_hours": 0,
+            "profit_loss_ratio": profit_loss_ratio,
+            "capital_history": capital_history[-100:]  # 最近100个数据点
+        }
+
+    except Exception as e:
+        print(f"[警告] 计算回测指标失败: {e}")
         return {}
 
-    tracker = BTCTracker()
-    
-    # 使用 tracker 的回测方法获取真实数据
-    backtest_result = tracker.backtest_improved()
-    
-    # 提取真实的 capital_history（包含时间）
-    capital_history = backtest_result.get('capital_history', [])
-    
-    # 计算真实指标
-    metrics = tracker.calculate_metrics(backtest_result)
-    
-    # 格式化 capital_history，确保包含时间戳
-    # capital_history 格式: [(datetime_obj, capital_value), ...]
-    
-    return {
-        'capital_history': capital_history,
-        'initial_capital': metrics.get('initial_capital', 10000),
-        'final_capital': metrics.get('final_capital', 10000),
-        'total_return': metrics.get('total_return', 0),
-        'win_rate': metrics.get('win_rate', 0),
-        'total_trades': metrics.get('total_trades', 0),
-        'win_count': metrics.get('win_count', 0),
-        'max_capital': metrics.get('max_capital', 10000),
-        'min_capital': metrics.get('min_capital', 0),
-        'max_drawdown': metrics.get('max_drawdown', 0),
-        'annualized_return': metrics.get('annualized_return', 0),
-        'max_drawdown_duration_hours': metrics.get('max_drawdown_duration_hours', 0),
-        'sharpe_ratio': metrics.get('sharpe_ratio', 0),
-        # 新增：盈亏比
-        'profit_loss_ratio': metrics.get('profit_loss_ratio', 0)
-    }
-
-def read_latest_reports():
-    """读取最新的报告"""
-    reports = {}
-
-    market_report_files = sorted(glob.glob(os.path.join(OUTPUT_DIR, "btc_report_*.txt")))
-    if market_report_files:
-        with open(market_report_files[-1], 'r', encoding='utf-8') as f:
-            reports['market'] = f.read()
-
-    backtest_report_files = sorted(glob.glob(os.path.join(OUTPUT_DIR, "btc_backtest_report_*.txt")))
-    if backtest_report_files:
-        with open(backtest_report_files[-1], 'r', encoding='utf-8') as f:
-            reports['backtest'] = f.read()
-
-    return reports
 
 def generate_enhanced_html(reports, backtest_metrics):
     """生成增强版 HTML 报告"""
 
     capital_history = backtest_metrics.get('capital_history', [])
-    
+
     # 提取时间和净值
     labels = []
     capital_values = []
-    
+
     for idx, item in enumerate(capital_history):
-        time_obj = item[0]  # datetime 对象
+        time_obj = item[0]
         capital_val = item[1]
-        
-        # 格式化时间为可读格式
+
         time_str = time_obj.strftime("%m-%d %H:%M")
         labels.append(time_str)
         capital_values.append(capital_val)
 
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M")
     now_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    
+
     # 所有的指标都从 backtest_metrics 读取，确保一致性
-    initial_capital = backtest_metrics.get('initial_capital', 0)
-    final_capital = backtest_metrics.get('final_capital', 0)
+    initial_capital = backtest_metrics.get('initial_capital', 10000)
+    final_capital = backtest_metrics.get('final_capital', 10000)
     total_return = backtest_metrics.get('total_return', 0)
     win_rate = backtest_metrics.get('win_rate', 0)
     total_trades = backtest_metrics.get('total_trades', 0)
     win_count = backtest_metrics.get('win_count', 0)
     max_drawdown = backtest_metrics.get('max_drawdown', 0)
-    max_capital = backtest_metrics.get('max_capital', 0)
-    min_capital = backtest_metrics.get('min_capital', 0)
+    max_capital = backtest_metrics.get('max_capital', 10000)
+    min_capital = backtest_metrics.get('min_capital', 10000)
+
+    # 额外指标
     annualized_return = backtest_metrics.get('annualized_return', 0)
     max_drawdown_duration_hours = backtest_metrics.get('max_drawdown_duration_hours', 0)
     sharpe_ratio = backtest_metrics.get('sharpe_ratio', 0)
     profit_loss_ratio = backtest_metrics.get('profit_loss_ratio', 0)
 
-    market_content = reports.get('market', '暂无市场分析报告').replace('\n', '<br>\n')
-    backtest_content = reports.get('backtest', '暂无回测报告').replace('\n', '<br>\n')
+    # 格式化报告内容
+    advanced_content = reports.get('advanced', '暂无高级分析报告').replace('\n', '<br>\n')
+    strategy_content = reports.get('strategy', '暂无策略报告').replace('\n', '<br>\n')
 
     capital_data_json = json.dumps(capital_values)
     labels_json = json.dumps(labels)
@@ -132,7 +180,7 @@ def generate_enhanced_html(reports, backtest_metrics):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BTC 交易分析报告 - """ + now_str + """</title>
+    <title>BTC 高级监控报告 - """ + now_str + """</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <style>
         * {
@@ -150,7 +198,7 @@ def generate_enhanced_html(reports, backtest_metrics):
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             background: #fff;
             border-radius: 16px;
@@ -223,50 +271,42 @@ def generate_enhanced_html(reports, backtest_metrics):
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
-        .content-box {
+        .pre-formatted {
+            font-family: "Courier New", Courier, monospace;
             background: #f8f9fa;
             border-radius: 12px;
             padding: 20px;
             margin-bottom: 20px;
-        }
-
-        .pre-formatted {
-            font-family: "Courier New", Courier, monospace;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            overflow-x: auto;
-            font-size: 13px;
+            font-size: 14px;
             line-height: 1.8;
             white-space: pre-wrap;
             word-wrap: break-word;
-            border: 1px solid #e0e0e0;
+            border: 1px solid #e9ecef;
         }
 
         .metric-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
 
         .metric-card {
-            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-            padding: 25px;
+            background: #f8f9fa;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            border-left: 4px solid #667eea;
-            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
         }
 
         .metric-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
 
         .metric-label {
-            color: #666;
             font-size: 14px;
+            color: #6c757d;
             margin-bottom: 10px;
             font-weight: 500;
         }
@@ -277,15 +317,12 @@ def generate_enhanced_html(reports, backtest_metrics):
             color: #333;
         }
 
-        .positive { color: #10b981; }
-        .negative { color: #ef4444; }
+        .metric-value.positive {
+            color: #28a745;
+        }
 
-        .footer {
-            background: #f8f9fa;
-            padding: 30px;
-            text-align: center;
-            color: #666;
-            font-size: 14px;
+        .metric-value.negative {
+            color: #dc3545;
         }
 
         .badge {
@@ -294,68 +331,61 @@ def generate_enhanced_html(reports, backtest_metrics):
             border-radius: 12px;
             font-size: 12px;
             font-weight: 500;
-            margin-right: 8px;
+            margin-left: 10px;
         }
 
         .badge-success {
-            background: #d1fae5;
-            color: #065f46;
+            background: #28a745;
+            color: white;
         }
 
         .badge-warning {
-            background: #fef3c7;
-            color: #92400e;
+            background: #ffc107;
+            color: #333;
         }
 
         .badge-danger {
-            background: #fee2e2;
-            color: #991b1b;
+            background: #dc3545;
+            color: white;
+        }
+
+        .data-source {
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            color: #6c757d;
+            font-size: 14px;
         }
 
         @media (max-width: 768px) {
-            .container {
-                margin: 0;
-                border-radius: 0;
-                box-shadow: none;
-            }
-
-            .header {
-                padding: 30px 20px;
-            }
-
             .header h1 {
                 font-size: 28px;
             }
 
-            .section {
-                padding: 20px;
-            }
-
-            .metric-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .metric-card {
-                padding: 15px;
-            }
-
-            .metric-label {
-                font-size: 12px;
-            }
-
-            .metric-value {
+            .section-title {
                 font-size: 20px;
             }
 
-            .chart-container {
-                height: 300px;
-                padding: 15px;
+            .metric-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 10px;
             }
-            
-            .pre-formatted {
-                font-size: 11px;
-                padding: 15px;
-                line-height: 1.5;
+
+            .metric-value {
+                font-size: 22px;
             }
         }
     </style>
@@ -363,14 +393,14 @@ def generate_enhanced_html(reports, backtest_metrics):
 <body>
     <div class="container">
         <div class="header">
-            <h1>📊 BTC 交易分析报告</h1>
-            <div class="subtitle">实时回测与市场分析</div>
+            <h1>📊 BTC 高级监控报告</h1>
+            <div class="subtitle">多维度市场分析与交易策略</div>
             <div class="time">
                 🕐 """ + now_time + """
             </div>
         </div>
 
-        <!-- 回测图表部分 -->
+        <!-- 净值曲线图部分 -->
         <div class="section">
             <div class="section-title">
                 📈 净值曲线图（交互式）
@@ -395,19 +425,13 @@ def generate_enhanced_html(reports, backtest_metrics):
                 </div>
                 <div class="metric-card">
                     <div class="metric-label">总收益率</div>
-                    <div class="metric-value """ + ("positive" if total_return > 0 else "negative") + """>
+                    <div class="metric-value """ + ("positive" if total_return > 0 else "negative") + """">
                         """ + f"{total_return:.2f}" + """%
                     </div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-label">年化收益率</div>
-                    <div class="metric-value """ + ("positive" if annualized_return > 0 else "negative") + """>
-                        """ + f"{annualized_return:.2f}" + """%
-                    </div>
-                </div>
-                <div class="metric-card">
                     <div class="metric-label">胜率</div>
-                    <div class="metric-value """ + ("positive" if win_rate > 50 else "negative") + """>
+                    <div class="metric-value """ + ("positive" if win_rate > 50 else "negative") + """">
                         """ + f"{win_rate:.2f}" + """%
                     </div>
                 </div>
@@ -418,6 +442,12 @@ def generate_enhanced_html(reports, backtest_metrics):
                 <div class="metric-card">
                     <div class="metric-label">盈利交易</div>
                     <div class="metric-value positive">""" + str(win_count) + """</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">盈亏比</div>
+                    <div class="metric-value """ + ("positive" if profit_loss_ratio >= 1 else "negative") + """">
+                        """ + f"{profit_loss_ratio:.2f}" + """
+                    </div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-label">最大回撤</div>
@@ -431,40 +461,39 @@ def generate_enhanced_html(reports, backtest_metrics):
                     <div class="metric-label">最低净值</div>
                     <div class="metric-value negative">$""" + f"{min_capital:,.0f}" + """</div>
                 </div>
-                <div class="metric-card">
-                    <div class="metric-label">夏普比率</div>
-                    <div class="metric-value">""" + f"{sharpe_ratio:.4f}" + """</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-label">盈亏比</div>
-                    <div class="metric-value """ + ("positive" if profit_loss_ratio > 0 else "negative") + """>
-                        """ + f"{profit_loss_ratio:.2f}" + """
-                    </div>
-                </div>
             </div>
         </div>
 
-        <!-- 市场分析部分 -->
+        <!-- 高级市场分析部分 -->
         <div class="section">
-            <div class="section-title">💰 市场分析</div>
+            <div class="section-title">
+                🔬 高级市场分析
+                <span class="badge badge-success">多维度</span>
+            </div>
             <div class="pre-formatted">
-""" + market_content + """
+""" + advanced_content + """
+            </div>
+            <div class="data-source">
+                📊 数据来源: CoingGecko + Coinglass + Whale Alert + GDELT + Nitter (全免费)
             </div>
         </div>
 
-        <!-- 回测报告部分 -->
+        <!-- 交易策略部分 -->
         <div class="section">
-            <div class="section-title">📋 详细回测报告</div>
+            <div class="section-title">
+                🎯 综合交易策略
+                <span class="badge badge-warning">动态优化</span>
+            </div>
             <div class="pre-formatted">
-""" + backtest_content + """
+""" + strategy_content + """
             </div>
         </div>
 
         <div class="footer">
             <p>📱 此页面专为手机和电脑浏览器优化</p>
             <p>📈 交互式图表：可缩放、悬停查看详情</p>
-            <p>📊 新增：盈亏比指标（盈利/亏损）</p>
-            <p>🔧 修复：年化收益率和夏普比率计算</p>
+            <p>🔬 多维度分析：技术面 + 链上数据 + 市场情绪 + 宏观新闻 + 社交舆情</p>
+            <p>💰 数据成本: $0/月（完全免费的数据源）</p>
             <p>⚠️ 本报告仅供参考，不构成投资建议</p>
             <p>🔄 自动生成时间：""" + now_time + """</p>
         </div>
@@ -482,102 +511,63 @@ def generate_enhanced_html(reports, backtest_metrics):
             data: {
                 labels: labels,
                 datasets: [{
-                    label: '净值曲线',
+                    label: '净值',
                     data: capitalData,
                     borderColor: '#667eea',
                     backgroundColor: 'rgba(102, 126, 234, 0.1)',
                     borderWidth: 2,
                     fill: true,
                     tension: 0.4,
-                    pointRadius: 3,
-                    pointHoverRadius: 6,
-                    pointBackgroundColor: '#667eea',
-                    pointBorderColor: '#fff',
-                    pointBorderWidth: 2
+                    pointRadius: 2,
+                    pointHoverRadius: 6
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                interaction: {
-                    intersect: false,
-                    mode: 'index'
-                },
                 plugins: {
                     legend: {
-                        display: true,
-                        position: 'top',
-                        labels: {
-                            font: {
-                                size: 14,
-                                weight: 'bold'
-                            },
-                            usePointStyle: true
-                        }
+                        display: false
                     },
                     tooltip: {
-                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                        titleFont: {
-                            size: 14,
-                            weight: 'bold'
-                        },
-                        bodyFont: {
-                            size: 13
-                        },
-                        padding: 12,
-                        displayColors: true,
+                        mode: 'index',
+                        intersect: false,
                         callbacks: {
                             label: function(context) {
-                                let label = context.dataset.label || '';
-                                if (label) {
-                                    label += ': ';
-                                }
-                                if (context.parsed.y !== null) {
-                                    label += '$' + context.parsed.y.toFixed(2);
-                                }
-                                return label;
-                            }
-                        }
-                    }
-                },
-                scales: {
-                    x: {
-                        title: {
-                            display: true,
-                            text: '时间',
-                            font: {
-                                size: 12,
-                                weight: 'bold'
-                            }
-                        },
-                        grid: {
-                            display: false
-                        }
-                    },
-                    y: {
-                        title: {
-                            display: true,
-                            text: '净值 ($)',
-                            font: {
-                                size: 12,
-                                weight: 'bold'
-                            }
-                        },
-                        beginAtZero: false,
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.05)'
-                        },
-                        ticks: {
-                            callback: function(value) {
-                                return '$' + value.toLocaleString();
+                                return '$' + context.parsed.y.toLocaleString();
                             }
                         }
                     }
                 }
+            },
+            scales: {
+                x: {
+                    grid: {
+                        display: false
+                    },
+                    ticks: {
+                        maxRotation: 45,
+                        minRotation: 0,
+                        autoSkip: true,
+                        maxTicksLimit: 10
+                    }
+                },
+                y: {
+                    beginAtZero: false,
+                    grid: {
+                        color: 'rgba(0,0,0,0.05)'
+                    },
+                    ticks: {
+                        callback: function(value) {
+                            return '$' + value.toLocaleString();
+                        }
+                    }
+                }
+            }
             }
         });
 
-        console.log('BTC 交易分析报告已加载');
+        console.log('BTC 高级监控报告已加载');
         console.log('数据点数:', capitalData.length);
     </script>
 </body>
@@ -586,77 +576,68 @@ def generate_enhanced_html(reports, backtest_metrics):
 
     return html
 
+
 def save_html(html_content):
     """保存 HTML 文件"""
     with open(HTML_OUTPUT, 'w', encoding='utf-8') as f:
         f.write(html_content)
     return HTML_OUTPUT
 
-def start_simple_server(port=8081):
-    """启动简单的 HTTP 服务器"""
-    import http.server
-    import threading
-
-    class MyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
-        def end_headers(self):
-            self.send_header('Content-type', 'text/html; charset=utf-8')
-            http.server.SimpleHTTPRequestHandler.end_headers(self)
-
-        def log_message(self, format, *args):
-            pass
-
-    try:
-        server = http.server.HTTPServer(('0.0.0.0', port), MyHTTPRequestHandler)
-        server_thread = threading.Thread(target=server.serve_forever)
-        server_thread.daemon = True
-        server_thread.start()
-        return True
-    except OSError as e:
-        if "Address already in use" in str(e):
-            return True
-        return False
 
 def main():
     """主函数"""
-    print(f"[{datetime.now()}] 开始生成增强版 HTML 报告...")
+    print(f"[{datetime.now()}] 开始生成高级 HTML 报告...")
 
+    # 1. 读取交易数据
     print("  1. 读取交易数据...")
     trades = read_trades_data()
 
+    # 2. 计算回测指标
     print("  2. 计算回测指标...")
     backtest_metrics = calculate_backtest_metrics(trades)
 
-    print("  3. 读取最新报告...")
-    reports = read_latest_reports()
+    # 3. 读取高级报告
+    print("  3. 读取高级市场分析报告...")
+    reports = read_advanced_reports()
 
+    # 4. 生成 HTML
     print("  4. 生成 HTML 报告...")
-    html_content = generate_enhanced_html(reports, backtest_metrics)
+    html = generate_enhanced_html(reports, backtest_metrics)
 
+    # 5. 保存 HTML
     print("  5. 保存 HTML 文件...")
-    html_file = save_html(html_content)
-    print(f"  ✅ HTML 报告已生成: {html_file}")
+    filepath = save_html(html)
+    print(f"  ✅ HTML 报告已生成: {filepath}")
 
+    # 6. 启动 HTTP 服务器（可选）
     print("  6. 启动 HTTP 服务器...")
-    port = 8081
-    server_started = start_simple_server(port)
+    import http.server
+    import threading
 
-    if server_started:
+    PORT = 8081
+
+    def start_server():
+        server = http.server.HTTPServer(('0.0.0.0', PORT), http.server.SimpleHTTPRequestHandler)
         print(f"\n{'='*60}")
-        print(f"🚀 HTTP 服务器已启动")
+        print("🚀 HTTP 服务器已启动")
         print(f"{'='*60}")
-        print(f"📱 本地访问: http://0.0.0.0:{port}/btc_report_enhanced.html")
-        print(f"🌐 外部访问: http://47.90.150.51:{port}/btc_report_enhanced.html")
+        print(f"📱 本地访问: http://0.0.0.0:{PORT}")
+        print(f"🌐 外部访问: http://47.90.150.51:{PORT}")
         print(f"{'='*60}")
         print(f"📋 报告特性:")
+        print(f"  • 多维度市场分析（量价 + 链上 + 情绪 + 宏观 + 社交）")
+        print(f"  • 综合交易策略")
         print(f"  • 交互式图表（Chart.js）")
         print(f"  • 响应式设计")
-        print(f"  • 无需外部图片文件")
         print(f"  • 支持手机和电脑")
-        print(f"  • 修复：年化收益率、夏普比率")
-        print(f"  • 新增：盈亏比指标")
         print(f"{'='*60}\n")
+        server.serve_forever()
 
-    print(f"[{datetime.now()}] 报告生成完成！")
+    server_thread = threading.Thread(target=start_server, daemon=True)
+    server_thread.start()
+
+    print(f"\n[{datetime.now()}] 报告生成完成！")
+
 
 if __name__ == "__main__":
     main()
