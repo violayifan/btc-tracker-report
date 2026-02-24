@@ -700,6 +700,19 @@ def generate_advanced_report(
   • 交易有风险，投资需谨慎
 
 {'='*60}
+
+📊 回测统计（关键指标）
+{'-'*60}
+• 总收益率        : {backtest.get('total_return', 0):.2f}%
+• 年化收益率       : {backtest.get('annualized_return', 0):.2f}%
+• 最大回撤        : {backtest.get('max_drawdown', 0):.2f}%
+• 夏普比率        : {backtest.get('sharpe_ratio', 0):.4f}
+• 总交易次数       : {backtest.get('total_trades', 0)}
+• 胜率          : {backtest.get('win_rate', 0):.2f}%
+• 初始资金        : ${backtest.get('initial_capital', 10000):,.0f}
+• 最终资金        : ${backtest.get('final_capital', 10000):,.0f}
+
+{'='*60}
 """
 
     return report
@@ -822,20 +835,6 @@ def main():
 
     # 16. 输出报告
     print(f"\n{report}")
-
-    # 17. 输出简化的回测统计
-    print(f"\n{'='*60}")
-    print("📊 回测统计（关键指标）")
-    print(f"{'='*60}")
-    print(f"• 总收益率        : {backtest['total_return']:.2f}%")
-    print(f"• 年化收益率       : {backtest['annualized_return']:.2f}%")
-    print(f"• 最大回撤        : {backtest['max_drawdown']:.2f}%")
-    print(f"• 夏普比率        : {backtest['sharpe_ratio']:.4f}")
-    print(f"• 总交易次数       : {backtest['total_trades']}")
-    print(f"• 胜率          : {backtest['win_rate']:.2f}%")
-    print(f"• 初始资金        : ${backtest['initial_capital']:,.0f}")
-    print(f"• 最终资金        : ${backtest['final_capital']:,.0f}")
-    print(f"{'='*60}\n")
 
     print(f"[{datetime.now()}] 高级分析完成!")
 
