@@ -12,7 +12,7 @@ cd /root/.openclaw/workspace
 
 # 运行 BTC 高级市场分析
 echo "📊 [1/7] 运行 BTC 高级市场分析..."
-python3 /root/.openclaw/workspace/btc_advanced_monitor.py
+python3 /root/.openclaw/workspace/btc_advanced_monitor_v2.py
 
 if [ $? -ne 0 ]; then
     echo "❌ BTC 高级分析失败"

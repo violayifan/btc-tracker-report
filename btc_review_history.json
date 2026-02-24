@@ -1,0 +1,22 @@
+{
+  "predictions": [
+    {
+      "timestamp": "2026-02-24T20:14:58.238468",
+      "action": "LONG",
+      "entry_price": 63252,
+      "reason": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a"
+    }
+  ],
+  "accuracy": {
+    "correct": 0,
+    "total": 0,
+    "rate": 0
+  },
+  "learned_weights": {
+    "volume_price": 0.3,
+    "onchain": 0.2,
+    "sentiment": 0.2,
+    "macro": 0.15,
+    "social": 0.15
+  }
+}

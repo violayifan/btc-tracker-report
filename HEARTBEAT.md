@@ -10,7 +10,7 @@
 ```
 
 **自动执行内容**：
-1. ✅ 运行 BTC 高级市场分析 (`btc_advanced_monitor.py`)
+1. ✅ 运行 BTC 高级市场分析 (`btc_advanced_monitor_v2.py`)
 2. ✅ 量价因子分析
 3. ✅ 链上资金分析
 4. ✅ 市场情绪分析
@@ -38,17 +38,16 @@
 当收到包含 "执行 BTC 市场分析与交易策略报告" 的系统事件时：
 
 1. 运行: `python3 /root/.openclaw/workspace/btc_monitor.py`（基础分析）
-   或 `python3 /root/.openclaw/workspace/btc_advanced_monitor.py`（高级分析）
+   或 `python3 /root/.openclaw/workspace/btc_advanced_monitor_v2.py`（高级分析）
 2. 读取最新报告: `cat /root/.openclaw/workspace/reports/btc_advanced_report_*.txt | tail -1`
 3. 将报告内容发送给用户（**不包含**网址更新，因为手动触发不推送到 GitHub）
 
 ### 回测与绩效分析
 
-`btc_monitor.py` 会自动：
+`btc_advanced_monitor_v2.py` 会自动：
 - 记录所有 LONG/SHORT 交易信号（HOLD 不记录）
 - 生成回测报告（收益率、最大回撤、夏普比率等）
-- 生成净值曲线图并保存到 `/root/.openclaw/workspace/backtest_chart.png`
-- 将回测汇总附加到市场分析报告末尾
+- 将回测关键指标显示在报告末尾（避免重复）
 - 更新 `btc_trades.json` 交易记录文件
 - 推送更新到 GitHub，GitHub Pages 自动部署
 
