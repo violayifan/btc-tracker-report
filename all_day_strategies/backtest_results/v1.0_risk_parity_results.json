@@ -1,0 +1,62 @@
+[
+  {
+    "scenario": "\u4f4e\u6ce2\u52a8\u9707\u8361",
+    "total_return": 1.35,
+    "max_drawdown": 0,
+    "sharpe_ratio": 0,
+    "total_events": 1079,
+    "final_capital": 10135.181856350362,
+    "final_position_summary": {
+      "total_btc": 0.1584885579120517,
+      "total_value": 10135.181856350362,
+      "num_levels": 10,
+      "avg_price": 63948.98149035192,
+      "capital_efficiency": 101.35181856350361
+    }
+  },
+  {
+    "scenario": "\u9ad8\u6ce2\u52a8\u9707\u8361",
+    "total_return": 1.35,
+    "max_drawdown": 0,
+    "sharpe_ratio": 0,
+    "total_events": 1079,
+    "final_capital": 10135.18185635036,
+    "final_position_summary": {
+      "total_btc": 0.16517847650997164,
+      "total_value": 10135.18185635036,
+      "num_levels": 10,
+      "avg_price": 61358.97406547705,
+      "capital_efficiency": 101.3518185635036
+    }
+  },
+  {
+    "scenario": "\u7f13\u6162\u4e0a\u6da8",
+    "total_return": 1.35,
+    "max_drawdown": 0,
+    "sharpe_ratio": 0,
+    "total_events": 1079,
+    "final_capital": 10135.18185635036,
+    "final_position_summary": {
+      "total_btc": 0.15757878202669753,
+      "total_value": 10135.18185635036,
+      "num_levels": 10,
+      "avg_price": 64318.18881956597,
+      "capital_efficiency": 101.3518185635036
+    }
+  },
+  {
+    "scenario": "\u5267\u70c8\u6ce2\u52a8",
+    "total_return": 1.35,
+    "max_drawdown": 0,
+    "sharpe_ratio": 0,
+    "total_events": 1079,
+    "final_capital": 10135.181856350362,
+    "final_position_summary": {
+      "total_btc": 0.1741681837229506,
+      "total_value": 10135.181856350362,
+      "num_levels": 10,
+      "avg_price": 58191.92483784754,
+      "capital_efficiency": 101.35181856350361
+    }
+  }
+]

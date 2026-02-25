@@ -1,0 +1,47 @@
+[
+  {
+    "scenario": "\u9707\u8361\u5e02\u573a",
+    "total_return": -14.79,
+    "win_rate": 64.29,
+    "max_drawdown": 19.39,
+    "sharpe_ratio": -0.7631,
+    "total_trades": 14,
+    "final_capital": 8520.583867557645
+  },
+  {
+    "scenario": "\u9707\u8361\u4e0a\u6da8",
+    "total_return": -0.22,
+    "win_rate": 81.82,
+    "max_drawdown": 5.19,
+    "sharpe_ratio": -0.0417,
+    "total_trades": 11,
+    "final_capital": 9978.361344438848
+  },
+  {
+    "scenario": "\u9707\u8361\u4e0b\u8dcc",
+    "total_return": -11.88,
+    "win_rate": 66.67,
+    "max_drawdown": 14.98,
+    "sharpe_ratio": -0.7929,
+    "total_trades": 12,
+    "final_capital": 8812.068101612753
+  },
+  {
+    "scenario": "\u5355\u8fb9\u4e0a\u6da8",
+    "total_return": -2.77,
+    "win_rate": 77.78,
+    "max_drawdown": 6.76,
+    "sharpe_ratio": -0.41,
+    "total_trades": 9,
+    "final_capital": 9722.683458632586
+  },
+  {
+    "scenario": "\u5355\u8fb9\u4e0b\u8dcc",
+    "total_return": -12.88,
+    "win_rate": 66.67,
+    "max_drawdown": 15.07,
+    "sharpe_ratio": -0.8545,
+    "total_trades": 12,
+    "final_capital": 8712.269671696959
+  }
+]
