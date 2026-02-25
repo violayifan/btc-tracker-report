@@ -1747,5 +1747,33 @@
     "take_profit": 69817.21045890363,
     "status": "open",
     "pnl": 0
+  },
+  {
+    "timestamp": "2026-02-26T04:00:02.604994",
+    "datetime": "2026-02-26 04:00:02",
+    "action": "LONG",
+    "price": 69034.0,
+    "stop_loss": 68895.932,
+    "take_profit": 69172.068,
+    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+  },
+  {
+    "timestamp": "2026-02-26T04:00:08.784742",
+    "datetime": "2026-02-26 04:00:08",
+    "action": "LONG",
+    "price": 69053.1,
+    "stop_loss": 68914.99380000001,
+    "take_profit": 69191.2062,
+    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+  },
+  {
+    "timestamp": "2026-02-26T04:00:24.829097",
+    "action": "LONG",
+    "entry_price": 69059,
+    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "stop_loss": 68761.36464154648,
+    "take_profit": 69356.19242817035,
+    "status": "open",
+    "pnl": 0
   }
 ]
