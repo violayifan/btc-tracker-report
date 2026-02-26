@@ -155,6 +155,12 @@
       "action": "LONG",
       "entry_price": 68211,
       "reason": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a"
+    },
+    {
+      "timestamp": "2026-02-26T13:00:14.292921",
+      "action": "LONG",
+      "entry_price": 68600,
+      "reason": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a"
     }
   ],
   "accuracy": {
