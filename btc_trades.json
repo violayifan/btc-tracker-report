@@ -6,7 +6,7 @@
     "price": 68000,
     "stop_loss": null,
     "take_profit": null,
-    "strategy": "\u6d4b\u8bd5\u6570\u636e"
+    "strategy": "测试数据"
   },
   {
     "timestamp": "2026-02-20T17:58:01.167827",
@@ -15,7 +15,7 @@
     "price": 68500,
     "stop_loss": null,
     "take_profit": null,
-    "strategy": "\u6d4b\u8bd5\u6570\u636e"
+    "strategy": "测试数据"
   },
   {
     "timestamp": "2026-02-20T17:58:01.268698",
@@ -24,7 +24,7 @@
     "price": 68200,
     "stop_loss": null,
     "take_profit": null,
-    "strategy": "\u6d4b\u8bd5\u6570\u636e"
+    "strategy": "测试数据"
   },
   {
     "timestamp": "2026-02-20T17:58:01.369667",
@@ -33,7 +33,7 @@
     "price": 68000,
     "stop_loss": null,
     "take_profit": null,
-    "strategy": "\u6d4b\u8bd5\u6570\u636e"
+    "strategy": "测试数据"
   },
   {
     "timestamp": "2026-02-20T17:58:01.470826",
@@ -42,7 +42,7 @@
     "price": 68100,
     "stop_loss": null,
     "take_profit": null,
-    "strategy": "\u6d4b\u8bd5\u6570\u636e"
+    "strategy": "测试数据"
   },
   {
     "timestamp": "2026-02-20T17:58:01.571775",
@@ -51,7 +51,7 @@
     "price": 67900,
     "stop_loss": null,
     "take_profit": null,
-    "strategy": "\u6d4b\u8bd5\u6570\u636e"
+    "strategy": "测试数据"
   },
   {
     "timestamp": "2026-02-20T18:01:25.476356",
@@ -60,7 +60,7 @@
     "price": 68186,
     "stop_loss": 68105.67,
     "take_profit": 68346.65,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-20T18:05:18.103700",
@@ -69,7 +69,7 @@
     "price": 68157,
     "stop_loss": 68077.11,
     "take_profit": 68316.78,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-20T20:03:18.554541",
@@ -78,7 +78,7 @@
     "price": 67327,
     "stop_loss": 67184.48,
     "take_profit": 67612.04,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-20T20:12:24.777988",
@@ -87,7 +87,7 @@
     "price": 67422,
     "stop_loss": 67276.29,
     "take_profit": 67713.42,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-20T21:04:47.892550",
@@ -96,7 +96,7 @@
     "price": 67158,
     "stop_loss": 67058.94,
     "take_profit": 67356.12,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-21T11:52:35.918151",
@@ -105,7 +105,7 @@
     "price": 67605,
     "stop_loss": 67530.14,
     "take_profit": 67754.73,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-21T11:53:28.776851",
@@ -114,7 +114,7 @@
     "price": 67605,
     "stop_loss": 67530.21,
     "take_profit": 67754.58,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-21T11:55:30.773793",
@@ -123,7 +123,7 @@
     "price": 67612,
     "stop_loss": 67537.38,
     "take_profit": 67761.23,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-21T15:40:17.889742",
@@ -132,7 +132,7 @@
     "price": 67845,
     "stop_loss": 67823.39,
     "take_profit": 67888.22,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-21T16:00:03.424577",
@@ -141,7 +141,7 @@
     "price": 67832,
     "stop_loss": 67810.46,
     "take_profit": 67875.09,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-21T16:30:35.295345",
@@ -150,7 +150,7 @@
     "price": 67955,
     "stop_loss": 67926.42,
     "take_profit": 68012.16,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-21T17:00:04.067993",
@@ -159,7 +159,7 @@
     "price": 68040,
     "stop_loss": 68003.84,
     "take_profit": 68112.32,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-21T17:01:22.991735",
@@ -168,7 +168,7 @@
     "price": 68033,
     "stop_loss": 67996.54,
     "take_profit": 68105.91,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-21T19:04:19.347644",
@@ -177,7 +177,7 @@
     "price": 68208,
     "stop_loss": 68177.93,
     "take_profit": 68268.15,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-21T20:00:03.704928",
@@ -186,7 +186,7 @@
     "price": 68074,
     "stop_loss": 68050.08,
     "take_profit": 68121.84,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-21T20:00:34.137221",
@@ -195,7 +195,7 @@
     "price": 68074,
     "stop_loss": 68050.14,
     "take_profit": 68121.72,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-21T21:00:02.989171",
@@ -204,7 +204,7 @@
     "price": 68175,
     "stop_loss": 68126.91,
     "take_profit": 68271.19,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-21T21:00:37.363698",
@@ -213,7 +213,7 @@
     "price": 68175,
     "stop_loss": 68126.91,
     "take_profit": 68271.19,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-21T22:00:02.704460",
@@ -222,7 +222,7 @@
     "price": 68219,
     "stop_loss": 68172.77,
     "take_profit": 68311.45,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-21T22:04:19.919582",
@@ -231,7 +231,7 @@
     "price": 68203,
     "stop_loss": 68154.7,
     "take_profit": 68299.61,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-21T22:46:05.520854",
@@ -240,7 +240,7 @@
     "price": 68516,
     "stop_loss": 68450.22,
     "take_profit": 68647.55,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-21T22:52:14.838600",
@@ -249,7 +249,7 @@
     "price": 68502,
     "stop_loss": 68431.57,
     "take_profit": 68642.85,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-21T23:57:59.749927",
@@ -258,7 +258,7 @@
     "price": 68605,
     "stop_loss": 68542.68,
     "take_profit": 68729.65,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-22T00:00:03.001160",
@@ -267,7 +267,7 @@
     "price": 68626,
     "stop_loss": 68563.29,
     "take_profit": 68751.43,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-22T00:00:54.851486",
@@ -276,7 +276,7 @@
     "price": 68626,
     "stop_loss": 68563.47,
     "take_profit": 68751.06,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-22T00:27:02.871054",
@@ -285,7 +285,7 @@
     "price": 68121,
     "stop_loss": 68058.28,
     "take_profit": 68246.45,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-22T00:28:44.505229",
@@ -294,7 +294,7 @@
     "price": 68167,
     "stop_loss": 68104.97,
     "take_profit": 68291.06,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-22T01:03:01.244488",
@@ -303,7 +303,7 @@
     "price": 68324,
     "stop_loss": 68255.86,
     "take_profit": 68460.28,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-22T02:00:04.532407",
@@ -312,7 +312,7 @@
     "price": 68395,
     "stop_loss": 68360.27,
     "take_profit": 68464.45,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-22T02:00:27.217927",
@@ -321,7 +321,7 @@
     "price": 68395,
     "stop_loss": 68360.62,
     "take_profit": 68463.77,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-22T03:00:02.609785",
@@ -330,7 +330,7 @@
     "price": 68563,
     "stop_loss": null,
     "take_profit": null,
-    "strategy": "\u7b49\u5f85\u56de\u8c03\u540e\u518d\u8003\u8651\u505a\u591a"
+    "strategy": "等待回调后再考虑做多"
   },
   {
     "timestamp": "2026-02-22T03:00:25.594041",
@@ -339,7 +339,7 @@
     "price": 68563,
     "stop_loss": 68508.93,
     "take_profit": 68671.13,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-22T06:00:02.787493",
@@ -348,7 +348,7 @@
     "price": 68346,
     "stop_loss": 68295.45,
     "take_profit": 68447.1,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-22T06:00:07.514895",
@@ -357,7 +357,7 @@
     "price": 68346,
     "stop_loss": 68295.45,
     "take_profit": 68447.1,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-22T07:00:02.754256",
@@ -366,7 +366,7 @@
     "price": 67969,
     "stop_loss": 67921.88,
     "take_profit": 68063.24,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-22T07:00:08.090162",
@@ -375,7 +375,7 @@
     "price": 67969,
     "stop_loss": 67919.66,
     "take_profit": 68067.67,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-22T08:00:02.834043",
@@ -384,7 +384,7 @@
     "price": 67996,
     "stop_loss": 67931.07,
     "take_profit": 68125.87,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-22T08:00:10.492949",
@@ -393,7 +393,7 @@
     "price": 67996,
     "stop_loss": 67931.07,
     "take_profit": 68125.87,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-22T09:00:04.814081",
@@ -402,7 +402,7 @@
     "price": 67892,
     "stop_loss": 67851.27,
     "take_profit": 67973.46,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-22T09:00:09.523909",
@@ -411,7 +411,7 @@
     "price": 67892,
     "stop_loss": 67851.27,
     "take_profit": 67973.46,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-22T10:00:03.379199",
@@ -420,7 +420,7 @@
     "price": 68111,
     "stop_loss": null,
     "take_profit": null,
-    "strategy": "\u7b49\u5f85\u56de\u8c03\u540e\u518d\u8003\u8651\u505a\u591a"
+    "strategy": "等待回调后再考虑做多"
   },
   {
     "timestamp": "2026-02-22T10:00:09.152008",
@@ -429,7 +429,7 @@
     "price": 68111,
     "stop_loss": null,
     "take_profit": null,
-    "strategy": "\u7b49\u5f85\u56de\u8c03\u540e\u518d\u8003\u8651\u505a\u591a"
+    "strategy": "等待回调后再考虑做多"
   },
   {
     "timestamp": "2026-02-22T12:00:02.948438",
@@ -438,7 +438,7 @@
     "price": 68005,
     "stop_loss": 67964.96,
     "take_profit": 68085.08,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-22T12:00:02.985778",
@@ -447,7 +447,7 @@
     "price": 68005,
     "stop_loss": 67964.96,
     "take_profit": 68085.08,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-22T12:01:11.301909",
@@ -456,7 +456,7 @@
     "price": 68014,
     "stop_loss": 67973.96,
     "take_profit": 68094.09,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-22T14:03:22.825013",
@@ -465,7 +465,7 @@
     "price": 67982,
     "stop_loss": 67958.75,
     "take_profit": 68028.49,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-22T18:00:03.280215",
@@ -474,7 +474,7 @@
     "price": 68049,
     "stop_loss": 68029.3,
     "take_profit": 68088.41,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-22T19:00:04.772138",
@@ -483,7 +483,7 @@
     "price": 68131.6,
     "stop_loss": 67995.3368,
     "take_profit": 68267.8632,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-22T19:00:23.263197",
@@ -492,7 +492,7 @@
     "price": 68131.6,
     "stop_loss": 67995.3368,
     "take_profit": 68267.8632,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-22T21:00:04.971267",
@@ -501,7 +501,7 @@
     "price": 67938.1,
     "stop_loss": 67802.2238,
     "take_profit": 68073.9762,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-22T21:00:27.436453",
@@ -510,7 +510,7 @@
     "price": 67956.1,
     "stop_loss": 67820.1878,
     "take_profit": 68092.01220000001,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-22T22:09:34.408166",
@@ -519,7 +519,7 @@
     "price": 67572.0,
     "stop_loss": 67031.424,
     "take_profit": 67774.71599999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-22T23:00:03.418747",
@@ -528,7 +528,7 @@
     "price": 67443.9,
     "stop_loss": 67309.0122,
     "take_profit": 67578.78779999999,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-22T23:00:22.429004",
@@ -537,7 +537,7 @@
     "price": 67446.9,
     "stop_loss": 66907.32479999999,
     "take_profit": 67649.24069999998,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-23T00:00:02.598294",
@@ -546,7 +546,7 @@
     "price": 67684.1,
     "stop_loss": 67548.73180000001,
     "take_profit": 67819.4682,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-23T01:00:02.644246",
@@ -555,7 +555,7 @@
     "price": 67630.7,
     "stop_loss": 67089.6544,
     "take_profit": 67833.5921,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-23T01:00:32.448510",
@@ -564,7 +564,7 @@
     "price": 67630.7,
     "stop_loss": 67495.4386,
     "take_profit": 67765.9614,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-23T02:00:03.556478",
@@ -573,7 +573,7 @@
     "price": 67369.5,
     "stop_loss": 67234.761,
     "take_profit": 67504.239,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-23T03:00:02.606440",
@@ -582,7 +582,7 @@
     "price": 67417.8,
     "stop_loss": 66878.45760000001,
     "take_profit": 67620.05339999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-23T04:00:03.285960",
@@ -591,7 +591,7 @@
     "price": 67427.7,
     "stop_loss": 67292.8446,
     "take_profit": 67562.5554,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-23T04:00:11.108088",
@@ -600,7 +600,7 @@
     "price": 67427.7,
     "stop_loss": 67292.8446,
     "take_profit": 67562.5554,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-23T05:00:03.101289",
@@ -609,7 +609,7 @@
     "price": 67404.1,
     "stop_loss": 67269.2918,
     "take_profit": 67538.9082,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-23T05:00:07.737817",
@@ -618,7 +618,7 @@
     "price": 67416.9,
     "stop_loss": 67282.0662,
     "take_profit": 67551.73379999999,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-23T06:00:05.608625",
@@ -627,7 +627,7 @@
     "price": 67608.1,
     "stop_loss": 67067.23520000001,
     "take_profit": 67810.9243,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-23T07:00:02.871348",
@@ -636,7 +636,7 @@
     "price": 67671.9,
     "stop_loss": 67130.5248,
     "take_profit": 67874.91569999998,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-23T07:00:45.907800",
@@ -645,7 +645,7 @@
     "price": 67679.6,
     "stop_loss": 67138.16320000001,
     "take_profit": 67882.6388,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-23T08:00:03.369953",
@@ -654,7 +654,7 @@
     "price": 67651.7,
     "stop_loss": 67110.4864,
     "take_profit": 67854.65509999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-23T08:00:13.094980",
@@ -663,7 +663,7 @@
     "price": 67640.8,
     "stop_loss": 67099.67360000001,
     "take_profit": 67843.7224,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-23T09:00:12.866809",
@@ -672,7 +672,7 @@
     "price": 66680.0,
     "stop_loss": 66546.64,
     "take_profit": 66813.36,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-23T10:00:02.500862",
@@ -681,7 +681,7 @@
     "price": 64427.6,
     "stop_loss": 63912.1792,
     "take_profit": 64620.88279999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-23T11:00:03.451550",
@@ -690,7 +690,7 @@
     "price": 64788.9,
     "stop_loss": 64659.3222,
     "take_profit": 64918.4778,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-23T11:00:08.357879",
@@ -699,7 +699,7 @@
     "price": 64776.3,
     "stop_loss": 64258.0896,
     "take_profit": 64970.628899999996,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-23T13:00:03.414145",
@@ -708,7 +708,7 @@
     "price": 64812.8,
     "stop_loss": 64683.1744,
     "take_profit": 64942.4256,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-23T13:00:26.687195",
@@ -717,7 +717,7 @@
     "price": 64844.9,
     "stop_loss": 64715.2102,
     "take_profit": 64974.5898,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-23T14:00:02.613500",
@@ -726,7 +726,7 @@
     "price": 65068.6,
     "stop_loss": 64938.4628,
     "take_profit": 65198.737199999996,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-23T14:00:26.268649",
@@ -735,7 +735,7 @@
     "price": 65039.8,
     "stop_loss": 64519.4816,
     "take_profit": 65234.9194,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-23T15:00:26.553705",
@@ -744,7 +744,7 @@
     "price": 65759.5,
     "stop_loss": 65233.424,
     "take_profit": 65956.77849999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-23T16:00:03.165059",
@@ -753,7 +753,7 @@
     "price": 65952.7,
     "stop_loss": 65425.0784,
     "take_profit": 66150.5581,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-23T16:00:18.011370",
@@ -762,7 +762,7 @@
     "price": 65927.0,
     "stop_loss": 65795.146,
     "take_profit": 66058.854,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-23T17:00:03.533811",
@@ -771,7 +771,7 @@
     "price": 65683.7,
     "stop_loss": 65552.3326,
     "take_profit": 65815.0674,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-23T17:00:24.565142",
@@ -780,7 +780,7 @@
     "price": 65721.6,
     "stop_loss": 65590.15680000001,
     "take_profit": 65853.0432,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-23T18:00:24.963071",
@@ -789,7 +789,7 @@
     "price": 66363.3,
     "stop_loss": 65832.3936,
     "take_profit": 66562.3899,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-23T19:00:02.884299",
@@ -798,7 +798,7 @@
     "price": 66328.8,
     "stop_loss": 65798.16960000001,
     "take_profit": 66527.7864,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-23T19:00:20.311074",
@@ -807,7 +807,7 @@
     "price": 66323.2,
     "stop_loss": 66190.5536,
     "take_profit": 66455.8464,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-23T20:00:03.115367",
@@ -816,7 +816,7 @@
     "price": 66210.1,
     "stop_loss": 65680.4192,
     "take_profit": 66408.7303,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-23T20:00:15.253456",
@@ -825,7 +825,7 @@
     "price": 66185.9,
     "stop_loss": 65656.41279999999,
     "take_profit": 66384.45769999998,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-23T21:00:03.989137",
@@ -834,7 +834,7 @@
     "price": 66295.3,
     "stop_loss": 65764.9376,
     "take_profit": 66494.1859,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-23T21:00:37.183290",
@@ -843,7 +843,7 @@
     "price": 66269.9,
     "stop_loss": 66137.3602,
     "take_profit": 66402.4398,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-23T22:00:23.801663",
@@ -852,7 +852,7 @@
     "price": 66149.0,
     "stop_loss": 66016.702,
     "take_profit": 66281.298,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-24T01:00:03.471656",
@@ -861,7 +861,7 @@
     "price": 65367.1,
     "stop_loss": 64844.163199999995,
     "take_profit": 65563.20129999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T01:00:14.829108",
@@ -870,7 +870,7 @@
     "price": 65381.5,
     "stop_loss": 64858.448,
     "take_profit": 65577.6445,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T02:00:11.690464",
@@ -879,7 +879,7 @@
     "price": 64742.5,
     "stop_loss": 64224.56,
     "take_profit": 64936.72749999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T03:00:03.412955",
@@ -888,7 +888,7 @@
     "price": 64644.9,
     "stop_loss": 64515.6102,
     "take_profit": 64774.1898,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-24T03:00:11.909542",
@@ -897,7 +897,7 @@
     "price": 64666.0,
     "stop_loss": 64148.672,
     "take_profit": 64859.99799999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T04:00:02.587729",
@@ -906,7 +906,7 @@
     "price": 64290.3,
     "stop_loss": 64161.7194,
     "take_profit": 64418.880600000004,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-24T04:00:06.556093",
@@ -915,7 +915,7 @@
     "price": 64293.4,
     "stop_loss": 63779.0528,
     "take_profit": 64486.280199999994,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T05:00:03.105601",
@@ -924,7 +924,7 @@
     "price": 64475.8,
     "stop_loss": 64346.8484,
     "take_profit": 64604.7516,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-24T05:00:17.445063",
@@ -933,7 +933,7 @@
     "price": 64560.9,
     "stop_loss": 64431.7782,
     "take_profit": 64690.0218,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-24T06:00:03.349676",
@@ -942,7 +942,7 @@
     "price": 64580.1,
     "stop_loss": 64450.9398,
     "take_profit": 64709.2602,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-24T07:00:03.414226",
@@ -951,7 +951,7 @@
     "price": 64725.5,
     "stop_loss": 64207.695999999996,
     "take_profit": 64919.676499999994,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T08:00:02.811940",
@@ -960,7 +960,7 @@
     "price": 64656.0,
     "stop_loss": 64526.688,
     "take_profit": 64785.312,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-24T08:00:21.177980",
@@ -969,7 +969,7 @@
     "price": 64680.5,
     "stop_loss": 64551.139,
     "take_profit": 64809.861,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-24T09:00:02.977326",
@@ -978,7 +978,7 @@
     "price": 64935.0,
     "stop_loss": 64415.52,
     "take_profit": 65129.80499999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T10:00:10.827876",
@@ -987,7 +987,7 @@
     "price": 64145.6,
     "stop_loss": 64017.3088,
     "take_profit": 64273.8912,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-24T11:00:03.038075",
@@ -996,7 +996,7 @@
     "price": 64109.0,
     "stop_loss": 63980.782,
     "take_profit": 64237.218,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-24T11:00:09.361083",
@@ -1005,7 +1005,7 @@
     "price": 64055.0,
     "stop_loss": 63542.56,
     "take_profit": 64247.16499999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T12:00:03.081643",
@@ -1014,7 +1014,7 @@
     "price": 63595.4,
     "stop_loss": 63086.6368,
     "take_profit": 63786.1862,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T13:00:03.551989",
@@ -1023,7 +1023,7 @@
     "price": 63342.9,
     "stop_loss": 63216.2142,
     "take_profit": 63469.5858,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-24T13:00:17.386445",
@@ -1032,7 +1032,7 @@
     "price": 63342.9,
     "stop_loss": 62836.156800000004,
     "take_profit": 63532.9287,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T14:00:03.465515",
@@ -1041,7 +1041,7 @@
     "price": 63096.4,
     "stop_loss": 62591.6288,
     "take_profit": 63285.68919999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T14:00:09.289422",
@@ -1050,7 +1050,7 @@
     "price": 63096.4,
     "stop_loss": 62970.207200000004,
     "take_profit": 63222.5928,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-24T15:00:03.202575",
@@ -1059,7 +1059,7 @@
     "price": 63078.7,
     "stop_loss": 62952.54259999999,
     "take_profit": 63204.8574,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-24T16:00:03.445353",
@@ -1068,7 +1068,7 @@
     "price": 63195.7,
     "stop_loss": 62690.134399999995,
     "take_profit": 63385.28709999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T17:00:02.684567",
@@ -1077,7 +1077,7 @@
     "price": 63392.1,
     "stop_loss": 62884.9632,
     "take_profit": 63582.27629999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T17:00:23.083910",
@@ -1086,7 +1086,7 @@
     "price": 63396.4,
     "stop_loss": 62889.228800000004,
     "take_profit": 63586.589199999995,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T18:00:03.336326",
@@ -1095,7 +1095,7 @@
     "price": 63244.7,
     "stop_loss": 62738.742399999996,
     "take_profit": 63434.43409999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T18:00:29.162772",
@@ -1104,7 +1104,7 @@
     "price": 63235.5,
     "stop_loss": 63109.029,
     "take_profit": 63361.971,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-24T19:00:02.986066",
@@ -1113,7 +1113,7 @@
     "price": 63289.3,
     "stop_loss": 62782.9856,
     "take_profit": 63479.16789999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T19:00:17.137577",
@@ -1122,7 +1122,7 @@
     "price": 63283.0,
     "stop_loss": 62776.736,
     "take_profit": 63472.848999999995,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T20:00:02.690812",
@@ -1131,7 +1131,7 @@
     "price": 63228.7,
     "stop_loss": 63102.2426,
     "take_profit": 63355.1574,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-24T20:00:43.486811",
@@ -1140,13 +1140,13 @@
     "price": 63193.6,
     "stop_loss": 62688.0512,
     "take_profit": 63383.180799999995,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T20:14:58.235489",
     "action": "LONG",
     "entry_price": 63252,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 63196.24445590589,
     "take_profit": 63307.525622307716,
     "status": "open",
@@ -1156,7 +1156,7 @@
     "timestamp": "2026-02-24T20:28:57.835939",
     "action": "LONG",
     "entry_price": 63296,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 63237.13619647815,
     "take_profit": 63355.08463146821,
     "status": "open",
@@ -1166,7 +1166,7 @@
     "timestamp": "2026-02-24T20:29:10.105114",
     "action": "LONG",
     "entry_price": 63296,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 63235.63754496488,
     "take_profit": 63353.283060440735,
     "status": "open",
@@ -1179,7 +1179,7 @@
     "price": 62970.5,
     "stop_loss": 62466.736,
     "take_profit": 63159.411499999995,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T21:00:54.920608",
@@ -1188,7 +1188,7 @@
     "price": 63000.0,
     "stop_loss": 62874.0,
     "take_profit": 63126.0,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-24T22:00:02.826872",
@@ -1197,7 +1197,7 @@
     "price": 62877.7,
     "stop_loss": 62751.944599999995,
     "take_profit": 63003.4554,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-24T22:00:56.076435",
@@ -1206,7 +1206,7 @@
     "price": 62854.1,
     "stop_loss": 62351.267199999995,
     "take_profit": 63042.66229999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-24T23:00:03.186961",
@@ -1215,13 +1215,13 @@
     "price": 63458.3,
     "stop_loss": 63331.383400000006,
     "take_profit": 63585.2166,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-24T23:00:08.420489",
     "action": "LONG",
     "entry_price": 63476,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 63214.69668681308,
     "take_profit": 63772.830889091514,
     "status": "open",
@@ -1234,7 +1234,7 @@
     "price": 63375.7,
     "stop_loss": 62868.69439999999,
     "take_profit": 63565.82709999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-25T00:00:02.789391",
@@ -1243,13 +1243,13 @@
     "price": 63965.7,
     "stop_loss": 63837.768599999996,
     "take_profit": 64093.6314,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-25T00:00:13.083637",
     "action": "LONG",
     "entry_price": 63964,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 63488.55592413948,
     "take_profit": 64439.551402436526,
     "status": "open",
@@ -1262,7 +1262,7 @@
     "price": 64001.9,
     "stop_loss": 63489.8848,
     "take_profit": 64193.905699999996,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-25T01:00:03.695055",
@@ -1271,13 +1271,13 @@
     "price": 64277.1,
     "stop_loss": 63762.8832,
     "take_profit": 64469.93129999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-25T01:00:20.631012",
     "action": "LONG",
     "entry_price": 64202,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 63929.97285971187,
     "take_profit": 64464.43720025406,
     "status": "open",
@@ -1290,7 +1290,7 @@
     "price": 64192.0,
     "stop_loss": 63678.464,
     "take_profit": 64384.575999999994,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-25T02:01:19.625530",
@@ -1299,13 +1299,13 @@
     "price": 64273.6,
     "stop_loss": 63759.411199999995,
     "take_profit": 64466.42079999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-25T03:00:21.276003",
     "action": "LONG",
     "entry_price": 64446,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 64309.765019494465,
     "take_profit": 64582.49665782929,
     "status": "open",
@@ -1318,7 +1318,7 @@
     "price": 64440.6,
     "stop_loss": 64311.718799999995,
     "take_profit": 64569.4812,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-25T04:00:02.749242",
@@ -1327,13 +1327,13 @@
     "price": 64429.4,
     "stop_loss": 64300.5412,
     "take_profit": 64558.2588,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-25T04:00:18.281744",
     "action": "LONG",
     "entry_price": 64446,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 64321.89614675019,
     "take_profit": 64593.158404690425,
     "status": "open",
@@ -1346,7 +1346,7 @@
     "price": 64458.3,
     "stop_loss": 64329.383400000006,
     "take_profit": 64587.2166,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-25T05:00:03.329308",
@@ -1355,7 +1355,7 @@
     "price": 64453.2,
     "stop_loss": 63937.5744,
     "take_profit": 64646.55959999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-25T06:00:03.523838",
@@ -1364,7 +1364,7 @@
     "price": 64046.9,
     "stop_loss": 63918.8062,
     "take_profit": 64174.993800000004,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-25T06:01:15.923821",
@@ -1373,7 +1373,7 @@
     "price": 63990.5,
     "stop_loss": 63478.576,
     "take_profit": 64182.47149999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-25T07:00:03.049616",
@@ -1382,7 +1382,7 @@
     "price": 64095.1,
     "stop_loss": 63966.9098,
     "take_profit": 64223.290199999996,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-25T08:00:03.487308",
@@ -1391,7 +1391,7 @@
     "price": 64061.4,
     "stop_loss": 63548.9088,
     "take_profit": 64253.5842,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-25T08:01:17.434500",
@@ -1400,7 +1400,7 @@
     "price": 64071.6,
     "stop_loss": 63943.4568,
     "take_profit": 64199.7432,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-25T09:00:03.296220",
@@ -1409,13 +1409,13 @@
     "price": 64227.6,
     "stop_loss": 64099.1448,
     "take_profit": 64356.055199999995,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-25T09:00:48.312208",
     "action": "LONG",
     "entry_price": 64233,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 64126.92644426758,
     "take_profit": 64347.40275539957,
     "status": "open",
@@ -1428,7 +1428,7 @@
     "price": 64181.0,
     "stop_loss": 64052.638,
     "take_profit": 64309.362,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-25T10:00:02.602611",
@@ -1437,13 +1437,13 @@
     "price": 65893.8,
     "stop_loss": 65366.649600000004,
     "take_profit": 66091.48139999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-25T10:00:20.162592",
     "action": "LONG",
     "entry_price": 65924,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 64846.989659687904,
     "take_profit": 67013.82430024985,
     "status": "open",
@@ -1456,7 +1456,7 @@
     "price": 66073.6,
     "stop_loss": 65941.4528,
     "take_profit": 66205.74720000001,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-25T11:00:03.350388",
@@ -1465,13 +1465,13 @@
     "price": 65898.2,
     "stop_loss": 65766.40359999999,
     "take_profit": 66029.9964,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-25T11:00:26.041007",
     "action": "LONG",
     "entry_price": 65900,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 65329.17170872675,
     "take_profit": 66455.03486015613,
     "status": "open",
@@ -1484,7 +1484,7 @@
     "price": 65393.6,
     "stop_loss": 65262.8128,
     "take_profit": 65524.3872,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-25T12:01:02.306814",
@@ -1493,7 +1493,7 @@
     "price": 65374.7,
     "stop_loss": 64851.702399999995,
     "take_profit": 65570.82409999998,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-25T13:00:02.780414",
@@ -1502,7 +1502,7 @@
     "price": 65458.0,
     "stop_loss": 65327.084,
     "take_profit": 65588.916,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-25T13:01:03.138224",
@@ -1511,7 +1511,7 @@
     "price": 65464.5,
     "stop_loss": 65333.570999999996,
     "take_profit": 65595.429,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-25T14:00:03.305296",
@@ -1520,7 +1520,7 @@
     "price": 64887.2,
     "stop_loss": 64757.425599999995,
     "take_profit": 65016.9744,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-25T14:01:28.005276",
@@ -1529,7 +1529,7 @@
     "price": 64926.2,
     "stop_loss": 64406.7904,
     "take_profit": 65120.97859999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-25T15:00:02.681259",
@@ -1538,7 +1538,7 @@
     "price": 64893.1,
     "stop_loss": 64373.9552,
     "take_profit": 65087.779299999995,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-25T15:01:09.477618",
@@ -1547,7 +1547,7 @@
     "price": 64929.0,
     "stop_loss": 64799.142,
     "take_profit": 65058.858,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-25T16:00:02.703957",
@@ -1556,13 +1556,13 @@
     "price": 65027.7,
     "stop_loss": 64897.6446,
     "take_profit": 65157.755399999995,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-25T16:00:12.904742",
     "action": "LONG",
     "entry_price": 65016,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 64924.32185138323,
     "take_profit": 65106.26864679793,
     "status": "open",
@@ -1575,7 +1575,7 @@
     "price": 65030.9,
     "stop_loss": 64510.6528,
     "take_profit": 65225.992699999995,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-25T17:00:03.303930",
@@ -1584,7 +1584,7 @@
     "price": 65521.0,
     "stop_loss": 64996.832,
     "take_profit": 65717.563,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-25T17:00:23.566219",
@@ -1593,13 +1593,13 @@
     "price": 65525.9,
     "stop_loss": 65394.8482,
     "take_profit": 65656.9518,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-25T17:00:38.133865",
     "action": "LONG",
     "entry_price": 65510,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 65273.60724959682,
     "take_profit": 65734.23805567494,
     "status": "open",
@@ -1609,7 +1609,7 @@
     "timestamp": "2026-02-25T18:00:18.675494",
     "action": "LONG",
     "entry_price": 65546,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 65312.47047278737,
     "take_profit": 65778.86725546251,
     "status": "open",
@@ -1622,7 +1622,7 @@
     "price": 65397.6,
     "stop_loss": 64874.4192,
     "take_profit": 65593.7928,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-25T20:00:02.600202",
@@ -1631,7 +1631,7 @@
     "price": 65419.0,
     "stop_loss": 64895.648,
     "take_profit": 65615.257,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-25T21:00:02.876307",
@@ -1640,13 +1640,13 @@
     "price": 66074.3,
     "stop_loss": 65942.1514,
     "take_profit": 66206.4486,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-25T21:00:15.800301",
     "action": "LONG",
     "entry_price": 66032,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 65716.71041774929,
     "take_profit": 66347.51363624995,
     "status": "open",
@@ -1659,13 +1659,13 @@
     "price": 66248.3,
     "stop_loss": 65718.31360000001,
     "take_profit": 66447.0449,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-25T22:00:44.215129",
     "action": "LONG",
     "entry_price": 66243,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 65885.28991084108,
     "take_profit": 66603.98526165153,
     "status": "open",
@@ -1678,13 +1678,13 @@
     "price": 66984.1,
     "stop_loss": 66448.22720000001,
     "take_profit": 67185.0523,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-25T23:00:19.549773",
     "action": "LONG",
     "entry_price": 66902,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 66601.35721773947,
     "take_profit": 67142.02732626216,
     "status": "open",
@@ -1697,13 +1697,13 @@
     "price": 67413.9,
     "stop_loss": 66874.5888,
     "take_profit": 67616.1417,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-26T00:00:11.449943",
     "action": "LONG",
     "entry_price": 67313,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 66852.19238404311,
     "take_profit": 67761.84147031822,
     "status": "open",
@@ -1713,7 +1713,7 @@
     "timestamp": "2026-02-26T01:00:26.616073",
     "action": "LONG",
     "entry_price": 68248,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 67707.50283310887,
     "take_profit": 68728.74012672961,
     "status": "open",
@@ -1726,13 +1726,13 @@
     "price": 68677.8,
     "stop_loss": 68128.3776,
     "take_profit": 68883.83339999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-26T02:00:20.863548",
     "action": "LONG",
     "entry_price": 68644,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 68163.53304802996,
     "take_profit": 69101.63620839329,
     "status": "open",
@@ -1742,7 +1742,7 @@
     "timestamp": "2026-02-26T03:00:06.734526",
     "action": "LONG",
     "entry_price": 69350,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 68890.64730197369,
     "take_profit": 69817.21045890363,
     "status": "open",
@@ -1755,7 +1755,7 @@
     "price": 69034.0,
     "stop_loss": 68895.932,
     "take_profit": 69172.068,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-26T04:00:08.784742",
@@ -1764,13 +1764,13 @@
     "price": 69053.1,
     "stop_loss": 68914.99380000001,
     "take_profit": 69191.2062,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-26T04:00:24.829097",
     "action": "LONG",
     "entry_price": 69059,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 68761.36464154648,
     "take_profit": 69356.19242817035,
     "status": "open",
@@ -1783,13 +1783,13 @@
     "price": 69149.4,
     "stop_loss": 68596.20479999999,
     "take_profit": 69356.8482,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-26T05:00:09.623648",
     "action": "LONG",
     "entry_price": 69183,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 69017.06190574539,
     "take_profit": 69391.64808130727,
     "status": "open",
@@ -1802,7 +1802,7 @@
     "price": 69109.3,
     "stop_loss": 68971.08140000001,
     "take_profit": 69247.5186,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-26T06:00:03.311371",
@@ -1811,7 +1811,7 @@
     "price": 68932.7,
     "stop_loss": 68381.2384,
     "take_profit": 69139.49809999998,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-26T06:00:24.408726",
@@ -1820,7 +1820,7 @@
     "price": 69013.0,
     "stop_loss": 68460.896,
     "take_profit": 69220.03899999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-26T07:00:02.927155",
@@ -1829,7 +1829,7 @@
     "price": 68421.4,
     "stop_loss": 68284.5572,
     "take_profit": 68558.24279999999,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-26T07:00:18.664492",
@@ -1838,7 +1838,7 @@
     "price": 68411.7,
     "stop_loss": 68274.8766,
     "take_profit": 68548.52339999999,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-26T08:00:30.280952",
@@ -1847,13 +1847,13 @@
     "price": 67929.8,
     "stop_loss": 67793.9404,
     "take_profit": 68065.6596,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-26T09:00:16.639671",
     "action": "LONG",
     "entry_price": 68350,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 68072.52466247042,
     "take_profit": 68627.62990226754,
     "status": "open",
@@ -1866,13 +1866,13 @@
     "price": 68245.6,
     "stop_loss": 67699.6352,
     "take_profit": 68450.3368,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-26T10:00:24.664043",
     "action": "LONG",
     "entry_price": 68275,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 68076.8120917628,
     "take_profit": 68474.09610803098,
     "status": "open",
@@ -1885,7 +1885,7 @@
     "price": 68024.7,
     "stop_loss": 67480.5024,
     "take_profit": 68228.7741,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-26T11:00:02.834708",
@@ -1894,7 +1894,7 @@
     "price": 68263.2,
     "stop_loss": 68126.6736,
     "take_profit": 68399.7264,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-26T11:00:31.290251",
@@ -1903,7 +1903,7 @@
     "price": 68267.3,
     "stop_loss": 68130.7654,
     "take_profit": 68403.8346,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-26T12:00:02.350686",
@@ -1912,13 +1912,13 @@
     "price": 68222.6,
     "stop_loss": 68086.1548,
     "take_profit": 68359.04520000001,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-26T12:00:19.182742",
     "action": "LONG",
     "entry_price": 68211,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 68071.63194603274,
     "take_profit": 68349.98824374138,
     "status": "open",
@@ -1931,13 +1931,13 @@
     "price": 68221.0,
     "stop_loss": 68084.558,
     "take_profit": 68357.442,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-26T13:00:14.288722",
     "action": "LONG",
     "entry_price": 68600,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 68330.65643458214,
     "take_profit": 68870.1870486011,
     "status": "open",
@@ -1950,7 +1950,7 @@
     "price": 68542.3,
     "stop_loss": 67993.96160000001,
     "take_profit": 68747.92689999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-26T14:00:03.382303",
@@ -1959,13 +1959,13 @@
     "price": 68436.6,
     "stop_loss": 68299.7268,
     "take_profit": 68573.47320000001,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-26T14:00:23.450245",
     "action": "LONG",
     "entry_price": 68425,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 68245.29356428087,
     "take_profit": 68604.26709279732,
     "status": "open",
@@ -1978,7 +1978,7 @@
     "price": 68419.1,
     "stop_loss": 68282.26180000001,
     "take_profit": 68555.9382,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-26T15:00:22.164248",
@@ -1987,7 +1987,7 @@
     "price": 68177.2,
     "stop_loss": 67631.7824,
     "take_profit": 68381.73159999998,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-26T16:00:02.951066",
@@ -1996,7 +1996,7 @@
     "price": 67848.3,
     "stop_loss": 67305.5136,
     "take_profit": 68051.8449,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-26T16:00:26.667282",
@@ -2005,7 +2005,7 @@
     "price": 67858.0,
     "stop_loss": 67315.136,
     "take_profit": 68061.574,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-26T17:00:03.283233",
@@ -2014,7 +2014,7 @@
     "price": 67966.1,
     "stop_loss": 67422.37120000001,
     "take_profit": 68169.99829999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-26T17:00:24.708558",
@@ -2023,13 +2023,13 @@
     "price": 67971.9,
     "stop_loss": 67835.9562,
     "take_profit": 68107.84379999999,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-26T18:00:12.470136",
     "action": "LONG",
     "entry_price": 68558,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 68318.95934432966,
     "take_profit": 68792.6068649629,
     "status": "open",
@@ -2042,7 +2042,7 @@
     "price": 68572.0,
     "stop_loss": 68023.424,
     "take_profit": 68777.71599999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-26T19:00:02.667594",
@@ -2051,13 +2051,13 @@
     "price": 68288.6,
     "stop_loss": 67742.2912,
     "take_profit": 68493.4658,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-26T19:00:09.936225",
     "action": "LONG",
     "entry_price": 68302,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 68076.78508688154,
     "take_profit": 68527.02000359466,
     "status": "open",
@@ -2070,7 +2070,7 @@
     "price": 68278.2,
     "stop_loss": 67731.97439999999,
     "take_profit": 68483.03459999998,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-26T20:00:03.135114",
@@ -2079,7 +2079,7 @@
     "price": 68046.2,
     "stop_loss": 67910.1076,
     "take_profit": 68182.29239999999,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-26T21:00:03.203666",
@@ -2088,7 +2088,7 @@
     "price": 68166.0,
     "stop_loss": 67620.672,
     "take_profit": 68370.49799999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-26T21:00:40.379882",
@@ -2097,7 +2097,7 @@
     "price": 68167.8,
     "stop_loss": 68031.4644,
     "take_profit": 68304.13560000001,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-26T22:00:02.748605",
@@ -2106,7 +2106,7 @@
     "price": 67904.6,
     "stop_loss": 67361.3632,
     "take_profit": 68108.3138,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-26T23:00:03.183174",
@@ -2115,7 +2115,7 @@
     "price": 67727.2,
     "stop_loss": 67185.3824,
     "take_profit": 67930.3816,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-26T23:00:37.105462",
@@ -2124,7 +2124,7 @@
     "price": 67679.4,
     "stop_loss": 67544.04119999999,
     "take_profit": 67814.7588,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-27T00:00:47.634327",
@@ -2133,7 +2133,7 @@
     "price": 67373.5,
     "stop_loss": 67238.753,
     "take_profit": 67508.247,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-27T01:00:02.757591",
@@ -2142,7 +2142,7 @@
     "price": 66603.7,
     "stop_loss": 66470.4926,
     "take_profit": 66736.9074,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-27T01:00:24.724178",
@@ -2151,7 +2151,7 @@
     "price": 66707.3,
     "stop_loss": 66573.8854,
     "take_profit": 66840.7146,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-27T02:00:02.748839",
@@ -2160,7 +2160,7 @@
     "price": 66827.8,
     "stop_loss": 66694.1444,
     "take_profit": 66961.4556,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-27T02:00:50.020730",
@@ -2169,13 +2169,13 @@
     "price": 66828.1,
     "stop_loss": 66694.44380000001,
     "take_profit": 66961.7562,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-27T03:00:45.600081",
     "action": "LONG",
     "entry_price": 67323,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 67092.77362817715,
     "take_profit": 67553.18149560879,
     "status": "open",
@@ -2188,7 +2188,7 @@
     "price": 67588.6,
     "stop_loss": 67453.4228,
     "take_profit": 67723.77720000001,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-27T04:00:25.972376",
@@ -2197,13 +2197,13 @@
     "price": 67604.6,
     "stop_loss": 67469.39080000001,
     "take_profit": 67739.8092,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-27T04:00:47.405173",
     "action": "LONG",
     "entry_price": 67593,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 67216.41156166057,
     "take_profit": 67970.58310690067,
     "status": "open",
@@ -2216,7 +2216,7 @@
     "price": 67353.4,
     "stop_loss": 67218.6932,
     "take_profit": 67488.1068,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-27T06:00:02.973884",
@@ -2225,7 +2225,7 @@
     "price": 67467.2,
     "stop_loss": 67332.2656,
     "take_profit": 67602.1344,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-27T06:00:04.498155",
@@ -2234,7 +2234,7 @@
     "price": 67467.2,
     "stop_loss": 67332.2656,
     "take_profit": 67602.1344,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-27T07:00:03.266674",
@@ -2243,13 +2243,13 @@
     "price": 67557.1,
     "stop_loss": 67421.98580000001,
     "take_profit": 67692.2142,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-27T07:00:13.066836",
     "action": "LONG",
     "entry_price": 67559,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 67450.89717521063,
     "take_profit": 67661.89678826225,
     "status": "open",
@@ -2262,7 +2262,7 @@
     "price": 67485.0,
     "stop_loss": 66945.12,
     "take_profit": 67687.45499999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-27T08:00:07.362420",
@@ -2271,13 +2271,13 @@
     "price": 67480.4,
     "stop_loss": 66940.55679999999,
     "take_profit": 67682.84119999998,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-27T08:00:14.577070",
     "action": "LONG",
     "entry_price": 67458,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 67377.76394564866,
     "take_profit": 67538.200817547,
     "status": "open",
@@ -2290,7 +2290,7 @@
     "price": 67234.7,
     "stop_loss": 66696.82239999999,
     "take_profit": 67436.40409999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-27T09:00:16.785603",
@@ -2299,7 +2299,7 @@
     "price": 67227.7,
     "stop_loss": 67093.24459999999,
     "take_profit": 67362.1554,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-27T10:00:03.171450",
@@ -2308,7 +2308,7 @@
     "price": 67352.1,
     "stop_loss": 66813.2832,
     "take_profit": 67554.1563,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-27T11:00:03.478149",
@@ -2317,13 +2317,13 @@
     "price": 67272.2,
     "stop_loss": 66734.0224,
     "take_profit": 67474.01659999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-27T11:00:12.518282",
     "action": "LONG",
     "entry_price": 67336,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 67142.3349386601,
     "take_profit": 67529.34889235439,
     "status": "open",
@@ -2336,13 +2336,13 @@
     "price": 67602.2,
     "stop_loss": 67466.9956,
     "take_profit": 67737.4044,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-27T12:00:13.657566",
     "action": "LONG",
     "entry_price": 67650,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 67491.55424811685,
     "take_profit": 67808.07092551689,
     "status": "open",
@@ -2355,7 +2355,7 @@
     "price": 67593.7,
     "stop_loss": 67052.9504,
     "take_profit": 67796.48109999999,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-27T13:00:03.185319",
@@ -2364,13 +2364,13 @@
     "price": 67745.8,
     "stop_loss": 67610.30840000001,
     "take_profit": 67881.2916,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-27T13:00:08.876189",
     "action": "LONG",
     "entry_price": 67748,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 67370.36597443657,
     "take_profit": 68141.15499145549,
     "status": "open",
@@ -2383,7 +2383,7 @@
     "price": 67655.6,
     "stop_loss": 67114.3552,
     "take_profit": 67858.5668,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-27T15:00:13.380856",
@@ -2392,7 +2392,7 @@
     "price": 67655.6,
     "stop_loss": 67520.28880000001,
     "take_profit": 67790.9112,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-27T16:00:03.290326",
@@ -2401,7 +2401,7 @@
     "price": 67679.6,
     "stop_loss": 67138.16320000001,
     "take_profit": 67882.6388,
-    "strategy": "\u9022\u4f4e\u505a\u591a\uff0c\u63a7\u5236\u4ed3\u4f4d"
+    "strategy": "逢低做多，控制仓位"
   },
   {
     "timestamp": "2026-02-27T17:00:03.002236",
@@ -2410,16 +2410,34 @@
     "price": 67939.2,
     "stop_loss": 67803.3216,
     "take_profit": 68075.0784,
-    "strategy": "\u5efa\u8bae\u505a\u591a\uff0c\u5173\u6ce8\u4e0a\u65b9\u963b\u529b\u4f4d\u7a81\u7834"
+    "strategy": "建议做多，关注上方阻力位突破"
   },
   {
     "timestamp": "2026-02-27T17:00:14.028504",
     "action": "LONG",
     "entry_price": 67962,
-    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
     "stop_loss": 67773.22784031481,
     "take_profit": 68150.89748625188,
     "status": "open",
     "pnl": 0
+  },
+  {
+    "timestamp": "2026-02-27T18:00:02.699607",
+    "datetime": "2026-02-27 18:00:02",
+    "action": "LONG",
+    "price": 67356.1,
+    "stop_loss": 67221.38780000001,
+    "take_profit": 67490.8122,
+    "strategy": "建议做多，关注上方阻力位突破"
+  },
+  {
+    "timestamp": "2026-02-27T18:00:14.146115",
+    "datetime": "2026-02-27 18:00:14",
+    "action": "LONG_DIP",
+    "price": 67335.9,
+    "stop_loss": 66797.2128,
+    "take_profit": 67537.90769999998,
+    "strategy": "逢低做多，控制仓位"
   }
 ]
