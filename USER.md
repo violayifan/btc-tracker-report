@@ -2,16 +2,38 @@
 
 _Learn about the person you're helping. Update this as you go._
 
-- **Name:**
-- **What to call them:**
-- **Pronouns:** _(optional)_
-- **Timezone:**
-- **Notes:**
+- **Name:** (not yet provided)
+- **What to call them:** Investor
+- **Pronouns:** (optional)
+- **Timezone:** GMT+8 (Asia/Shanghai)
+- **Notes:** 
 
 ## Context
 
-_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
+**Investment Focus:**
+- Primary interest: AI stocks, particularly Hong Kong market
+- Currently holds: MiniMax (00100.HK)
+- Interested in: Fundamental analysis, capital flows, big V opinions, earnings predictions
+
+**Analysis Preferences:**
+- Prefers comprehensive, multi-source analysis
+- Uses: MiroMind AI deep research for market analysis
+- Values: Data-driven insights with scenario analysis
+- Risk tolerance: Moderate (considers stop-loss, position sizing)
+
+**Recent Topics:**
+- MiniMax fundamentals & IPO performance
+- March 2nd earnings prediction (2025 full year)
+- Hong Kong AI application IPO stock landscape
+- Capital flow analysis (institutional vs retail)
+- Post-earnings price movement scenarios
+
+**Investment Style:**
+- Active monitoring: BTC market analysis hourly
+- Time horizon: Short-medium term (earnings catalyst trading)
+- Position management: Uses stop-losses, considers reducing position before earnings
+- Research approach: Combines fundamentals, technicals, sentiment, capital flows
 
 ---
 
-The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
+_Updated: 2026-02-27_
