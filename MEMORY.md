@@ -6,7 +6,7 @@ _This file stores distilled, curated memories that persist across sessions._
 
 ## Workspace Status
 
-- **Last Updated**: 2026-02-27
+- **Last Updated**: 2026-02-28
 - **Status**: Active workspace, regular BTC monitoring running
 - **Location**: /root/.openclaw/workspace
 
@@ -24,9 +24,10 @@ _This file stores distilled, curated memories that persist across sessions._
 ## Human Profile
 
 - **Timezone**: GMT+8 (Asia/Shanghai)
-- **Primary Interest**: AI stocks, Hong Kong market investing
-- **Investment Focus**: AI application companies, IPO analysis, earnings predictions
+- **Primary Interest**: AI stocks, Hong Kong market investing, High-frequency trading data
+- **Investment Focus**: AI application companies, IPO analysis, earnings predictions, China commodity futures
 - **Risk Tolerance**: Moderate, uses stop-loss and position sizing
+- **Research Interests**: High-frequency market data, tick-by-tick order flow, CTP interface
 
 ---
 
@@ -71,6 +72,14 @@ _This file stores distilled, curated memories that persist across sessions._
 - **Hong Kong AI Sector**: Institutional buying, retail selling at highs
 - **Key Players**: Korean investors, Middle East sovereign funds (ADIA), US/EU tech funds
 - **Behavior**: "Buy on dips, sell on rips" for retail; institutions accumulating
+
+### China Commodity Futures High-Frequency Data
+- **Data Availability**: Tick-by-tick order and execution data confirmed available
+- **CTP Interface**: Official API provides millisecond-level real-time push
+- **Exchanges**: SHFE, DCE, CZCE, INE, GFEX all support tick data via CTP
+- **Data Types**: Tick orders (逐笔委托), Tick executions (逐笔成交), Level-2 depth
+- **Access Methods**: CTP MD API (free with trading account), Commercial providers (Wind, iFind), VNPY (open-source)
+- **Reference**: VNPY documentation at https://www.vnpy.com/docs/cn/community/info/gateway.html
 
 ---
 
