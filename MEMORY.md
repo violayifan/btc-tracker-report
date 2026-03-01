@@ -6,7 +6,7 @@ _This file stores distilled, curated memories that persist across sessions._
 
 ## Workspace Status
 
-- **Last Updated**: 2026-02-28
+- **Last Updated**: 2026-03-01
 - **Status**: Active workspace, regular BTC monitoring running
 - **Location**: /root/.openclaw/workspace
 
@@ -28,6 +28,7 @@ _This file stores distilled, curated memories that persist across sessions._
 - **Investment Focus**: AI application companies, IPO analysis, earnings predictions, China commodity futures
 - **Risk Tolerance**: Moderate, uses stop-loss and position sizing
 - **Research Interests**: High-frequency market data, tick-by-tick order flow, CTP interface
+- **Exchange Monitoring**: Interested in official exchange announcements (e.g., Binance announcements)
 
 ---
 
@@ -41,11 +42,25 @@ _This file stores distilled, curated memories that persist across sessions._
 - **GitHub Integration**: Auto-commit and push to https://github.com/violayifan/btc-tracker-report
 - **GitHub Pages**: https://violayifan.github.io/btc-tracker-report
 
+### Data Source Status (2026-03-01)
+- **KuCoin API**: ✅ Working reliably
+- **Binance API**: ❌ Failing (response format exceptions)
+- **OKX API**: ❌ Failing (response format exceptions)
+- **K-line Data**: ❌ Failing (using simulated data as fallback)
+- **Note**: Currently dependent on KuCoin API as single working source
+
 ### Deep Research Capability
 - **Tool**: MiroMind AI (dr.miromind.ai)
 - **Location**: `/opt/openclaw/skills/deepreseach-search-skill/`
 - **Use Cases**: Multi-round web searches, complex analysis, market research
 - **Output**: Markdown reports with citations
+
+### Tavily Search API
+- **API Key**: Configured and working
+- **Key Location**: `/root/.openclaw/workspace/.tavily_api_key`
+- **Search Script**: `/root/.openclaw/workspace/tavily_search.sh`
+- **Usage**: For real-time news and web search
+- **Configured**: 2026-03-01
 
 ---
 
@@ -112,6 +127,11 @@ _This file stores distilled, curated memories that persist across sessions._
 ### Channels
 - **Primary**: Feishu (direct message)
 - **Active**: Currently active in DM with user `ou_9cde50d77f516edcf3a661ca32f83b2a`
+
+### Tool Configuration Status
+- **Browser Control**: Requires gateway restart and Chrome extension tab attachment
+- **Web Search**: Requires `BRAVE_API_KEY` configuration for web_search tool
+- **Web Fetch**: Limited effectiveness on dynamic JavaScript-heavy sites (like Binance)
 
 ---
 
