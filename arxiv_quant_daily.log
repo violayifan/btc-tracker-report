@@ -1,0 +1,207 @@
+[2026-03-08 14:15:50] ============================================================
+[2026-03-08 14:15:50] 🚀 Arxiv 量化投资论文日报任务开始
+[2026-03-08 14:15:50] ============================================================
+[2026-03-08 14:15:50] 🔍 开始搜索 arXiv 论文...
+[2026-03-08 14:15:50] ✅ 找到 20 篇相关论文
+[2026-03-08 14:15:50] ✅ 选中论文: Kraus Constrained Sequence Learning For Quantum Trajectories from Continuous Measurement
+[2026-03-08 14:15:50]    得分: 10.0
+[2026-03-08 14:15:50]    类别: cs.LG
+[2026-03-08 14:15:50] 📖 开始分析论文...
+[2026-03-08 14:15:50] ✅ 论文分析完成
+[2026-03-08 14:15:50] ✅ Markdown 文档生成完成
+[2026-03-08 14:15:50] ✅ 文档已保存到知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260308.md
+[2026-03-08 14:15:50] 📝 开始创建飞书文档...
+[2026-03-08 14:15:50] ❌ 创建飞书文档异常: __init__() got an unexpected keyword argument 'capture_output'
+[2026-03-08 14:15:50] ============================================================
+[2026-03-08 14:15:50] ✅ 任务完成
+[2026-03-08 14:15:50] 📄 论文: Kraus Constrained Sequence Learning For Quantum Trajectories from Continuous Measurement
+[2026-03-08 14:15:50] 💾 知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260308.md
+[2026-03-08 14:15:50] 📝 飞书文档: 创建失败
+[2026-03-08 14:15:50] ============================================================
+[2026-03-08 14:17:33] ============================================================
+[2026-03-08 14:17:33] 🚀 Arxiv 量化投资论文日报任务开始
+[2026-03-08 14:17:33] ============================================================
+[2026-03-08 14:17:33] 🔍 开始搜索 arXiv 论文...
+[2026-03-08 14:17:33] ✅ 找到 20 篇相关论文
+[2026-03-08 14:17:33] ✅ 选中论文: Kraus Constrained Sequence Learning For Quantum Trajectories from Continuous Measurement
+[2026-03-08 14:17:33]    得分: 10.0
+[2026-03-08 14:17:33]    类别: cs.LG
+[2026-03-08 14:17:33] 📖 开始分析论文...
+[2026-03-08 14:17:33] ✅ 论文分析完成
+[2026-03-08 14:17:33] ✅ Markdown 文档生成完成
+[2026-03-08 14:17:33] ✅ 文档已保存到知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260308.md
+[2026-03-08 14:17:33] 📝 开始创建飞书文档...
+[2026-03-08 14:17:33] ❌ 创建飞书文档异常: __init__() got an unexpected keyword argument 'text'
+[2026-03-08 14:17:33] ⚠️ 飞书文档创建失败，但继续执行后续任务
+[2026-03-08 14:17:33] ============================================================
+[2026-03-08 14:17:33] ✅ 任务完成
+[2026-03-08 14:17:33] 📄 论文: Kraus Constrained Sequence Learning For Quantum Trajectories from Continuous Measurement
+[2026-03-08 14:17:33] 💾 知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260308.md
+[2026-03-08 14:17:33] 📝 飞书文档: 创建失败
+[2026-03-08 14:17:33] ============================================================
+[2026-03-08 14:19:08] ============================================================
+[2026-03-08 14:19:08] 🚀 Arxiv 量化投资论文日报任务开始
+[2026-03-08 14:19:08] ============================================================
+[2026-03-08 14:19:08] 🔍 开始搜索 arXiv 论文...
+[2026-03-08 14:19:08] ❌ 搜索 arXiv 论文失败: 400 Client Error: Bad Request for url: https://export.arxiv.org/api/query?search_query=all%3Acat%3Aq-fin.%2A+OR+%28all%3A%22quantitative+finance%22+OR+all%3A%22algorithmic+trading%22+OR+all%3A%22quantitative%22+AND+all%3A%22finance%22%29&start=0&max_results=30&sortBy=submittedDate&sortOrder=descending
+[2026-03-08 14:19:08] ❌ 未找到论文，任务结束
+[2026-03-08 14:19:16] ============================================================
+[2026-03-08 14:19:16] 🚀 Arxiv 量化投资论文日报任务开始
+[2026-03-08 14:19:16] ============================================================
+[2026-03-08 14:19:16] 🔍 开始搜索 arXiv 论文...
+[2026-03-08 14:19:16] ❌ 搜索 arXiv 论文失败: 400 Client Error: Bad Request for url: https://export.arxiv.org/api/query?search_query=all%3Acat%3Aq-fin&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending
+[2026-03-08 14:19:16] ❌ 未找到论文，任务结束
+[2026-03-08 14:19:26] ============================================================
+[2026-03-08 14:19:26] 🚀 Arxiv 量化投资论文日报任务开始
+[2026-03-08 14:19:26] ============================================================
+[2026-03-08 14:19:26] 🔍 开始搜索 arXiv 论文...
+[2026-03-08 14:19:26] ✅ 找到 0 篇相关论文
+[2026-03-08 14:19:26] ❌ 未找到论文，任务结束
+[2026-03-08 14:19:34] ============================================================
+[2026-03-08 14:19:34] 🚀 Arxiv 量化投资论文日报任务开始
+[2026-03-08 14:19:34] ============================================================
+[2026-03-08 14:19:34] 🔍 开始搜索 arXiv 论文...
+[2026-03-08 14:19:34] ✅ 找到 20 篇相关论文
+[2026-03-08 14:19:34] ✅ 选中论文: Deep Learning for Financial Time Series: A Large-Scale Benchmark of Risk-Adjusted Performance
+[2026-03-08 14:19:34]    得分: 28.0
+[2026-03-08 14:19:34]    类别: q-fin.TR
+[2026-03-08 14:19:34] 📖 开始分析论文...
+[2026-03-08 14:19:34] ✅ 论文分析完成
+[2026-03-08 14:19:34] ✅ Markdown 文档生成完成
+[2026-03-08 14:19:34] ✅ 文档已保存到知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260308.md
+[2026-03-08 14:19:34] 📝 开始创建飞书文档...
+[2026-03-08 14:19:35] ❌ 创建飞书文档异常: local variable 'proc' referenced before assignment
+[2026-03-08 14:19:35] ⚠️ 飞书文档创建失败，但继续执行后续任务
+[2026-03-08 14:19:35] ============================================================
+[2026-03-08 14:19:35] ✅ 任务完成
+[2026-03-08 14:19:35] 📄 论文: Deep Learning for Financial Time Series: A Large-Scale Benchmark of Risk-Adjusted Performance
+[2026-03-08 14:19:35] 💾 知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260308.md
+[2026-03-08 14:19:35] 📝 飞书文档: 创建失败
+[2026-03-08 14:19:35] ============================================================
+[2026-03-08 14:20:10] ============================================================
+[2026-03-08 14:20:10] 🚀 Arxiv 量化投资论文日报任务开始
+[2026-03-08 14:20:10] ============================================================
+[2026-03-08 14:20:10] 🔍 开始搜索 arXiv 论文...
+[2026-03-08 14:20:10] ✅ 找到 20 篇相关论文
+[2026-03-08 14:20:10] ✅ 选中论文: Deep Learning for Financial Time Series: A Large-Scale Benchmark of Risk-Adjusted Performance
+[2026-03-08 14:20:10]    得分: 28.0
+[2026-03-08 14:20:10]    类别: q-fin.TR
+[2026-03-08 14:20:10] 📖 开始分析论文...
+[2026-03-08 14:20:10] ✅ 论文分析完成
+[2026-03-08 14:20:10] ✅ Markdown 文档生成完成
+[2026-03-08 14:20:10] ✅ 文档已保存到知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260308.md
+[2026-03-08 14:20:10] 📝 开始创建飞书文档...
+[2026-03-08 14:20:10] ❌ 创建飞书文档异常: local variable 'proc' referenced before assignment
+[2026-03-08 14:20:10] ⚠️ 飞书文档创建失败，但继续执行后续任务
+[2026-03-08 14:20:10] ============================================================
+[2026-03-08 14:20:10] ✅ 任务完成
+[2026-03-08 14:20:10] 📄 论文: Deep Learning for Financial Time Series: A Large-Scale Benchmark of Risk-Adjusted Performance
+[2026-03-08 14:20:10] 💾 知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260308.md
+[2026-03-08 14:20:10] 📝 飞书文档: 创建失败
+[2026-03-08 14:20:10] ============================================================
+[2026-03-08 14:21:10] ============================================================
+[2026-03-08 14:21:10] 🚀 Arxiv 量化投资论文日报任务开始
+[2026-03-08 14:21:10] ============================================================
+[2026-03-08 14:21:10] 🔍 开始搜索 arXiv 论文...
+[2026-03-08 14:21:10] ✅ 找到 20 篇相关论文
+[2026-03-08 14:21:10] ✅ 选中论文: Deep Learning for Financial Time Series: A Large-Scale Benchmark of Risk-Adjusted Performance
+[2026-03-08 14:21:10]    得分: 28.0
+[2026-03-08 14:21:10]    类别: q-fin.TR
+[2026-03-08 14:21:10] 📖 开始分析论文...
+[2026-03-08 14:21:10] ✅ 论文分析完成
+[2026-03-08 14:21:10] ✅ Markdown 文档生成完成
+[2026-03-08 14:21:10] ✅ 文档已保存到知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260308.md
+[2026-03-08 14:21:10] 📝 开始创建飞书文档...
+[2026-03-08 14:21:10] ❌ 创建飞书文档失败: file:///opt/openclaw/openclaw.mjs:2
+exec /root/.nvm/versions/node/v20.20.0/bin/node /opt/openclaw/openclaw.mjs "$@"
+           ^
+
+SyntaxError: Unexpected token '.'
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:497:12)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:544:27)
+    at async ModuleJob._link (node:internal/modules/esm/module_job:148:19)
+
+Node.js v20.20.0
+
+[2026-03-08 14:21:10] ⚠️ 飞书文档创建失败，但继续执行后续任务
+[2026-03-08 14:21:10] ============================================================
+[2026-03-08 14:21:10] ✅ 任务完成
+[2026-03-08 14:21:10] 📄 论文: Deep Learning for Financial Time Series: A Large-Scale Benchmark of Risk-Adjusted Performance
+[2026-03-08 14:21:10] 💾 知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260308.md
+[2026-03-08 14:21:10] 📝 飞书文档: 创建失败
+[2026-03-08 14:21:10] ============================================================
+[2026-03-08 14:27:35] ============================================================
+[2026-03-08 14:27:35] 🚀 Arxiv 量化投资论文日报任务开始
+[2026-03-08 14:27:35] ============================================================
+[2026-03-08 14:27:35] 🔍 开始搜索 arXiv 论文...
+[2026-03-08 14:27:35] ✅ 找到 20 篇相关论文
+[2026-03-08 14:27:35] ✅ 选中论文: Deep Learning for Financial Time Series: A Large-Scale Benchmark of Risk-Adjusted Performance
+[2026-03-08 14:27:35]    得分: 28.0
+[2026-03-08 14:27:35]    类别: q-fin.TR
+[2026-03-08 14:27:35] 📖 开始分析论文...
+[2026-03-08 14:27:35] ✅ 论文分析完成
+[2026-03-08 14:27:35] ✅ Markdown 文档生成完成
+[2026-03-08 14:27:36] ✅ 文档已保存到知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260308.md
+[2026-03-08 14:27:36] 📝 开始创建飞书文档...
+[2026-03-08 14:27:36] ❌ 创建飞书文档失败: file:///opt/openclaw/openclaw.mjs:2
+exec /root/.nvm/versions/node/v20.20.0/bin/node /opt/openclaw/openclaw.mjs "$@"
+           ^
+
+SyntaxError: Unexpected token '.'
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:497:12)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:544:27)
+    at async ModuleJob._link (node:internal/modules/esm/module_job:148:19)
+
+Node.js v20.20.0
+
+[2026-03-08 14:27:36] ⚠️ 飞书文档创建失败，但继续执行后续任务
+[2026-03-08 14:27:36] ============================================================
+[2026-03-08 14:27:36] ✅ 任务完成
+[2026-03-08 14:27:36] 📄 论文: Deep Learning for Financial Time Series: A Large-Scale Benchmark of Risk-Adjusted Performance
+[2026-03-08 14:27:36] 💾 知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260308.md
+[2026-03-08 14:27:36] 📝 飞书文档: 创建失败
+[2026-03-08 14:27:36] ============================================================
+[2026-03-08 14:34:34] ============================================================
+[2026-03-08 14:34:34] 🚀 Arxiv 量化投资论文日报任务开始
+[2026-03-08 14:34:34] ============================================================
+[2026-03-08 14:34:34] 🔍 开始搜索 arXiv 论文...
+[2026-03-08 14:34:34] ✅ 找到 20 篇相关论文
+[2026-03-08 14:34:34] ✅ 选中论文: Deep Learning for Financial Time Series: A Large-Scale Benchmark of Risk-Adjusted Performance
+[2026-03-08 14:34:34]    得分: 28.0
+[2026-03-08 14:34:34]    类别: q-fin.TR
+[2026-03-08 14:34:34] 📖 开始分析论文...
+[2026-03-08 14:34:34] ✅ 论文分析完成
+[2026-03-08 14:34:34] ✅ Markdown 文档生成完成
+[2026-03-08 14:34:34] ✅ 文档已保存到知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260308.md
+[2026-03-08 14:34:34] ✅ 临时论文数据已保存: /root/.openclaw/workspace/temp_arxiv_paper.json
+[2026-03-08 14:34:34] ✅ 临时报告已保存: /root/.openclaw/workspace/temp_arxiv_report.md
+[2026-03-08 14:34:34] ============================================================
+[2026-03-08 14:34:34] ✅ 任务完成
+[2026-03-08 14:34:34] 📄 论文: Deep Learning for Financial Time Series: A Large-Scale Benchmark of Risk-Adjusted Performance
+[2026-03-08 14:34:34] 💾 知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260308.md
+[2026-03-08 14:34:34] 📝 临时文件已保存，等待主会话创建飞书文档
+[2026-03-08 14:34:34] ============================================================
+[2026-03-08 14:37:21] ============================================================
+[2026-03-08 14:37:21] 🚀 Arxiv 量化投资论文日报任务开始
+[2026-03-08 14:37:21] ============================================================
+[2026-03-08 14:37:21] 🔍 开始搜索 arXiv 论文...
+[2026-03-08 14:37:21] ✅ 找到 20 篇相关论文
+[2026-03-08 14:37:21] ✅ 选中论文: Deep Learning for Financial Time Series: A Large-Scale Benchmark of Risk-Adjusted Performance
+[2026-03-08 14:37:21]    得分: 28.0
+[2026-03-08 14:37:21]    类别: q-fin.TR
+[2026-03-08 14:37:21] 📖 开始分析论文...
+[2026-03-08 14:37:21] ✅ 论文分析完成
+[2026-03-08 14:37:21] ✅ Markdown 文档生成完成
+[2026-03-08 14:37:21] ✅ 文档已保存到知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260308.md
+[2026-03-08 14:37:21] ✅ 临时论文数据已保存: /root/.openclaw/workspace/temp_arxiv_paper.json
+[2026-03-08 14:37:21] ✅ 临时报告已保存: /root/.openclaw/workspace/temp_arxiv_report.md
+[2026-03-08 14:37:21] ============================================================
+[2026-03-08 14:37:21] ✅ 任务完成
+[2026-03-08 14:37:21] 📄 论文: Deep Learning for Financial Time Series: A Large-Scale Benchmark of Risk-Adjusted Performance
+[2026-03-08 14:37:21] 💾 知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260308.md
+[2026-03-08 14:37:21] 📝 临时文件已保存，等待主会话创建飞书文档
+[2026-03-08 14:37:21] ============================================================

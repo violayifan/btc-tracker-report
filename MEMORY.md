@@ -6,8 +6,8 @@ _This file stores distilled, curated memories that persist across sessions._
 
 ## Workspace Status
 
-- **Last Updated**: 2026-03-01
-- **Status**: Active workspace, regular BTC monitoring running
+- **Last Updated**: 2026-03-08
+- **Status**: Active workspace, regular BTC monitoring running, Arxiv daily analysis configured
 - **Location**: /root/.openclaw/workspace
 
 ---
@@ -41,6 +41,21 @@ _This file stores distilled, curated memories that persist across sessions._
 - **Reports**: Saved to `/root/.openclaw/workspace/reports/`
 - **GitHub Integration**: Auto-commit and push to https://github.com/violayifan/btc-tracker-report
 - **GitHub Pages**: https://violayifan.github.io/btc-tracker-report
+
+### Arxiv Quant Daily Paper Analysis (NEW - 2026-03-08)
+- **Script**: `arxiv_quant_daily.py`
+- **Frequency**: Daily at 8 AM via cron (`0 8 * * *`)
+- **Purpose**: Automatically fetch, analyze, and summarize top quant finance papers from arXiv
+- **Workflow**:
+  1. Searches arXiv API for q-fin.* category papers (20 most recent)
+  2. Scores papers based on category, keywords, authors
+  3. Selects highest-scoring paper
+  4. Analyzes paper (extracts contributions, methodology, applications)
+  5. Generates Markdown report
+  6. Saves to knowledge base: `/root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_YYYYMMDD.md`
+  7. [PENDING FIX] Creates Feishu document and sends to user
+- **Status**: Paper search, analysis, knowledge base storage working; Feishu integration needs fix
+- **Issue**: subprocess to openclaw command fails; need to use feishu_doc tool directly
 
 ### Data Source Status (2026-03-01)
 - **KuCoin API**: ✅ Working reliably

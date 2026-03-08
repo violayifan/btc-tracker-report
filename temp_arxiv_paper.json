@@ -1,0 +1,57 @@
+{
+  "basic_info": {
+    "title": "Deep Learning for Financial Time Series: A Large-Scale Benchmark of Risk-Adjusted Performance",
+    "authors": [
+      "Adir Saly-Kaufmann",
+      "Kieran Wood",
+      "Jan Peter-Calliess",
+      "Stefan Zohren"
+    ],
+    "published": "2026-03-02T12:52:50Z",
+    "url": "https://arxiv.org/abs/2603.01820v1",
+    "category": "q-fin.TR"
+  },
+  "summary": "We present a large scale benchmark of modern deep learning architectures for a financial time series prediction and position sizing task, with a primary focus on Sharpe ratio optimization. Evaluating linear models, recurrent networks, transformer based architectures, state space models, and recent sequence representation approaches, we assess out of sample performance on a daily futures dataset spanning commodities, equity indices, bonds, and FX spanning 2010 to 2025. Our evaluation goes beyond average returns and includes statistical significance, downside and tail risk measures, breakeven transaction cost analysis, robustness to random seed selection, and computational efficiency. We find that models explicitly designed to learn rich temporal representations consistently outperform linear benchmarks and generic deep learning models, which often lead the ranking in standard time series benchmarks. Hybrid models such as VSN with LSTM, a combination of Variable Selection Networks (VSN) and LSTMs, achieves the highest overall Sharpe ratio, while VSN with xLSTM and LSTM with PatchTST exhibit superior downside adjusted characteristics. xLSTM demonstrates the largest breakeven transaction cost buffer, indicating improved robustness to trading frictions.",
+  "key_contributions": [
+    "We present a large scale benchmark of modern deep learning architectures for a financial time series prediction and position sizing task, with a primary focus on Sharpe ratio optimization.",
+    "We present a large scale benchmark of modern deep learning architectures for a financial time series prediction and position sizing task, with a primary focus on Sharpe ratio optimization",
+    "Evaluating linear models, recurrent networks, transformer based architectures, state space models, and recent sequence representation approaches, we assess out of sample performance on a daily futures dataset spanning commodities, equity indices, bonds, and FX spanning 2010 to 2025"
+  ],
+  "methodology": [
+    "深度学习/神经网络",
+    "Transformer架构",
+    "长短期记忆网络 (LSTM)",
+    "时间序列分析",
+    "夏普比率优化",
+    "基准测试",
+    "预测"
+  ],
+  "potential_applications": [
+    "量化交易"
+  ],
+  "detailed_summary": {
+    "research_objective": "研究量化投资相关的理论和方法问题",
+    "approach": [
+      "We present a large scale benchmark of modern deep learning architectures for a financial time series prediction and position sizing task, with a primary focus on Sharpe ratio optimization",
+      "Evaluating linear models, recurrent networks, transformer based architectures, state space models, and recent sequence representation approaches, we assess out of sample performance on a daily futures dataset spanning commodities, equity indices, bonds, and FX spanning 2010 to 2025"
+    ],
+    "key_findings": [
+      "We find that models explicitly designed to learn rich temporal representations consistently outperform linear benchmarks and generic deep learning models, which often lead the ranking in standard time series benchmarks."
+    ],
+    "data_and_scope": [
+      "Evaluating linear models, recurrent networks, transformer based architectures, state space models, and recent sequence representation approaches, we assess out of sample performance on a daily futures dataset spanning commodities, equity indices, bonds, and FX spanning 2010 to 2025"
+    ],
+    "limitations": [
+      "基于论文摘要无法判断"
+    ]
+  },
+  "evaluation": {
+    "innovation": "一般 - 主要是对现有方法的应用或比较",
+    "practical_value": "中 - 有一定的实用价值",
+    "theoretical_contribution": "中 - 有一定的理论贡献",
+    "data_quality": "中 - 数据集较为充分",
+    "applicability": "中 - 模型有一定的适用性",
+    "overall_rating": "⭐⭐⭐⭐ 良好 - 值得参考"
+  },
+  "analysis_date": "2026-03-08 14:37:21"
+}

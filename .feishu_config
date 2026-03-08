@@ -1,0 +1,4 @@
+# 飞书应用配置
+# 请在下方填入你的飞书应用凭据
+FEISHU_APP_ID=
+FEISHU_APP_SECRET=
