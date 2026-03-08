@@ -30,6 +30,9 @@ class ArxivQuantDaily:
         self.temp_paper_data_file = self.workspace / "temp_arxiv_paper.json"
         self.temp_report_file = self.workspace / "temp_arxiv_report.md"
 
+        # 飞书文档记录
+        self.feishu_doc_token_file = self.workspace / "feishu_doc_token.txt"
+
     def log(self, message):
         """记录日志"""
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -691,6 +694,13 @@ class ArxivQuantDaily:
         except Exception as e:
             self.log(f"❌ 保存临时报告失败: {str(e)}")
 
+    def create_feishu_document(self, content, title):
+        """创建飞书文档"""
+        self.log("📝 开始创建飞书文档...")
+        self.log("   ⚠️ 注意：此功能需要主会话的飞书工具支持")
+        self.log("   当前脚本无法直接调用飞书工具，将由主会话处理")
+        return None
+
     def run(self):
         """执行完整流程"""
         self.log("=" * 60)
@@ -701,13 +711,13 @@ class ArxivQuantDaily:
         papers = self.search_arxiv_papers()
         if not papers:
             self.log("❌ 未找到论文，任务结束")
-            return False, None, None
+            return False, None, None, None
 
         # 2. 选择最佳论文
         best_paper = self.select_best_paper(papers)
         if not best_paper:
             self.log("❌ 未选中论文，任务结束")
-            return False, None, None
+            return False, None, None, None
 
         # 3. 分析论文
         analysis = self.analyze_paper(best_paper)
@@ -724,25 +734,28 @@ class ArxivQuantDaily:
         # 6. 保存临时文件
         self.save_temp_files(analysis, md_content)
 
+        # 7. 尝试创建飞书文档（标记为主会话处理）
+        feishu_doc_token = self.create_feishu_document(md_content, best_paper['title'])
+
         # 总结
         self.log("=" * 60)
         self.log("✅ 任务完成")
         self.log(f"📄 论文: {best_paper['title']}")
         self.log(f"💾 知识库: {kb_path}")
-        self.log(f"📝 临时文件已保存，等待主会话创建飞书文档")
+        self.log(f"📝 临时文件已保存，等待主会话处理飞书文档创建")
         self.log("=" * 60)
 
-        return True, analysis, md_content
+        return True, analysis, md_content, feishu_doc_token
 
 
 def main():
     """主函数"""
     analyzer = ArxivQuantDaily()
-    success, analysis, md_content = analyzer.run()
+    success, analysis, md_content, feishu_doc_token = analyzer.run()
 
     if success:
         print("\n✅ Arxiv 量化投资论文日报任务执行成功")
-        print("📝 临时文件已保存，请由主会话创建飞书文档并发送")
+        print("📝 临时文件已保存，等待主会话处理")
         exit(0)
     else:
         print("\n❌ Arxiv 量化投资论文日报任务执行失败")

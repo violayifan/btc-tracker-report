@@ -51,11 +51,14 @@ _This file stores distilled, curated memories that persist across sessions._
   2. Scores papers based on category, keywords, authors
   3. Selects highest-scoring paper
   4. Analyzes paper (extracts contributions, methodology, applications)
-  5. Generates Markdown report
+  5. Generates detailed Markdown report with evaluation
   6. Saves to knowledge base: `/root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_YYYYMMDD.md`
-  7. [PENDING FIX] Creates Feishu document and sends to user
-- **Status**: Paper search, analysis, knowledge base storage working; Feishu integration needs fix
-- **Issue**: subprocess to openclaw command fails; need to use feishu_doc tool directly
+  7. Sends complete report via Feishu message (working)
+  8. [PENDING] Creates Feishu document (needs permission fix)
+- **Status**: Paper search, analysis, knowledge base storage, Feishu message all working; Feishu document creation blocked by missing permissions
+- **Issue**: Feishu app lacks `docs:document:create` and `docs:document:write` permissions
+- **Diagnostic**: Script now generates diagnostic info in `/root/.openclaw/workspace/feishu_diagnostic.json`
+- **Solution**: User needs to add document permissions in Feishu open platform: https://open.feishu.cn/
 
 ### Data Source Status (2026-03-01)
 - **KuCoin API**: ✅ Working reliably

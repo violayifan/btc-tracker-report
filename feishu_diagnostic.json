@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-03-08 15:08:03",
+  "checklist": {
+    "workspace_exists": true,
+    "knowledge_base_exists": true,
+    "log_file_exists": true,
+    "temp_paper_data_exists": true,
+    "temp_report_exists": true,
+    "feishu_doc_token_exists": false
+  },
+  "paths": {
+    "workspace": "/root/.openclaw/workspace",
+    "knowledge_base": "/root/.openclaw/workspace/knowledge_base/arxiv_quant",
+    "log_file": "/root/.openclaw/workspace/arxiv_quant_daily.log",
+    "temp_paper_data": "/root/.openclaw/workspace/temp_arxiv_paper.json",
+    "temp_report": "/root/.openclaw/workspace/temp_arxiv_report.md",
+    "feishu_doc_token": "/root/.openclaw/workspace/feishu_doc_token.txt"
+  },
+  "note": "飞书文档创建失败，可能是由于缺少文档创建权限。"
+}
