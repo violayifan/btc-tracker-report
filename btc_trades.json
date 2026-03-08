@@ -5917,5 +5917,14 @@
     "stop_loss": 67148.6336,
     "take_profit": 67417.7664,
     "strategy": "建议做多，关注上方阻力位突破"
+  },
+  {
+    "timestamp": "2026-03-08T08:10:06.361772",
+    "datetime": "2026-03-08 08:10:06",
+    "action": "LONG_DIP",
+    "price": 67411.3,
+    "stop_loss": 66872.0096,
+    "take_profit": 67613.5339,
+    "strategy": "逢低做多，控制仓位"
   }
 ]
