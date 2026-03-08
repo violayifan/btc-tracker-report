@@ -1,0 +1,4 @@
+[2026-03-08 20:32:23] ❌ 检查Playwright失败: __init__() got an unexpected keyword argument 'capture_output'
+[2026-03-08 20:32:23] 🔍 开始访问微信文章: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2MzAwNzM0NQ==&action=getalbum&album_id=3485425931919884288&scene=126
+[2026-03-08 20:32:23] 📦 开始安装 Playwright...
+[2026-03-08 20:32:23] ❌ 安装Playwright异常: __init__() got an unexpected keyword argument 'capture_output'
