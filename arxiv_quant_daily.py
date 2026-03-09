@@ -497,7 +497,7 @@ class ArxivQuantDaily:
             return "⭐⭐ 较低 - 按需阅读"
 
     def generate_markdown(self, analysis):
-        """生成 Markdown 文档"""
+        """生成 Markdown 文档（完整版）"""
         date_str = datetime.now().strftime("%Y-%m-%d")
 
         md_content = f"""# Arxiv 量化投资论文日报 - {date_str}
@@ -661,6 +661,73 @@ class ArxivQuantDaily:
 
         return md_content
 
+    def generate_feishu_markdown(self, analysis):
+        """生成飞书文档专用 Markdown（精简版，去除 emoji，限制长度）"""
+        date_str = datetime.now().strftime("%Y-%m-%d")
+
+        md_content = f"""# Arxiv 量化投资论文日报 - {date_str}
+
+## 论文信息
+
+- 标题: {analysis['basic_info']['title']}
+- 作者: {', '.join(analysis['basic_info']['authors'][:3])}{' 等' if len(analysis['basic_info']['authors']) > 3 else ''}
+- 链接: {analysis['basic_info']['url']}
+- 类别: {analysis['basic_info']['category']}
+
+---
+
+## 核心贡献
+
+"""
+
+        # 精简关键贡献
+        for i, contribution in enumerate(analysis['key_contributions'][:3], 1):
+            # 去除 emoji 和特殊字符
+            clean_contrib = contribution.strip()
+            md_content += f"{i}. {clean_contrib}\n"
+
+        md_content += f"""
+---
+
+## 研究方法
+
+"""
+
+        for method in analysis['methodology'][:5]:
+            md_content += f"- {method}\n"
+
+        md_content += f"""
+
+## 主要发现
+
+- 综合评价: {analysis['evaluation']['overall_rating'].replace('⭐', '').replace(' ', '')}
+- 创新性: {analysis['evaluation']['innovation'].split(' - ')[0] if ' - ' in analysis['evaluation']['innovation'] else analysis['evaluation']['innovation']}
+- 实用价值: {analysis['evaluation']['practical_value'].split(' - ')[0] if ' - ' in analysis['evaluation']['practical_value'] else analysis['evaluation']['practical_value']}
+- 理论贡献: {analysis['evaluation']['theoretical_contribution'].split(' - ')[0] if ' - ' in analysis['evaluation']['theoretical_contribution'] else analysis['evaluation']['theoretical_contribution']}
+- 数据质量: {analysis['evaluation']['data_quality'].split(' - ')[0] if ' - ' in analysis['evaluation']['data_quality'] else analysis['evaluation']['data_quality']}
+
+---
+
+## 潜在应用
+
+"""
+
+        for app in analysis['potential_applications'][:4]:
+            md_content += f"- {app}\n"
+
+        md_content += f"""
+
+## 摘要
+
+{analysis['summary'][:500]}...
+
+---
+
+*本报告由自动化系统生成，仅供参考。完整分析请阅读论文原文。*
+"""
+
+        return md_content
+
     def save_to_knowledge_base(self, content, paper_title):
         """保存到知识库"""
         date_str = datetime.now().strftime("%Y%m%d")
@@ -676,7 +743,7 @@ class ArxivQuantDaily:
             self.log(f"❌ 保存到知识库失败: {str(e)}")
             return None
 
-    def save_temp_files(self, analysis, md_content):
+    def save_temp_files(self, analysis, md_content, feishu_md_content):
         """保存临时文件供主会话使用"""
         # 保存论文数据
         try:
@@ -686,13 +753,22 @@ class ArxivQuantDaily:
         except Exception as e:
             self.log(f"❌ 保存临时论文数据失败: {str(e)}")
 
-        # 保存 Markdown 报告
+        # 保存完整 Markdown 报告
         try:
             with open(self.temp_report_file, 'w', encoding='utf-8') as f:
                 f.write(md_content)
             self.log(f"✅ 临时报告已保存: {self.temp_report_file}")
         except Exception as e:
             self.log(f"❌ 保存临时报告失败: {str(e)}")
+
+        # 保存飞书文档专用精简版
+        feishu_report_file = self.workspace / "temp_feishu_report.md"
+        try:
+            with open(feishu_report_file, 'w', encoding='utf-8') as f:
+                f.write(feishu_md_content)
+            self.log(f"✅ 飞书文档专用报告已保存: {feishu_report_file}")
+        except Exception as e:
+            self.log(f"❌ 保存飞书报告失败: {str(e)}")
 
     def create_feishu_document(self, content, title):
         """创建飞书文档"""
@@ -726,23 +802,36 @@ class ArxivQuantDaily:
         md_content = self.generate_markdown(analysis)
         self.log("✅ Markdown 文档生成完成")
 
-        # 5. 保存到知识库
+        # 5. 生成飞书文档专用精简版
+        feishu_md_content = self.generate_feishu_markdown(analysis)
+        self.log("✅ 飞书文档专用 Markdown 生成完成")
+
+        # 6. 保存到知识库
         kb_path = self.save_to_knowledge_base(md_content, best_paper['title'])
         if not kb_path:
             self.log("⚠️ 知识库保存失败")
 
-        # 6. 保存临时文件
-        self.save_temp_files(analysis, md_content)
+        # 7. 保存临时文件
+        self.save_temp_files(analysis, md_content, feishu_md_content)
 
         # 7. 尝试创建飞书文档（标记为主会话处理）
         feishu_doc_token = self.create_feishu_document(md_content, best_paper['title'])
+
+        # 8. 创建标记文件，通知主会话处理飞书消息和文档创建
+        pending_file = self.workspace / ".arxiv_pending"
+        try:
+            with open(pending_file, 'w', encoding='utf-8') as f:
+                f.write(f"论文日报已生成: {best_paper['title']}")
+            self.log(f"✅ 已创建待处理标记: {pending_file}")
+        except Exception as e:
+            self.log(f"⚠️ 创建标记文件失败: {str(e)}")
 
         # 总结
         self.log("=" * 60)
         self.log("✅ 任务完成")
         self.log(f"📄 论文: {best_paper['title']}")
         self.log(f"💾 知识库: {kb_path}")
-        self.log(f"📝 临时文件已保存，等待主会话处理飞书文档创建")
+        self.log(f"📝 临时文件已保存，主会话将自动处理飞书消息和文档创建")
         self.log("=" * 60)
 
         return True, analysis, md_content, feishu_doc_token

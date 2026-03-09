@@ -2,45 +2,42 @@
 
 ## 📄 论文基本信息
 
-**标题**: Deep Learning for Financial Time Series: A Large-Scale Benchmark of Risk-Adjusted Performance
+**标题**: Stock Market Prediction Using Node Transformer Architecture Integrated with BERT Sentiment Analysis
 
-**作者**: Adir Saly-Kaufmann, Kieran Wood, Jan Peter-Calliess, Stefan Zohren
+**作者**: Mohammad Al Ridhawi, Mahtab Haj Ali, Hussein Al Osman
 
 
-**发布时间**: 2026-03-02T12:52:50Z
+**发布时间**: 2026-03-06T05:15:22Z
 
-**论文类别**: q-fin.TR
+**论文类别**: cs.LG
 
-**论文链接**: https://arxiv.org/abs/2603.01820v1
+**论文链接**: https://arxiv.org/abs/2603.05917v1
 
-**PDF链接**: https://arxiv.org/pdf/2603.01820v1.pdf
+**PDF链接**: https://arxiv.org/pdf/2603.05917v1.pdf
 
-**分析时间**: 2026-03-09 08:00:08
+**分析时间**: 2026-03-09 09:39:56
 
 ---
 
 ## 📝 论文摘要
 
-We present a large scale benchmark of modern deep learning architectures for a financial time series prediction and position sizing task, with a primary focus on Sharpe ratio optimization. Evaluating linear models, recurrent networks, transformer based architectures, state space models, and recent sequence representation approaches, we assess out of sample performance on a daily futures dataset spanning commodities, equity indices, bonds, and FX spanning 2010 to 2025. Our evaluation goes beyond average returns and includes statistical significance, downside and tail risk measures, breakeven transaction cost analysis, robustness to random seed selection, and computational efficiency. We find that models explicitly designed to learn rich temporal representations consistently outperform linear benchmarks and generic deep learning models, which often lead the ranking in standard time series benchmarks. Hybrid models such as VSN with LSTM, a combination of Variable Selection Networks (VSN) and LSTMs, achieves the highest overall Sharpe ratio, while VSN with xLSTM and LSTM with PatchTST exhibit superior downside adjusted characteristics. xLSTM demonstrates the largest breakeven transaction cost buffer, indicating improved robustness to trading frictions.
+Stock market prediction presents considerable challenges for investors, financial institutions, and policymakers operating in complex market environments characterized by noise, non-stationarity, and behavioral dynamics. Traditional forecasting methods often fail to capture the intricate patterns and cross-sectional dependencies inherent in financial markets. This paper presents an integrated framework combining a node transformer architecture with BERT-based sentiment analysis for stock price forecasting. The proposed model represents the stock market as a graph structure where individual stocks form nodes and edges capture relationships including sectoral affiliations, correlated price movements, and supply chain connections. A fine-tuned BERT model extracts sentiment from social media posts and combines it with quantitative market features through attention-based fusion. The node transformer processes historical market data while capturing both temporal evolution and cross-sectional dependencies among stocks. Experiments on 20 S&P 500 stocks spanning January 1982 to March 2025 demonstrate that the integrated model achieves a mean absolute percentage error (MAPE) of 0.80% for one-day-ahead predictions, compared to 1.20% for ARIMA and 1.00% for LSTM. Sentiment analysis reduces prediction error by 10% overall and 25% during earnings announcements, while graph-based modeling contributes an additional 15% improvement by capturing inter-stock dependencies. Directional accuracy reaches 65% for one-day forecasts. Statistical validation through paired t-tests confirms these improvements (p < 0.05 for all comparisons). The model maintains MAPE below 1.5% during high-volatility periods where baseline models exceed 2%.
 
 ---
 
 ## 🎯 关键贡献
 
-1. We present a large scale benchmark of modern deep learning architectures for a financial time series prediction and position sizing task, with a primary focus on Sharpe ratio optimization.
-2. We present a large scale benchmark of modern deep learning architectures for a financial time series prediction and position sizing task, with a primary focus on Sharpe ratio optimization
-3. Evaluating linear models, recurrent networks, transformer based architectures, state space models, and recent sequence representation approaches, we assess out of sample performance on a daily futures dataset spanning commodities, equity indices, bonds, and FX spanning 2010 to 2025
+1. model achieves a mean absolute percentage error (MAPE) of 0.
+2. Stock market prediction presents considerable challenges for investors, financial institutions, and policymakers operating in complex market environments characterized by noise, non-stationarity, and behavioral dynamics
+3. Traditional forecasting methods often fail to capture the intricate patterns and cross-sectional dependencies inherent in financial markets
 
 ---
 
 ## 🔬 研究方法
 
-- 深度学习/神经网络
 - Transformer架构
 - 长短期记忆网络 (LSTM)
-- 时间序列分析
-- 夏普比率优化
-- 基准测试
+- 预测模型
 - 预测
 
 
@@ -48,7 +45,8 @@ We present a large scale benchmark of modern deep learning architectures for a f
 
 ## 💡 潜在应用
 
-- 量化交易
+- 市场预测
+- 价格预测
 
 
 ---
@@ -61,22 +59,24 @@ We present a large scale benchmark of modern deep learning architectures for a f
 
 ### 研究方法/方法学
 
-We present a large scale benchmark of modern deep learning architectures for a financial time series prediction and position sizing task, with a primary focus on Sharpe ratio optimization
+Traditional forecasting methods often fail to capture the intricate patterns and cross-sectional dependencies inherent in financial markets
 
-Evaluating linear models, recurrent networks, transformer based architectures, state space models, and recent sequence representation approaches, we assess out of sample performance on a daily futures dataset spanning commodities, equity indices, bonds, and FX spanning 2010 to 2025
+This paper presents an integrated framework combining a node transformer architecture with BERT-based sentiment analysis for stock price forecasting
 
 ### 关键发现
 
-- We find that models explicitly designed to learn rich temporal representations consistently outperform linear benchmarks and generic deep learning models, which often lead the ranking in standard time series benchmarks.
+- 见论文详细内容
 
 
 ### 数据和研究范围
 
-Evaluating linear models, recurrent networks, transformer based architectures, state space models, and recent sequence representation approaches, we assess out of sample performance on a daily futures dataset spanning commodities, equity indices, bonds, and FX spanning 2010 to 2025
+The proposed model represents the stock market as a graph structure where individual stocks form nodes and edges capture relationships including sectoral affiliations, correlated price movements, and supply chain connections
+
+The node transformer processes historical market data while capturing both temporal evolution and cross-sectional dependencies among stocks
 
 ### 研究局限性
 
-- 基于论文摘要无法判断
+- Stock market prediction presents considerable challenges for investors, financial institutions, and policymakers operating in complex market environments characterized by noise, non-stationarity, and behavioral dynamics
 
 
 ---
@@ -87,7 +87,7 @@ Evaluating linear models, recurrent networks, transformer based architectures, s
 **评价**: 一般 - 主要是对现有方法的应用或比较
 
 ### 实用价值
-**评价**: 中 - 有一定的实用价值
+**评价**: 一般 - 主要是理论性研究
 
 ### 理论贡献
 **评价**: 中 - 有一定的理论贡献
@@ -96,7 +96,7 @@ Evaluating linear models, recurrent networks, transformer based architectures, s
 **评价**: 中 - 数据集较为充分
 
 ### 适用性
-**评价**: 中 - 模型有一定的适用性
+**评价**: 一般 - 需要进一步验证泛化能力
 
 ### 综合评分
 **⭐⭐⭐⭐ 良好 - 值得参考**
@@ -106,7 +106,8 @@ Evaluating linear models, recurrent networks, transformer based architectures, s
 ## 📖 阅读建议
 
 **适合人群**:
-- 量化交易从业者
+- 市场预测从业者
+- 价格预测从业者
 
 - 量化金融研究人员
 - 金融科技工程师

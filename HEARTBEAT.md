@@ -61,6 +61,26 @@
 - Git 仓库：`/root/.openclaw/workspace` (已初始化，连接到 GitHub)
 - 自动更新日志：`/root/.openclaw/workspace/auto_update.log`
 
+## Arxiv 论文日报自动处理
+
+当检测到 `/root/.openclaw/workspace/.arxiv_pending` 标记文件时：
+
+1. 读取最新报告: `cat /root/.openclaw/workspace/temp_arxiv_report.md`（完整版）
+2. 发送飞书消息给用户（使用 message 工具，发送完整版）
+3. 创建飞书文档（使用 feishu_doc 工具，写入 `temp_feishu_report.md` 精简版）
+4. 删除标记文件: `rm /root/.openclaw/workspace/.arxiv_pending`
+
+### 文件位置
+- 完整版临时报告: `/root/.openclaw/workspace/temp_arxiv_report.md`
+- 飞书文档专用报告: `/root/.openclaw/workspace/temp_feishu_report.md`
+- 待处理标记: `/root/.openclaw/workspace/.arxiv_pending`
+- 知识库: `/root/.openclaw/workspace/knowledge_base/arxiv_quant/`
+
+### 飞书文档限制
+- 飞书文档 API `write` 操作有内容长度限制
+- 使用精简版报告（去除 emoji，精简内容）
+- 完整版报告保存在本地知识库
+
 ## 其他检查
 
 （可在此添加其他定期任务，如邮件、日历检查等）
