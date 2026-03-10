@@ -350,3 +350,60 @@ Node.js v20.20.0
 [2026-03-09 09:39:56] 💾 知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260309.md
 [2026-03-09 09:39:56] 📝 临时文件已保存，主会话将自动处理飞书消息和文档创建
 [2026-03-09 09:39:56] ============================================================
+[2026-03-10 08:00:02] ============================================================
+[2026-03-10 08:00:02] 🚀 Arxiv 量化投资论文日报任务开始
+[2026-03-10 08:00:02] ============================================================
+[2026-03-10 08:00:02] 🔍 开始搜索 arXiv 论文...
+[2026-03-10 08:00:08] ✅ 找到 20 篇相关论文
+[2026-03-10 08:00:08] ✅ 选中论文: Stock Market Prediction Using Node Transformer Architecture Integrated with BERT Sentiment Analysis
+[2026-03-10 08:00:08]    得分: 22.5
+[2026-03-10 08:00:08]    类别: cs.LG
+[2026-03-10 08:00:08] 📖 开始分析论文...
+[2026-03-10 08:00:08] ✅ 论文分析完成
+[2026-03-10 08:00:08] ✅ Markdown 文档生成完成
+[2026-03-10 08:00:08] ✅ 飞书文档专用 Markdown 生成完成
+[2026-03-10 08:00:08] ✅ 文档已保存到知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260310.md
+[2026-03-10 08:00:08] ✅ 临时论文数据已保存: /root/.openclaw/workspace/temp_arxiv_paper.json
+[2026-03-10 08:00:08] ✅ 临时报告已保存: /root/.openclaw/workspace/temp_arxiv_report.md
+[2026-03-10 08:00:08] ✅ 飞书文档专用报告已保存: /root/.openclaw/workspace/temp_feishu_report.md
+[2026-03-10 08:00:08] 📝 开始创建飞书文档...
+[2026-03-10 08:00:08]    ⚠️ 注意：此功能需要主会话的飞书工具支持
+[2026-03-10 08:00:08]    当前脚本无法直接调用飞书工具，将由主会话处理
+[2026-03-10 08:00:08] ✅ 已创建待处理标记: /root/.openclaw/workspace/.arxiv_pending
+[2026-03-10 08:00:08] ============================================================
+[2026-03-10 08:00:08] ✅ 任务完成
+[2026-03-10 08:00:08] 📄 论文: Stock Market Prediction Using Node Transformer Architecture Integrated with BERT Sentiment Analysis
+[2026-03-10 08:00:08] 💾 知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260310.md
+[2026-03-10 08:00:08] 📝 临时文件已保存，主会话将自动处理飞书消息和文档创建
+[2026-03-10 08:00:08] ============================================================
+/usr/lib/python3.6/site-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (1.26.20) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+[2026-03-10 08:00:02] ============================================================
+[2026-03-10 08:00:02] 🚀 Arxiv 量化投资论文日报任务开始
+[2026-03-10 08:00:02] ============================================================
+[2026-03-10 08:00:02] 🔍 开始搜索 arXiv 论文...
+[2026-03-10 08:00:08] ✅ 找到 20 篇相关论文
+[2026-03-10 08:00:08] ✅ 选中论文: Stock Market Prediction Using Node Transformer Architecture Integrated with BERT Sentiment Analysis
+[2026-03-10 08:00:08]    得分: 22.5
+[2026-03-10 08:00:08]    类别: cs.LG
+[2026-03-10 08:00:08] 📖 开始分析论文...
+[2026-03-10 08:00:08] ✅ 论文分析完成
+[2026-03-10 08:00:08] ✅ Markdown 文档生成完成
+[2026-03-10 08:00:08] ✅ 飞书文档专用 Markdown 生成完成
+[2026-03-10 08:00:08] ✅ 文档已保存到知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260310.md
+[2026-03-10 08:00:08] ✅ 临时论文数据已保存: /root/.openclaw/workspace/temp_arxiv_paper.json
+[2026-03-10 08:00:08] ✅ 临时报告已保存: /root/.openclaw/workspace/temp_arxiv_report.md
+[2026-03-10 08:00:08] ✅ 飞书文档专用报告已保存: /root/.openclaw/workspace/temp_feishu_report.md
+[2026-03-10 08:00:08] 📝 开始创建飞书文档...
+[2026-03-10 08:00:08]    ⚠️ 注意：此功能需要主会话的飞书工具支持
+[2026-03-10 08:00:08]    当前脚本无法直接调用飞书工具，将由主会话处理
+[2026-03-10 08:00:08] ✅ 已创建待处理标记: /root/.openclaw/workspace/.arxiv_pending
+[2026-03-10 08:00:08] ============================================================
+[2026-03-10 08:00:08] ✅ 任务完成
+[2026-03-10 08:00:08] 📄 论文: Stock Market Prediction Using Node Transformer Architecture Integrated with BERT Sentiment Analysis
+[2026-03-10 08:00:08] 💾 知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260310.md
+[2026-03-10 08:00:08] 📝 临时文件已保存，主会话将自动处理飞书消息和文档创建
+[2026-03-10 08:00:08] ============================================================
+
+✅ Arxiv 量化投资论文日报任务执行成功
+📝 临时文件已保存，等待主会话处理
