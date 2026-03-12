@@ -1,10 +1,15 @@
 {
   "tasks": {
     "btc_analysis": {
-      "last_run": "2026-03-12T03:00:08Z",
+      "last_run": "2026-03-12T04:00:05Z",
       "status": "success",
-      "duration": 7,
+      "duration": 4,
       "history": [
+        {
+          "time": "2026-03-12T04:00:05Z",
+          "status": "success",
+          "duration": 4
+        },
         {
           "time": "2026-03-12T03:00:08Z",
           "status": "success",
@@ -18,10 +23,15 @@
       ]
     },
     "html_generation": {
-      "last_run": "2026-03-12T03:00:18Z",
+      "last_run": "2026-03-12T04:00:15Z",
       "status": "success",
       "duration": 10,
       "history": [
+        {
+          "time": "2026-03-12T04:00:15Z",
+          "status": "success",
+          "duration": 10
+        },
         {
           "time": "2026-03-12T03:00:18Z",
           "status": "success",
@@ -35,10 +45,15 @@
       ]
     },
     "github_push": {
-      "last_run": "2026-03-12T02:00:20Z",
+      "last_run": "2026-03-12T03:00:19Z",
       "status": "success",
-      "duration": 2,
+      "duration": 1,
       "history": [
+        {
+          "time": "2026-03-12T03:00:19Z",
+          "status": "success",
+          "duration": 1
+        },
         {
           "time": "2026-03-12T02:00:20Z",
           "status": "success",
