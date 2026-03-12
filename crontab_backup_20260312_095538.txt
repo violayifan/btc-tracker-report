@@ -1,0 +1,3 @@
+0 * * * * /root/.openclaw/workspace/auto_update.sh >> /root/.openclaw/workspace/auto_update.log 2>&1
+0 * * * * /root/.openclaw/workspace/update_btc_report.sh >> /root/.openclaw/workspace/update_btc_report.log 2>&1
+0 8 * * * /root/.openclaw/workspace/arxiv_daily_with_notification.sh >> /root/.openclaw/workspace/arxiv_daily_with_notification.log 2>&1

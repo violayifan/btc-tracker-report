@@ -1,0 +1,22 @@
+# ============================================
+# 优化的定时任务配置
+# ============================================
+# 使用统一的任务管理器 (task_manager.sh)
+# 包含：BTC 每小时分析 + Arxiv 每日论文 + 健康检查
+# ============================================
+
+# BTC 完整流水线（每小时整点执行）
+# 包含：市场分析、HTML 生成、GitHub Pages 推送
+0 * * * * /root/.openclaw/workspace/task_manager.sh btc >> /root/.openclaw/workspace/logs/btc_pipeline.log 2>&1
+
+# Arxiv 论文日报（每天 8:00 执行）
+# 包含：论文搜索、分析、飞书消息发送
+0 8 * * * /root/.openclaw/workspace/task_manager.sh arxiv >> /root/.openclaw/workspace/logs/arxiv_daily.log 2>&1
+
+# 任务健康检查（每天 9:00 执行）
+# 检查：Git 状态、文件完整性、磁盘空间、依赖项
+0 9 * * * /root/.openclaw/workspace/task_manager.sh health >> /root/.openclaw/workspace/logs/health_check.log 2>&1
+
+# 日志清理（每周日 3:00 执行）
+# 清理 7 天前的旧日志
+0 3 * * 0 /root/.openclaw/workspace/task_manager.sh cleanup >> /root/.openclaw/workspace/logs/cleanup.log 2>&1
