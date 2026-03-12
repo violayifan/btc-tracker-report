@@ -1,55 +1,52 @@
 {
   "basic_info": {
-    "title": "Stock Market Prediction Using Node Transformer Architecture Integrated with BERT Sentiment Analysis",
+    "title": "Nonconcave Portfolio Choice under Smooth Ambiguity",
     "authors": [
-      "Mohammad Al Ridhawi",
-      "Mahtab Haj Ali",
-      "Hussein Al Osman"
+      "Emanuele Borgonovo",
+      "An Chen",
+      "Massimo Marinacci",
+      "Shihao Zhu"
     ],
-    "published": "2026-03-06T05:15:22Z",
-    "url": "https://arxiv.org/abs/2603.05917v1",
-    "category": "cs.LG"
+    "published": "2026-03-09T16:16:25Z",
+    "url": "https://arxiv.org/abs/2603.08552v1",
+    "category": "q-fin.PM"
   },
-  "summary": "Stock market prediction presents considerable challenges for investors, financial institutions, and policymakers operating in complex market environments characterized by noise, non-stationarity, and behavioral dynamics. Traditional forecasting methods often fail to capture the intricate patterns and cross-sectional dependencies inherent in financial markets. This paper presents an integrated framework combining a node transformer architecture with BERT-based sentiment analysis for stock price forecasting. The proposed model represents the stock market as a graph structure where individual stocks form nodes and edges capture relationships including sectoral affiliations, correlated price movements, and supply chain connections. A fine-tuned BERT model extracts sentiment from social media posts and combines it with quantitative market features through attention-based fusion. The node transformer processes historical market data while capturing both temporal evolution and cross-sectional dependencies among stocks. Experiments on 20 S&P 500 stocks spanning January 1982 to March 2025 demonstrate that the integrated model achieves a mean absolute percentage error (MAPE) of 0.80% for one-day-ahead predictions, compared to 1.20% for ARIMA and 1.00% for LSTM. Sentiment analysis reduces prediction error by 10% overall and 25% during earnings announcements, while graph-based modeling contributes an additional 15% improvement by capturing inter-stock dependencies. Directional accuracy reaches 65% for one-day forecasts. Statistical validation through paired t-tests confirms these improvements (p < 0.05 for all comparisons). The model maintains MAPE below 1.5% during high-volatility periods where baseline models exceed 2%.",
+  "summary": "We study continuous-time portfolio choice with nonlinear payoffs under smooth ambiguity and Bayesian learning. We develop a general framework for dynamic, non-concave asset allocation that accommodates nonlinear payoffs, broad utility classes, and flexible ambiguity attitudes. Dynamic consistency is obtained by a robust representation that recasts the ambiguity-averse problem as ambiguity-neutral with distorted priors. This structure delivers explicit trading rules by combining nonlinear filtering with the martingale approach and nests standard concave and linear-payoff benchmarks. As a leading application, delegated management with convex incentives illustrates that ambiguity aversion shifts beliefs toward adverse states, limits the range of states that would otherwise trigger more aggressive risk taking, and reduces volatility through lower risky exposure.",
   "key_contributions": [
-    "model achieves a mean absolute percentage error (MAPE) of 0.",
-    "Stock market prediction presents considerable challenges for investors, financial institutions, and policymakers operating in complex market environments characterized by noise, non-stationarity, and behavioral dynamics",
-    "Traditional forecasting methods often fail to capture the intricate patterns and cross-sectional dependencies inherent in financial markets"
+    "We develop a general framework for dynamic, non-concave asset allocation that accommodates nonlinear payoffs, broad utility classes, and flexible ambiguity attitudes.",
+    "We study continuous-time portfolio choice with nonlinear payoffs under smooth ambiguity and Bayesian learning",
+    "We develop a general framework for dynamic, non-concave asset allocation that accommodates nonlinear payoffs, broad utility classes, and flexible ambiguity attitudes"
   ],
   "methodology": [
-    "Transformer架构",
-    "长短期记忆网络 (LSTM)",
-    "预测模型",
-    "预测"
+    "投资组合优化",
+    "基准测试"
   ],
   "potential_applications": [
-    "市场预测",
-    "价格预测"
+    "量化交易"
   ],
   "detailed_summary": {
-    "research_objective": "研究量化投资相关的理论和方法问题",
+    "research_objective": "We study continuous-time portfolio choice with nonlinear payoffs under smooth ambiguity and Bayesian learning.",
     "approach": [
-      "Traditional forecasting methods often fail to capture the intricate patterns and cross-sectional dependencies inherent in financial markets",
-      "This paper presents an integrated framework combining a node transformer architecture with BERT-based sentiment analysis for stock price forecasting"
+      "We develop a general framework for dynamic, non-concave asset allocation that accommodates nonlinear payoffs, broad utility classes, and flexible ambiguity attitudes",
+      "This structure delivers explicit trading rules by combining nonlinear filtering with the martingale approach and nests standard concave and linear-payoff benchmarks"
     ],
     "key_findings": [
       "见论文详细内容"
     ],
     "data_and_scope": [
-      "The proposed model represents the stock market as a graph structure where individual stocks form nodes and edges capture relationships including sectoral affiliations, correlated price movements, and supply chain connections",
-      "The node transformer processes historical market data while capturing both temporal evolution and cross-sectional dependencies among stocks"
+      "As a leading application, delegated management with convex incentives illustrates that ambiguity aversion shifts beliefs toward adverse states, limits the range of states that would otherwise trigger more aggressive risk taking, and reduces volatility through lower risky exposure"
     ],
     "limitations": [
-      "Stock market prediction presents considerable challenges for investors, financial institutions, and policymakers operating in complex market environments characterized by noise, non-stationarity, and behavioral dynamics"
+      "基于论文摘要无法判断"
     ]
   },
   "evaluation": {
     "innovation": "一般 - 主要是对现有方法的应用或比较",
-    "practical_value": "一般 - 主要是理论性研究",
+    "practical_value": "高 - 具有很强的实际应用价值",
     "theoretical_contribution": "中 - 有一定的理论贡献",
-    "data_quality": "中 - 数据集较为充分",
-    "applicability": "一般 - 需要进一步验证泛化能力",
-    "overall_rating": "⭐⭐⭐⭐ 良好 - 值得参考"
+    "data_quality": "无法判断 - 摘要中未详细描述数据",
+    "applicability": "中 - 模型有一定的适用性",
+    "overall_rating": "⭐⭐ 较低 - 按需阅读"
   },
-  "analysis_date": "2026-03-11 08:00:07"
+  "analysis_date": "2026-03-12 08:00:07"
 }
