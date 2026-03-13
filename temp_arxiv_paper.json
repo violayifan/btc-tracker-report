@@ -1,40 +1,42 @@
 {
   "basic_info": {
-    "title": "Nonconcave Portfolio Choice under Smooth Ambiguity",
+    "title": "AlgoXpert Alpha Research Framework. A Rigorous IS WFA OOS Protocol for Mitigating Overfitting in Quantitative Strategies",
     "authors": [
-      "Emanuele Borgonovo",
-      "An Chen",
-      "Massimo Marinacci",
-      "Shihao Zhu"
+      "The Anh Pham",
+      "Bao Chan Nguyen",
+      "Nguyet Nguyen Thi"
     ],
-    "published": "2026-03-09T16:16:25Z",
-    "url": "https://arxiv.org/abs/2603.08552v1",
+    "published": "2026-03-10T05:40:23Z",
+    "url": "https://arxiv.org/abs/2603.09219v1",
     "category": "q-fin.PM"
   },
-  "summary": "We study continuous-time portfolio choice with nonlinear payoffs under smooth ambiguity and Bayesian learning. We develop a general framework for dynamic, non-concave asset allocation that accommodates nonlinear payoffs, broad utility classes, and flexible ambiguity attitudes. Dynamic consistency is obtained by a robust representation that recasts the ambiguity-averse problem as ambiguity-neutral with distorted priors. This structure delivers explicit trading rules by combining nonlinear filtering with the martingale approach and nests standard concave and linear-payoff benchmarks. As a leading application, delegated management with convex incentives illustrates that ambiguity aversion shifts beliefs toward adverse states, limits the range of states that would otherwise trigger more aggressive risk taking, and reduces volatility through lower risky exposure.",
+  "summary": "Transitioning a strategy from backtest to live trading is a common failure point for quantitative systems due to parameter overfitting, selection bias, and sensitivity to regime changes. This paper presents the AlgoXpert Alpha Research Framework, a standardized protocol that evaluates strategies across three stages: In Sample (IS), which focuses on stable parameter regions instead of single optima; Walk Forward Analysis (WFA) using rolling windows and purge gaps to reduce information leakage, supported by majority pass and catastrophic veto rules; and Out of Sample (OOS) testing under strict parameter lock with no further tuning.\n  The framework applies a defense in depth structure that includes structural safeguards such as cliff veto, execution controls such as spread and leverage guards, and equity protection mechanisms such as circuit breakers and a kill switch. A case study on USDJPY M5 intraday data demonstrates how to detect overfitting through performance decay and drawdown behavior across chronological stages. A post validation comparison of four alpha variants (v1 to v4) shows rank reversal when the objective changes from maximizing Sharpe to minimizing maximum drawdown, highlighting the trade off between risk adjusted performance and tail risk control.",
   "key_contributions": [
-    "We develop a general framework for dynamic, non-concave asset allocation that accommodates nonlinear payoffs, broad utility classes, and flexible ambiguity attitudes.",
-    "We study continuous-time portfolio choice with nonlinear payoffs under smooth ambiguity and Bayesian learning",
-    "We develop a general framework for dynamic, non-concave asset allocation that accommodates nonlinear payoffs, broad utility classes, and flexible ambiguity attitudes"
+    "Transitioning a strategy from backtest to live trading is a common failure point for quantitative systems due to parameter overfitting, selection bias, and sensitivity to regime changes",
+    "This paper presents the AlgoXpert Alpha Research Framework, a standardized protocol that evaluates strategies across three stages: In Sample (IS), which focuses on stable parameter regions instead of single optima; Walk Forward Analysis (WFA) using rolling windows and purge gaps to reduce information leakage, supported by majority pass and catastrophic veto rules; and Out of Sample (OOS) testing under strict parameter lock with no further tuning",
+    "The framework applies a defense in depth structure that includes structural safeguards such as cliff veto, execution controls such as spread and leverage guards, and equity protection mechanisms such as circuit breakers and a kill switch"
   ],
   "methodology": [
-    "投资组合优化",
-    "基准测试"
+    "最大回撤",
+    "回测分析"
   ],
   "potential_applications": [
-    "量化交易"
+    "量化交易",
+    "风险控制",
+    "交易执行"
   ],
   "detailed_summary": {
-    "research_objective": "We study continuous-time portfolio choice with nonlinear payoffs under smooth ambiguity and Bayesian learning.",
+    "research_objective": "研究量化投资相关的理论和方法问题",
     "approach": [
-      "We develop a general framework for dynamic, non-concave asset allocation that accommodates nonlinear payoffs, broad utility classes, and flexible ambiguity attitudes",
-      "This structure delivers explicit trading rules by combining nonlinear filtering with the martingale approach and nests standard concave and linear-payoff benchmarks"
+      "Transitioning a strategy from backtest to live trading is a common failure point for quantitative systems due to parameter overfitting, selection bias, and sensitivity to regime changes",
+      "This paper presents the AlgoXpert Alpha Research Framework, a standardized protocol that evaluates strategies across three stages: In Sample (IS), which focuses on stable parameter regions instead of single optima; Walk Forward Analysis (WFA) using rolling windows and purge gaps to reduce information leakage, supported by majority pass and catastrophic veto rules; and Out of Sample (OOS) testing under strict parameter lock with no further tuning"
     ],
     "key_findings": [
       "见论文详细内容"
     ],
     "data_and_scope": [
-      "As a leading application, delegated management with convex incentives illustrates that ambiguity aversion shifts beliefs toward adverse states, limits the range of states that would otherwise trigger more aggressive risk taking, and reduces volatility through lower risky exposure"
+      "This paper presents the AlgoXpert Alpha Research Framework, a standardized protocol that evaluates strategies across three stages: In Sample (IS), which focuses on stable parameter regions instead of single optima; Walk Forward Analysis (WFA) using rolling windows and purge gaps to reduce information leakage, supported by majority pass and catastrophic veto rules; and Out of Sample (OOS) testing under strict parameter lock with no further tuning",
+      "The framework applies a defense in depth structure that includes structural safeguards such as cliff veto, execution controls such as spread and leverage guards, and equity protection mechanisms such as circuit breakers and a kill switch"
     ],
     "limitations": [
       "基于论文摘要无法判断"
@@ -42,11 +44,11 @@
   },
   "evaluation": {
     "innovation": "一般 - 主要是对现有方法的应用或比较",
-    "practical_value": "高 - 具有很强的实际应用价值",
+    "practical_value": "中 - 有一定的实用价值",
     "theoretical_contribution": "中 - 有一定的理论贡献",
     "data_quality": "无法判断 - 摘要中未详细描述数据",
-    "applicability": "中 - 模型有一定的适用性",
+    "applicability": "一般 - 需要进一步验证泛化能力",
     "overall_rating": "⭐⭐ 较低 - 按需阅读"
   },
-  "analysis_date": "2026-03-12 08:00:07"
+  "analysis_date": "2026-03-13 08:00:02"
 }
