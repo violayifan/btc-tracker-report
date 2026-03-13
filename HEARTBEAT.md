@@ -63,18 +63,24 @@
 
 ## Arxiv 论文日报自动处理
 
-**状态**：手动暂停（等待新指令）
+**状态**：✅ 已启用（每天 8:30 自动运行）
 
-**当前状态**：
-- ✅ 代码逻辑已修改，防止无限循环
-- ✅ 系统已暂停自动后台检查
-- ⏸️ 系统处于**手动控制模式**（等待用户指令）
+**定时任务设置**：每天 8:30 自动运行
+```bash
+30 8 * * * /root/.openclaw/workspace/task_manager.sh arxiv >> /root/.openclaw/workspace/logs/arxiv_daily.log 2>&1
+```
 
-**说明**：
-- 用户已确认系统运行正常，并要求暂时停止自动后台检查，以减少资源消耗和重复通知。
-- 系统已切换到手动模式，定时任务将仅在收到明确指令后执行。
-- 如需立即运行 BTC 分析或 Daily AI 搜索，请直接下达指令。
-- 系统将不再自动发送定时提醒通知，界面将保持清爽。
+**自动执行内容**：
+1. 搜索 arXiv q-fin.* 分类最新的量化金融论文
+2. 评分并筛选最相关的论文
+3. 分析论文的核心贡献和方法论
+4. 生成详细的 Markdown 报告
+5. 保存到知识库：`/root/.openclaw/workspace/knowledge_base/arxiv_quant/`
+6. 通过 Feishu 消息发送完整报告
+
+### 文件位置
+- 论文报告：`/root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_YYYYMMDD.md`
+- 执行日志：`/root/.openclaw/workspace/logs/arxiv_daily.log`
 
 ---
 
