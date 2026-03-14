@@ -203,6 +203,71 @@ task_push_github() {
     return 0
 }
 
+# 发送飞书消息
+send_feishu_message() {
+    local message=$1
+    log "INFO" "📤 发送飞书消息..."
+
+    # 创建临时 Python 脚本发送消息
+    local temp_script=$(mktemp)
+    cat > "$temp_script" << 'PYTHON_SCRIPT'
+#!/usr/bin/env python3
+import sys
+import subprocess
+import json
+
+# 读取消息内容
+message = sys.stdin.read()
+
+# 调用 OpenClaw 发送飞书消息
+# 使用 openclaw CLI 发送
+try:
+    result = subprocess.run(
+        ['openclaw', 'message', 'send', '--channel', 'feishu', '--message', message],
+        capture_output=True,
+        text=True,
+        timeout=30
+    )
+    if result.returncode == 0:
+        print(json.dumps({"status": "success"}))
+        sys.exit(0)
+    else:
+        print(json.dumps({"status": "error", "message": result.stderr}), file=sys.stderr)
+        sys.exit(1)
+except Exception as e:
+    print(json.dumps({"status": "error", "message": str(e)}), file=sys.stderr)
+    sys.exit(1)
+PYTHON_SCRIPT
+
+    # 执行脚本
+    echo "$message" | python3 "$temp_script" 2>/dev/null
+    local exit_code=$?
+
+    # 清理临时文件
+    rm -f "$temp_script"
+
+    if [ $exit_code -eq 0 ]; then
+        log "INFO" "✅ 飞书消息发送成功"
+        return 0
+    else
+        log "WARN" "⚠️  飞书消息发送失败（可能由主会话处理）"
+        return 0  # 不影响任务执行
+    fi
+}
+
+# 读取最新 BTC 报告
+read_latest_btc_report() {
+    local latest_report=$(ls -t "$WORKSPACE/reports/btc_report_"*.txt 2>/dev/null | head -1)
+
+    if [ -z "$latest_report" ]; then
+        log "WARN" "⚠️  未找到 BTC 报告文件"
+        return 1
+    fi
+
+    cat "$latest_report"
+    return 0
+}
+
 # BTC 完整流水线（每小时）
 run_btc_full_pipeline() {
     log "INFO" "=========================================="
@@ -220,6 +285,27 @@ run_btc_full_pipeline() {
 
     log "INFO" "🌐 网址: https://violayifan.github.io/btc-tracker-report"
     log "INFO" "✅ BTC 完整流水线执行成功"
+
+    # 4. 发送飞书消息
+    log "INFO" "📤 准备发送飞书消息..."
+    local report_content=$(read_latest_btc_report)
+
+    if [ $? -eq 0 ]; then
+        # 添加访问链接前缀
+        local message="[自动任务 - BTC 市场分析]
+
+🌐 查看完整报告: https://violayifan.github.io/btc-tracker-report
+
+─────────────────────────────────────
+
+$report_content"
+
+        send_feishu_message "$message"
+    else
+        log "WARN" "⚠️  无法读取报告，跳过飞书消息"
+    fi
+
+    log "INFO" "✅ BTC 完整流水线执行完成（含飞书消息）"
 
     return 0
 }
@@ -246,14 +332,20 @@ run_arxiv_daily() {
 
     # 发送飞书消息
     log "INFO" "📤 发送飞书消息..."
-    # 注意：这里需要根据实际环境调整
-    # 可以使用 OpenClaw CLI 或直接调用消息 API
-    log "INFO" "⚠️  飞书消息发送由主会话处理"
+
+    # 添加标题前缀
+    local message="[自动任务 - Arxiv 量化金融论文日报]
+
+─────────────────────────────────────
+
+$report_content"
+
+    send_feishu_message "$message"
 
     # 清理待处理标记
     rm -f "$WORKSPACE/.arxiv_pending"
 
-    log "INFO" "✅ Arxiv 论文日报任务完成"
+    log "INFO" "✅ Arxiv 论文日报任务完成（含飞书消息）"
     return 0
 }
 
