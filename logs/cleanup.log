@@ -1,0 +1,11 @@
+[2026-03-15 03:00:01] [INFO] ==========================================
+[2026-03-15 03:00:01] [INFO] 🧹 清理旧日志
+[2026-03-15 03:00:01] [INFO] ==========================================
+[2026-03-15 03:00:01] [INFO] ✅ 旧日志已清理
+[2026-03-15 03:00:01] [INFO] 📄 当前日志文件:
+-rw-r--r-- 1 root root 6.2K Mar 14 08:30 /root/.openclaw/workspace/logs/arxiv_daily.log
+-rw-r--r-- 1 root root 578K Mar 15 03:00 /root/.openclaw/workspace/logs/btc_pipeline.log
+-rw-r--r-- 1 root root  300 Mar 15 03:00 /root/.openclaw/workspace/logs/cleanup.log
+-rw-r--r-- 1 root root 2.1K Mar 14 09:00 /root/.openclaw/workspace/logs/health_check.log
+-rw-r--r-- 1 root root 159K Mar 15 03:00 /root/.openclaw/workspace/logs/task_manager.log
+[2026-03-15 03:00:01] [INFO] ==========================================
