@@ -1,54 +1,56 @@
 {
   "basic_info": {
-    "title": "AlgoXpert Alpha Research Framework. A Rigorous IS WFA OOS Protocol for Mitigating Overfitting in Quantitative Strategies",
+    "title": "Beyond Polarity: Multi-Dimensional LLM Sentiment Signals for WTI Crude Oil Futures Return Prediction",
     "authors": [
-      "The Anh Pham",
-      "Bao Chan Nguyen",
-      "Nguyet Nguyen Thi"
+      "Dehao Dai",
+      "Ding Ma",
+      "Dou Liu",
+      "Kerui Geng",
+      "Yiqing Wang"
     ],
-    "published": "2026-03-10T05:40:23Z",
-    "url": "https://arxiv.org/abs/2603.09219v1",
-    "category": "q-fin.PM"
+    "published": "2026-03-12T00:42:08Z",
+    "url": "https://arxiv.org/abs/2603.11408v1",
+    "category": "q-fin.ST"
   },
-  "summary": "Transitioning a strategy from backtest to live trading is a common failure point for quantitative systems due to parameter overfitting, selection bias, and sensitivity to regime changes. This paper presents the AlgoXpert Alpha Research Framework, a standardized protocol that evaluates strategies across three stages: In Sample (IS), which focuses on stable parameter regions instead of single optima; Walk Forward Analysis (WFA) using rolling windows and purge gaps to reduce information leakage, supported by majority pass and catastrophic veto rules; and Out of Sample (OOS) testing under strict parameter lock with no further tuning.\n  The framework applies a defense in depth structure that includes structural safeguards such as cliff veto, execution controls such as spread and leverage guards, and equity protection mechanisms such as circuit breakers and a kill switch. A case study on USDJPY M5 intraday data demonstrates how to detect overfitting through performance decay and drawdown behavior across chronological stages. A post validation comparison of four alpha variants (v1 to v4) shows rank reversal when the objective changes from maximizing Sharpe to minimizing maximum drawdown, highlighting the trade off between risk adjusted performance and tail risk control.",
+  "summary": "Forecasting crude oil prices remains challenging because market-relevant information is embedded in large volumes of unstructured news and is not fully captured by traditional polarity-based sentiment measures. This paper examines whether multi-dimensional sentiment signals extracted by large language models improve the prediction of weekly WTI crude oil futures returns. Using energy-sector news articles from 2020 to 2025, we construct five sentiment dimensions covering relevance, polarity, intensity, uncertainty, and forwardness based on GPT-4o, Llama 3.2-3b, and two benchmark models, FinBERT and AlphaVantage. We aggregate article-level signals to the weekly level and evaluate their predictive performance in a classification framework. The best results are achieved by combining GPT-4o and FinBERT, suggesting that LLM-based and conventional financial sentiment models provide complementary predictive information. SHAP analysis further shows that intensity- and uncertainty-related features are among the most important predictors, indicating that the predictive value of news sentiment extends beyond simple polarity. Overall, the results suggest that multi-dimensional LLM-based sentiment measures can improve commodity return forecasting and support energy-market risk monitoring.",
   "key_contributions": [
-    "Transitioning a strategy from backtest to live trading is a common failure point for quantitative systems due to parameter overfitting, selection bias, and sensitivity to regime changes",
-    "This paper presents the AlgoXpert Alpha Research Framework, a standardized protocol that evaluates strategies across three stages: In Sample (IS), which focuses on stable parameter regions instead of single optima; Walk Forward Analysis (WFA) using rolling windows and purge gaps to reduce information leakage, supported by majority pass and catastrophic veto rules; and Out of Sample (OOS) testing under strict parameter lock with no further tuning",
-    "The framework applies a defense in depth structure that includes structural safeguards such as cliff veto, execution controls such as spread and leverage guards, and equity protection mechanisms such as circuit breakers and a kill switch"
+    "Forecasting crude oil prices remains challenging because market-relevant information is embedded in large volumes of unstructured news and is not fully captured by traditional polarity-based sentiment measures",
+    "This paper examines whether multi-dimensional sentiment signals extracted by large language models improve the prediction of weekly WTI crude oil futures returns",
+    "Using energy-sector news articles from 2020 to 2025, we construct five sentiment dimensions covering relevance, polarity, intensity, uncertainty, and forwardness based on GPT-4o, Llama 3"
   ],
   "methodology": [
-    "最大回撤",
-    "回测分析"
+    "基准测试",
+    "预测模型",
+    "预测",
+    "分类任务"
   ],
   "potential_applications": [
-    "量化交易",
-    "风险控制",
-    "交易执行"
+    "量化金融研究"
   ],
   "detailed_summary": {
-    "research_objective": "研究量化投资相关的理论和方法问题",
+    "research_objective": "This paper examines whether multi-dimensional sentiment signals extracted by large language models improve the prediction of weekly WTI crude oil futures returns.",
     "approach": [
-      "Transitioning a strategy from backtest to live trading is a common failure point for quantitative systems due to parameter overfitting, selection bias, and sensitivity to regime changes",
-      "This paper presents the AlgoXpert Alpha Research Framework, a standardized protocol that evaluates strategies across three stages: In Sample (IS), which focuses on stable parameter regions instead of single optima; Walk Forward Analysis (WFA) using rolling windows and purge gaps to reduce information leakage, supported by majority pass and catastrophic veto rules; and Out of Sample (OOS) testing under strict parameter lock with no further tuning"
+      "This paper examines whether multi-dimensional sentiment signals extracted by large language models improve the prediction of weekly WTI crude oil futures returns",
+      "2-3b, and two benchmark models, FinBERT and AlphaVantage"
     ],
     "key_findings": [
       "见论文详细内容"
     ],
     "data_and_scope": [
-      "This paper presents the AlgoXpert Alpha Research Framework, a standardized protocol that evaluates strategies across three stages: In Sample (IS), which focuses on stable parameter regions instead of single optima; Walk Forward Analysis (WFA) using rolling windows and purge gaps to reduce information leakage, supported by majority pass and catastrophic veto rules; and Out of Sample (OOS) testing under strict parameter lock with no further tuning",
-      "The framework applies a defense in depth structure that includes structural safeguards such as cliff veto, execution controls such as spread and leverage guards, and equity protection mechanisms such as circuit breakers and a kill switch"
+      "This paper examines whether multi-dimensional sentiment signals extracted by large language models improve the prediction of weekly WTI crude oil futures returns",
+      "Overall, the results suggest that multi-dimensional LLM-based sentiment measures can improve commodity return forecasting and support energy-market risk monitoring"
     ],
     "limitations": [
       "基于论文摘要无法判断"
     ]
   },
   "evaluation": {
-    "innovation": "一般 - 主要是对现有方法的应用或比较",
-    "practical_value": "中 - 有一定的实用价值",
+    "innovation": "中 - 在现有方法基础上有所改进",
+    "practical_value": "一般 - 主要是理论性研究",
     "theoretical_contribution": "中 - 有一定的理论贡献",
-    "data_quality": "无法判断 - 摘要中未详细描述数据",
+    "data_quality": "中 - 数据集较为充分",
     "applicability": "一般 - 需要进一步验证泛化能力",
     "overall_rating": "⭐⭐ 较低 - 按需阅读"
   },
-  "analysis_date": "2026-03-13 08:00:02"
+  "analysis_date": "2026-03-14 08:30:03"
 }
