@@ -76,10 +76,19 @@
 3. 分析论文的核心贡献和方法论
 4. 生成详细的 Markdown 报告
 5. 保存到知识库：`/root/.openclaw/workspace/knowledge_base/arxiv_quant/`
-6. 通过 Feishu 消息发送完整报告
+6. 生成待发送报告：`/root/.openclaw/workspace/temp_feishu_report.md`
+
+### Heartbeat 检查任务（每小时）
+
+在每次 heartbeat 时检查：
+1. 是否有新的 Arxiv 报告需要发送（检查 `temp_feishu_report.md` 文件修改时间）
+2. 如果有新报告（上次发送后生成的），读取并发送到 Feishu
+3. 更新 `arxiv_last_sent.txt` 记录最后发送的报告日期
 
 ### 文件位置
 - 论文报告：`/root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_YYYYMMDD.md`
+- 待发送报告：`/root/.openclaw/workspace/temp_feishu_report.md`
+- 发送记录：`/root/.openclaw/workspace/arxiv_last_sent.txt`
 - 执行日志：`/root/.openclaw/workspace/logs/arxiv_daily.log`
 
 ---

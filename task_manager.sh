@@ -327,25 +327,7 @@ run_arxiv_daily() {
         return 1
     fi
 
-    # 读取报告内容
-    local report_content=$(cat "$WORKSPACE/temp_feishu_report.md")
-
-    # 发送飞书消息
-    log "INFO" "📤 发送飞书消息..."
-
-    # 添加标题前缀
-    local message="[自动任务 - Arxiv 量化金融论文日报]
-
-─────────────────────────────────────
-
-$report_content"
-
-    send_feishu_message "$message"
-
-    # 清理待处理标记
-    rm -f "$WORKSPACE/.arxiv_pending"
-
-    log "INFO" "✅ Arxiv 论文日报任务完成（含飞书消息）"
+    log "INFO" "✅ Arxiv 论文日报任务完成（等待主会话发送消息）"
     return 0
 }
 
