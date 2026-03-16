@@ -1,10 +1,15 @@
 {
   "tasks": {
     "btc_analysis": {
-      "last_run": "2026-03-16T20:00:05Z",
+      "last_run": "2026-03-16T21:00:06Z",
       "status": "success",
-      "duration": 4,
+      "duration": 5,
       "history": [
+        {
+          "time": "2026-03-16T21:00:06Z",
+          "status": "success",
+          "duration": 5
+        },
         {
           "time": "2026-03-16T20:00:05Z",
           "status": "success",
@@ -49,19 +54,19 @@
           "time": "2026-03-16T12:00:08Z",
           "status": "success",
           "duration": 7
-        },
-        {
-          "time": "2026-03-16T11:00:05Z",
-          "status": "success",
-          "duration": 3
         }
       ]
     },
     "html_generation": {
-      "last_run": "2026-03-16T20:00:15Z",
+      "last_run": "2026-03-16T21:00:17Z",
       "status": "success",
-      "duration": 10,
+      "duration": 11,
       "history": [
+        {
+          "time": "2026-03-16T21:00:17Z",
+          "status": "success",
+          "duration": 11
+        },
         {
           "time": "2026-03-16T20:00:15Z",
           "status": "success",
@@ -106,19 +111,19 @@
           "time": "2026-03-16T12:00:19Z",
           "status": "success",
           "duration": 11
-        },
-        {
-          "time": "2026-03-16T11:00:15Z",
-          "status": "success",
-          "duration": 10
         }
       ]
     },
     "github_push": {
-      "last_run": "2026-03-16T19:00:19Z",
+      "last_run": "2026-03-16T20:00:16Z",
       "status": "success",
       "duration": 1,
       "history": [
+        {
+          "time": "2026-03-16T20:00:16Z",
+          "status": "success",
+          "duration": 1
+        },
         {
           "time": "2026-03-16T19:00:19Z",
           "status": "success",
@@ -161,11 +166,6 @@
         },
         {
           "time": "2026-03-16T11:00:16Z",
-          "status": "success",
-          "duration": 1
-        },
-        {
-          "time": "2026-03-16T10:00:15Z",
           "status": "success",
           "duration": 1
         }
