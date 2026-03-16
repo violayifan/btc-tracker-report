@@ -1,10 +1,15 @@
 {
   "tasks": {
     "btc_analysis": {
-      "last_run": "2026-03-15T23:00:06Z",
+      "last_run": "2026-03-16T00:00:11Z",
       "status": "success",
-      "duration": 5,
+      "duration": 9,
       "history": [
+        {
+          "time": "2026-03-16T00:00:11Z",
+          "status": "success",
+          "duration": 9
+        },
         {
           "time": "2026-03-15T23:00:06Z",
           "status": "success",
@@ -49,19 +54,19 @@
           "time": "2026-03-15T15:00:06Z",
           "status": "success",
           "duration": 5
-        },
-        {
-          "time": "2026-03-15T14:00:07Z",
-          "status": "success",
-          "duration": 5
         }
       ]
     },
     "html_generation": {
-      "last_run": "2026-03-15T23:00:16Z",
+      "last_run": "2026-03-16T00:00:21Z",
       "status": "success",
       "duration": 10,
       "history": [
+        {
+          "time": "2026-03-16T00:00:21Z",
+          "status": "success",
+          "duration": 10
+        },
         {
           "time": "2026-03-15T23:00:16Z",
           "status": "success",
@@ -106,19 +111,19 @@
           "time": "2026-03-15T15:00:16Z",
           "status": "success",
           "duration": 10
-        },
-        {
-          "time": "2026-03-15T14:00:17Z",
-          "status": "success",
-          "duration": 10
         }
       ]
     },
     "github_push": {
-      "last_run": "2026-03-15T22:00:18Z",
+      "last_run": "2026-03-15T23:00:17Z",
       "status": "success",
       "duration": 1,
       "history": [
+        {
+          "time": "2026-03-15T23:00:17Z",
+          "status": "success",
+          "duration": 1
+        },
         {
           "time": "2026-03-15T22:00:18Z",
           "status": "success",
@@ -161,11 +166,6 @@
         },
         {
           "time": "2026-03-15T14:00:17Z",
-          "status": "success",
-          "duration": 0
-        },
-        {
-          "time": "2026-03-15T13:00:21Z",
           "status": "success",
           "duration": 0
         }
