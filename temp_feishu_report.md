@@ -1,37 +1,34 @@
-# Arxiv 量化投资论文日报 - 2026-03-17
+# Arxiv 量化投资论文日报 - 2026-03-18
 
 ## 论文信息
 
-- 标题: Beyond Polarity: Multi-Dimensional LLM Sentiment Signals for WTI Crude Oil Futures Return Prediction
-- 作者: Dehao Dai, Ding Ma, Dou Liu 等
-- 链接: https://arxiv.org/abs/2603.11408v1
-- 类别: q-fin.ST
+- 标题: Some general results on risk budgeting portfolios
+- 作者: Claudia Fassino, Pierpaolo Uberti
+- 链接: https://arxiv.org/abs/2603.15511v1
+- 类别: q-fin.PM
 
 ---
 
 ## 核心贡献
 
-1. Forecasting crude oil prices remains challenging because market-relevant information is embedded in large volumes of unstructured news and is not fully captured by traditional polarity-based sentiment measures
-2. This paper examines whether multi-dimensional sentiment signals extracted by large language models improve the prediction of weekly WTI crude oil futures returns
-3. Using energy-sector news articles from 2020 to 2025, we construct five sentiment dimensions covering relevance, polarity, intensity, uncertainty, and forwardness based on GPT-4o, Llama 3
+1. We propose a novel approach, alternative to the ones proposed in the literature, for the calculation of the risk budgeting portfolio.
+2. Given a reference risk measure, the risk budgeting is the portfolio where each asset contributes a predetermined amount to the total risk
+3. We propose a novel approach, alternative to the ones proposed in the literature, for the calculation of the risk budgeting portfolio
 
 ---
 
 ## 研究方法
 
-- 基准测试
-- 预测模型
-- 预测
-- 分类任务
+- 投资组合优化
 
 
 ## 主要发现
 
 - 综合评价: 较低-按需阅读
 - 创新性: 中
-- 实用价值: 一般
+- 实用价值: 中
 - 理论贡献: 中
-- 数据质量: 中
+- 数据质量: 无法判断
 
 ---
 
@@ -42,7 +39,7 @@
 
 ## 摘要
 
-Forecasting crude oil prices remains challenging because market-relevant information is embedded in large volumes of unstructured news and is not fully captured by traditional polarity-based sentiment measures. This paper examines whether multi-dimensional sentiment signals extracted by large language models improve the prediction of weekly WTI crude oil futures returns. Using energy-sector news articles from 2020 to 2025, we construct five sentiment dimensions covering relevance, polarity, inte...
+Given a reference risk measure, the risk budgeting is the portfolio where each asset contributes a predetermined amount to the total risk. We propose a novel approach, alternative to the ones proposed in the literature, for the calculation of the risk budgeting portfolio. This different perspective on the problem has several interesting consequences. For the calculation of the portfolio, we define a Cauchy sequence within the simplex of R^n, whose limit corresponds to the risk budgeting portfoli...
 
 ---
 

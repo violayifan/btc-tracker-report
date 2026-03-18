@@ -1,44 +1,37 @@
 {
   "basic_info": {
-    "title": "Beyond Polarity: Multi-Dimensional LLM Sentiment Signals for WTI Crude Oil Futures Return Prediction",
+    "title": "Some general results on risk budgeting portfolios",
     "authors": [
-      "Dehao Dai",
-      "Ding Ma",
-      "Dou Liu",
-      "Kerui Geng",
-      "Yiqing Wang"
+      "Claudia Fassino",
+      "Pierpaolo Uberti"
     ],
-    "published": "2026-03-12T00:42:08Z",
-    "url": "https://arxiv.org/abs/2603.11408v1",
-    "category": "q-fin.ST"
+    "published": "2026-03-16T16:38:17Z",
+    "url": "https://arxiv.org/abs/2603.15511v1",
+    "category": "q-fin.PM"
   },
-  "summary": "Forecasting crude oil prices remains challenging because market-relevant information is embedded in large volumes of unstructured news and is not fully captured by traditional polarity-based sentiment measures. This paper examines whether multi-dimensional sentiment signals extracted by large language models improve the prediction of weekly WTI crude oil futures returns. Using energy-sector news articles from 2020 to 2025, we construct five sentiment dimensions covering relevance, polarity, intensity, uncertainty, and forwardness based on GPT-4o, Llama 3.2-3b, and two benchmark models, FinBERT and AlphaVantage. We aggregate article-level signals to the weekly level and evaluate their predictive performance in a classification framework. The best results are achieved by combining GPT-4o and FinBERT, suggesting that LLM-based and conventional financial sentiment models provide complementary predictive information. SHAP analysis further shows that intensity- and uncertainty-related features are among the most important predictors, indicating that the predictive value of news sentiment extends beyond simple polarity. Overall, the results suggest that multi-dimensional LLM-based sentiment measures can improve commodity return forecasting and support energy-market risk monitoring.",
+  "summary": "Given a reference risk measure, the risk budgeting is the portfolio where each asset contributes a predetermined amount to the total risk. We propose a novel approach, alternative to the ones proposed in the literature, for the calculation of the risk budgeting portfolio. This different perspective on the problem has several interesting consequences. For the calculation of the portfolio, we define a Cauchy sequence within the simplex of R^n, whose limit corresponds to the risk budgeting portfolio. This construction allows for the straightforward implementation of an efficient algorithm, avoiding the need to solve auxiliary, equivalent optimization problems, which may be computationally challenging and hard to interpret in the decision theory context. We compare our algorithm with the standard optimization-based methods proposed in the literature. From a theoretical point of view, starting from the Cauchy sequence, we define a function for which the risk budgeting portfolio is a fixed point. Therefore, sufficient conditions for the existence and uniqueness of the fixed point can be used. The methodology is developed for general risk measures and implemented in detail in the case of standard deviation.",
   "key_contributions": [
-    "Forecasting crude oil prices remains challenging because market-relevant information is embedded in large volumes of unstructured news and is not fully captured by traditional polarity-based sentiment measures",
-    "This paper examines whether multi-dimensional sentiment signals extracted by large language models improve the prediction of weekly WTI crude oil futures returns",
-    "Using energy-sector news articles from 2020 to 2025, we construct five sentiment dimensions covering relevance, polarity, intensity, uncertainty, and forwardness based on GPT-4o, Llama 3"
+    "We propose a novel approach, alternative to the ones proposed in the literature, for the calculation of the risk budgeting portfolio.",
+    "Given a reference risk measure, the risk budgeting is the portfolio where each asset contributes a predetermined amount to the total risk",
+    "We propose a novel approach, alternative to the ones proposed in the literature, for the calculation of the risk budgeting portfolio"
   ],
   "methodology": [
-    "基准测试",
-    "预测模型",
-    "预测",
-    "分类任务"
+    "投资组合优化"
   ],
   "potential_applications": [
     "量化金融研究"
   ],
   "detailed_summary": {
-    "research_objective": "This paper examines whether multi-dimensional sentiment signals extracted by large language models improve the prediction of weekly WTI crude oil futures returns.",
+    "research_objective": "研究量化投资相关的理论和方法问题",
     "approach": [
-      "This paper examines whether multi-dimensional sentiment signals extracted by large language models improve the prediction of weekly WTI crude oil futures returns",
-      "2-3b, and two benchmark models, FinBERT and AlphaVantage"
+      "We propose a novel approach, alternative to the ones proposed in the literature, for the calculation of the risk budgeting portfolio",
+      "This construction allows for the straightforward implementation of an efficient algorithm, avoiding the need to solve auxiliary, equivalent optimization problems, which may be computationally challenging and hard to interpret in the decision theory context"
     ],
     "key_findings": [
       "见论文详细内容"
     ],
     "data_and_scope": [
-      "This paper examines whether multi-dimensional sentiment signals extracted by large language models improve the prediction of weekly WTI crude oil futures returns",
-      "Overall, the results suggest that multi-dimensional LLM-based sentiment measures can improve commodity return forecasting and support energy-market risk monitoring"
+      "见论文详细内容"
     ],
     "limitations": [
       "基于论文摘要无法判断"
@@ -46,11 +39,11 @@
   },
   "evaluation": {
     "innovation": "中 - 在现有方法基础上有所改进",
-    "practical_value": "一般 - 主要是理论性研究",
+    "practical_value": "中 - 有一定的实用价值",
     "theoretical_contribution": "中 - 有一定的理论贡献",
-    "data_quality": "中 - 数据集较为充分",
+    "data_quality": "无法判断 - 摘要中未详细描述数据",
     "applicability": "一般 - 需要进一步验证泛化能力",
     "overall_rating": "⭐⭐ 较低 - 按需阅读"
   },
-  "analysis_date": "2026-03-17 08:30:05"
+  "analysis_date": "2026-03-18 08:30:02"
 }
