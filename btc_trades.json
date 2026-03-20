@@ -10035,5 +10035,24 @@
     "stop_loss": 69586.0224,
     "take_profit": 70357.64159999999,
     "strategy": "逢低做多，控制仓位"
+  },
+  {
+    "timestamp": "2026-03-21T05:00:07.459268",
+    "action": "LONG",
+    "entry_price": 70037,
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
+    "stop_loss": 69894.93380764934,
+    "take_profit": 70197.77893169153,
+    "status": "open",
+    "pnl": 0
+  },
+  {
+    "timestamp": "2026-03-21T05:00:11.955081",
+    "datetime": "2026-03-21 05:00:11",
+    "action": "LONG_DIP",
+    "price": 70072.0,
+    "stop_loss": 69511.424,
+    "take_profit": 70282.21599999999,
+    "strategy": "逢低做多，控制仓位"
   }
 ]
