@@ -10223,5 +10223,15 @@
     "take_profit": 70659.51307233066,
     "status": "open",
     "pnl": 0
+  },
+  {
+    "timestamp": "2026-03-21T21:00:07.413811",
+    "action": "LONG",
+    "entry_price": 70708,
+    "description": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a",
+    "stop_loss": 70631.18650570288,
+    "take_profit": 70784.32957479975,
+    "status": "open",
+    "pnl": 0
   }
 ]
