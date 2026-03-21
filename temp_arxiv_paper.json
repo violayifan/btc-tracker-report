@@ -1,22 +1,26 @@
 {
   "basic_info": {
-    "title": "Some general results on risk budgeting portfolios",
+    "title": "Adaptive Regime-Aware Stock Price Prediction Using Autoencoder-Gated Dual Node Transformers with Reinforcement Learning Control",
     "authors": [
-      "Claudia Fassino",
-      "Pierpaolo Uberti"
+      "Mohammad Al Ridhawi",
+      "Mahtab Haj Ali",
+      "Hussein Al Osman"
     ],
-    "published": "2026-03-16T16:38:17Z",
-    "url": "https://arxiv.org/abs/2603.15511v1",
-    "category": "q-fin.PM"
+    "published": "2026-03-19T16:55:33Z",
+    "url": "https://arxiv.org/abs/2603.19136v1",
+    "category": "cs.LG"
   },
-  "summary": "Given a reference risk measure, the risk budgeting is the portfolio where each asset contributes a predetermined amount to the total risk. We propose a novel approach, alternative to the ones proposed in the literature, for the calculation of the risk budgeting portfolio. This different perspective on the problem has several interesting consequences. For the calculation of the portfolio, we define a Cauchy sequence within the simplex of R^n, whose limit corresponds to the risk budgeting portfolio. This construction allows for the straightforward implementation of an efficient algorithm, avoiding the need to solve auxiliary, equivalent optimization problems, which may be computationally challenging and hard to interpret in the decision theory context. We compare our algorithm with the standard optimization-based methods proposed in the literature. From a theoretical point of view, starting from the Cauchy sequence, we define a function for which the risk budgeting portfolio is a fixed point. Therefore, sufficient conditions for the existence and uniqueness of the fixed point can be used. The methodology is developed for general risk measures and implemented in detail in the case of standard deviation.",
+  "summary": "Stock markets exhibit regime-dependent behavior where prediction models optimized for stable conditions often fail during volatile periods. Existing approaches typically treat all market states uniformly or require manual regime labeling, which is expensive and quickly becomes stale as market dynamics evolve. This paper introduces an adaptive prediction framework that adaptively identifies deviations from normal market conditions and routes data through specialized prediction pathways. The architecture consists of three components: (1) an autoencoder trained on normal market conditions that identifies anomalous regimes through reconstruction error, (2) dual node transformer networks specialized for stable and event-driven market conditions respectively, and (3) a Soft Actor-Critic reinforcement learning controller that adaptively tunes the regime detection threshold and pathway blending weights based on prediction performance feedback. The reinforcement learning component enables the system to learn adaptive regime boundaries, defining anomalies as market states where standard prediction approaches fail. Experiments on 20 S&P 500 stocks spanning 1982 to 2025 demonstrate that the proposed framework achieves 0.68% MAPE for one-day predictions without the reinforcement controller and 0.59% MAPE with the full adaptive system, compared to 0.80% for the baseline integrated node transformer. Directional accuracy reaches 72% with the complete framework. The system maintains robust performance during high-volatility periods, with MAPE below 0.85% when baseline models exceed 1.5%. Ablation studies confirm that each component contributes meaningfully: autoencoder routing accounts for 36% relative MAPE degradation upon removal, followed by the SAC controller at 15% and the dual-path architecture at 7%.",
   "key_contributions": [
-    "We propose a novel approach, alternative to the ones proposed in the literature, for the calculation of the risk budgeting portfolio.",
-    "Given a reference risk measure, the risk budgeting is the portfolio where each asset contributes a predetermined amount to the total risk",
-    "We propose a novel approach, alternative to the ones proposed in the literature, for the calculation of the risk budgeting portfolio"
+    "framework achieves 0.",
+    "Stock markets exhibit regime-dependent behavior where prediction models optimized for stable conditions often fail during volatile periods",
+    "Existing approaches typically treat all market states uniformly or require manual regime labeling, which is expensive and quickly becomes stale as market dynamics evolve"
   ],
   "methodology": [
-    "投资组合优化"
+    "强化学习",
+    "Transformer架构",
+    "自编码器",
+    "预测"
   ],
   "potential_applications": [
     "量化金融研究"
@@ -24,26 +28,27 @@
   "detailed_summary": {
     "research_objective": "研究量化投资相关的理论和方法问题",
     "approach": [
-      "We propose a novel approach, alternative to the ones proposed in the literature, for the calculation of the risk budgeting portfolio",
-      "This construction allows for the straightforward implementation of an efficient algorithm, avoiding the need to solve auxiliary, equivalent optimization problems, which may be computationally challenging and hard to interpret in the decision theory context"
+      "Stock markets exhibit regime-dependent behavior where prediction models optimized for stable conditions often fail during volatile periods",
+      "Existing approaches typically treat all market states uniformly or require manual regime labeling, which is expensive and quickly becomes stale as market dynamics evolve"
     ],
     "key_findings": [
       "见论文详细内容"
     ],
     "data_and_scope": [
-      "见论文详细内容"
+      "Stock markets exhibit regime-dependent behavior where prediction models optimized for stable conditions often fail during volatile periods",
+      "This paper introduces an adaptive prediction framework that adaptively identifies deviations from normal market conditions and routes data through specialized prediction pathways"
     ],
     "limitations": [
       "基于论文摘要无法判断"
     ]
   },
   "evaluation": {
-    "innovation": "中 - 在现有方法基础上有所改进",
-    "practical_value": "中 - 有一定的实用价值",
+    "innovation": "一般 - 主要是对现有方法的应用或比较",
+    "practical_value": "一般 - 主要是理论性研究",
     "theoretical_contribution": "中 - 有一定的理论贡献",
-    "data_quality": "无法判断 - 摘要中未详细描述数据",
-    "applicability": "一般 - 需要进一步验证泛化能力",
-    "overall_rating": "⭐⭐ 较低 - 按需阅读"
+    "data_quality": "中 - 数据集较为充分",
+    "applicability": "中 - 模型有一定的适用性",
+    "overall_rating": "⭐⭐⭐ 一般 - 可以了解"
   },
-  "analysis_date": "2026-03-20 08:30:04"
+  "analysis_date": "2026-03-21 08:30:06"
 }
