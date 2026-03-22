@@ -777,3 +777,29 @@ Node.js v20.20.0
 [2026-03-21 08:30:06] 💾 知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260321.md
 [2026-03-21 08:30:06] 📝 临时文件已保存，主会话将自动处理飞书消息和文档创建
 [2026-03-21 08:30:06] ============================================================
+[2026-03-22 08:30:02] ============================================================
+[2026-03-22 08:30:02] 🚀 Arxiv 量化投资论文日报任务开始
+[2026-03-22 08:30:02] ============================================================
+[2026-03-22 08:30:02] 🔍 开始搜索 arXiv 论文...
+[2026-03-22 08:30:04] ✅ 找到 20 篇相关论文
+[2026-03-22 08:30:04] ✅ 选中论文: Adaptive Regime-Aware Stock Price Prediction Using Autoencoder-Gated Dual Node Transformers with Reinforcement Learning Control
+[2026-03-22 08:30:04]    得分: 21.5
+[2026-03-22 08:30:04]    类别: cs.LG
+[2026-03-22 08:30:04] 📖 开始分析论文...
+[2026-03-22 08:30:04] ✅ 论文分析完成
+[2026-03-22 08:30:04] ✅ Markdown 文档生成完成
+[2026-03-22 08:30:04] ✅ 飞书文档专用 Markdown 生成完成
+[2026-03-22 08:30:04] ✅ 文档已保存到知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260322.md
+[2026-03-22 08:30:04] ✅ 临时论文数据已保存: /root/.openclaw/workspace/temp_arxiv_paper.json
+[2026-03-22 08:30:04] ✅ 临时报告已保存: /root/.openclaw/workspace/temp_arxiv_report.md
+[2026-03-22 08:30:04] ✅ 飞书文档专用报告已保存: /root/.openclaw/workspace/temp_feishu_report.md
+[2026-03-22 08:30:04] 📝 开始创建飞书文档...
+[2026-03-22 08:30:04]    ⚠️ 注意：此功能需要主会话的飞书工具支持
+[2026-03-22 08:30:04]    当前脚本无法直接调用飞书工具，将由主会话处理
+[2026-03-22 08:30:04] ✅ 已创建待处理标记: /root/.openclaw/workspace/.arxiv_pending
+[2026-03-22 08:30:04] ============================================================
+[2026-03-22 08:30:04] ✅ 任务完成
+[2026-03-22 08:30:04] 📄 论文: Adaptive Regime-Aware Stock Price Prediction Using Autoencoder-Gated Dual Node Transformers with Reinforcement Learning Control
+[2026-03-22 08:30:04] 💾 知识库: /root/.openclaw/workspace/knowledge_base/arxiv_quant/arxiv_quant_20260322.md
+[2026-03-22 08:30:04] 📝 临时文件已保存，主会话将自动处理飞书消息和文档创建
+[2026-03-22 08:30:04] ============================================================
