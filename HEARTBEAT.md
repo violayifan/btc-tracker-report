@@ -67,7 +67,7 @@
 
 **定时任务设置**：每天 8:30 自动运行
 ```bash
-30 8 * * * /root/.openclaw/workspace/task_manager.sh arxiv >> /root/.openclaw/workspace/logs/arxiv_daily.log 2>&1
+30 8 * * /root/.openclaw/workspace/task_manager.sh arxiv >> /root/.openclaw/workspace/logs/arxiv_daily.log 2>&1
 ```
 
 **自动执行内容**：
