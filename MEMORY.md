@@ -141,6 +141,7 @@ _This file stores distilled, curated memories that persist across sessions._
 - `healthcheck`: Security hardening and risk assessment
 - `weather`: Weather forecasts
 - `skill-creator`: Create AgentSkills
+- `unireader`: AI-powered paper reading assistant (2026-03-22 installed, running on Python 3.11.13)
 
 ### Channels
 - **Primary**: Feishu (direct message)
@@ -173,6 +174,42 @@ _This file stores distilled, curated memories that persist across sessions._
 - Provide data first, then interpretation
 - Include specific price targets and stop-loss levels
 - Acknowledge uncertainty, use probabilities not predictions
+
+---
+
+## UniReader Configuration (2026-03-22)
+
+### Skill Installation
+- **Location**: `/root/.openclaw/workspace/skills/unireader`
+- **Source**: https://github.com/hydeng97/UniReader
+- **Status**: Downloaded and configured, awaiting Python 3.10+ environment
+
+### GLM API Configuration
+- **API Key**: `765673f861824881bf26ad734043b18c.Pp7mmllE6zUIbf5Q`
+- **Base URL**: `https://open.bigmodel.cn/api/paas/v4`
+- **Model**: `glm-4`
+- **Config File**: `/root/.openclaw/workspace/skills/unireader/config.yaml`
+
+### Dependencies Issue
+- **Current Python Version**: 3.6.8
+- **Required Python Version**: 3.10+
+- **Status**: Blocked, needs Python upgrade or alternative environment
+- **Error**: `SyntaxError: future feature annotations is not defined`
+
+### UniReader Features
+- PDF/Markdown document parsing
+- Public URL extraction (arXiv, OpenReview, etc.)
+- Multi-angle paper analysis
+- Branch-based conversation management
+- Parallel processing for multiple interpretation angles
+
+### Service Details
+- **Main Service**: http://localhost:8000
+- **File Server**: http://localhost:8765
+- **Startup Script**: `/root/.openclaw/workspace/skills/unireader/start.sh`
+- **Data Directory**: `/root/.openclaw/workspace/skills/unireader/data/`
+- **Status**: ✅ Running (Python 3.11.13, Process ID: 930003)
+- **Last Updated**: 2026-03-22
 
 ---
 
