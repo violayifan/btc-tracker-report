@@ -10826,5 +10826,24 @@
     "stop_loss": 70539.4384,
     "take_profit": 70822.1616,
     "strategy": "建议做多，关注上方阻力位突破"
+  },
+  {
+    "timestamp": "2026-03-24T06:00:11.580376",
+    "action": "LONG",
+    "entry_price": 70871,
+    "description": "趋势向上 + 恐慌情绪 = 做多机会",
+    "stop_loss": 70782.64179534685,
+    "take_profit": 71000.5691951042,
+    "status": "open",
+    "pnl": 0
+  },
+  {
+    "timestamp": "2026-03-24T06:00:17.203385",
+    "datetime": "2026-03-24 06:00:17",
+    "action": "LONG",
+    "price": 70891.8,
+    "stop_loss": 70750.01640000001,
+    "take_profit": 71033.5836,
+    "strategy": "建议做多，关注上方阻力位突破"
   }
 ]
