@@ -1,10 +1,15 @@
 {
   "tasks": {
     "btc_analysis": {
-      "last_run": "2026-03-24T21:00:07Z",
+      "last_run": "2026-03-24T22:00:06Z",
       "status": "success",
-      "duration": 6,
+      "duration": 5,
       "history": [
+        {
+          "time": "2026-03-24T22:00:06Z",
+          "status": "success",
+          "duration": 5
+        },
         {
           "time": "2026-03-24T21:00:07Z",
           "status": "success",
@@ -49,19 +54,19 @@
           "time": "2026-03-24T13:00:07Z",
           "status": "success",
           "duration": 5
-        },
-        {
-          "time": "2026-03-24T12:00:09Z",
-          "status": "success",
-          "duration": 8
         }
       ]
     },
     "html_generation": {
-      "last_run": "2026-03-24T21:00:17Z",
+      "last_run": "2026-03-24T22:00:16Z",
       "status": "success",
       "duration": 10,
       "history": [
+        {
+          "time": "2026-03-24T22:00:16Z",
+          "status": "success",
+          "duration": 10
+        },
         {
           "time": "2026-03-24T21:00:17Z",
           "status": "success",
@@ -106,19 +111,19 @@
           "time": "2026-03-24T13:00:18Z",
           "status": "success",
           "duration": 11
-        },
-        {
-          "time": "2026-03-24T12:00:19Z",
-          "status": "success",
-          "duration": 10
         }
       ]
     },
     "github_push": {
-      "last_run": "2026-03-24T20:00:21Z",
+      "last_run": "2026-03-24T21:00:19Z",
       "status": "success",
-      "duration": 3,
+      "duration": 2,
       "history": [
+        {
+          "time": "2026-03-24T21:00:19Z",
+          "status": "success",
+          "duration": 2
+        },
         {
           "time": "2026-03-24T20:00:21Z",
           "status": "success",
@@ -161,11 +166,6 @@
         },
         {
           "time": "2026-03-24T12:00:20Z",
-          "status": "success",
-          "duration": 1
-        },
-        {
-          "time": "2026-03-24T11:00:22Z",
           "status": "success",
           "duration": 1
         }
