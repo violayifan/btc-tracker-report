@@ -1,42 +1,43 @@
 {
   "basic_info": {
-    "title": "Adaptive Regime-Aware Stock Price Prediction Using Autoencoder-Gated Dual Node Transformers with Reinforcement Learning Control",
+    "title": "FinRL-X: An AI-Native Modular Infrastructure for Quantitative Trading",
     "authors": [
-      "Mohammad Al Ridhawi",
-      "Mahtab Haj Ali",
-      "Hussein Al Osman"
+      "Hongyang Yang",
+      "Boyu Zhang",
+      "Yang She",
+      "Xinyu Liao",
+      "Xiaoli Zhang"
     ],
-    "published": "2026-03-19T16:55:33Z",
-    "url": "https://arxiv.org/abs/2603.19136v1",
-    "category": "cs.LG"
+    "published": "2026-03-22T17:13:10Z",
+    "url": "https://arxiv.org/abs/2603.21330v1",
+    "category": "q-fin.TR"
   },
-  "summary": "Stock markets exhibit regime-dependent behavior where prediction models optimized for stable conditions often fail during volatile periods. Existing approaches typically treat all market states uniformly or require manual regime labeling, which is expensive and quickly becomes stale as market dynamics evolve. This paper introduces an adaptive prediction framework that adaptively identifies deviations from normal market conditions and routes data through specialized prediction pathways. The architecture consists of three components: (1) an autoencoder trained on normal market conditions that identifies anomalous regimes through reconstruction error, (2) dual node transformer networks specialized for stable and event-driven market conditions respectively, and (3) a Soft Actor-Critic reinforcement learning controller that adaptively tunes the regime detection threshold and pathway blending weights based on prediction performance feedback. The reinforcement learning component enables the system to learn adaptive regime boundaries, defining anomalies as market states where standard prediction approaches fail. Experiments on 20 S&P 500 stocks spanning 1982 to 2025 demonstrate that the proposed framework achieves 0.68% MAPE for one-day predictions without the reinforcement controller and 0.59% MAPE with the full adaptive system, compared to 0.80% for the baseline integrated node transformer. Directional accuracy reaches 72% with the complete framework. The system maintains robust performance during high-volatility periods, with MAPE below 0.85% when baseline models exceed 1.5%. Ablation studies confirm that each component contributes meaningfully: autoencoder routing accounts for 36% relative MAPE degradation upon removal, followed by the SAC controller at 15% and the dual-path architecture at 7%.",
+  "summary": "We present FinRL-X, a modular and deployment-consistent trading architecture that unifies data processing, strategy construction, backtesting, and broker execution under a weight-centric interface. While existing open-source platforms are often backtesting- or model-centric, they rarely provide system-level consistency between research evaluation and live deployment. FinRL-X addresses this gap through a composable strategy pipeline that integrates stock selection, portfolio allocation, timing, and portfolio-level risk overlays within a unified protocol. The framework supports both rule-based and AI-driven components, including reinforcement learning allocators and LLM-based sentiment signals, without altering downstream execution semantics. FinRL-X provides an extensible foundation for reproducible, end-to-end quantitative trading research and deployment. The official FinRL-X implementation is available at https://github.com/AI4Finance-Foundation/FinRL-Trading.",
   "key_contributions": [
-    "framework achieves 0.",
-    "Stock markets exhibit regime-dependent behavior where prediction models optimized for stable conditions often fail during volatile periods",
-    "Existing approaches typically treat all market states uniformly or require manual regime labeling, which is expensive and quickly becomes stale as market dynamics evolve"
+    "We present FinRL-X, a modular and deployment-consistent trading architecture that unifies data processing, strategy construction, backtesting, and broker execution under a weight-centric interface.",
+    "We present FinRL-X, a modular and deployment-consistent trading architecture that unifies data processing, strategy construction, backtesting, and broker execution under a weight-centric interface",
+    "While existing open-source platforms are often backtesting- or model-centric, they rarely provide system-level consistency between research evaluation and live deployment"
   ],
   "methodology": [
     "强化学习",
-    "Transformer架构",
-    "自编码器",
-    "预测"
+    "投资组合优化",
+    "回测分析"
   ],
   "potential_applications": [
-    "量化金融研究"
+    "量化交易",
+    "交易执行"
   ],
   "detailed_summary": {
     "research_objective": "研究量化投资相关的理论和方法问题",
     "approach": [
-      "Stock markets exhibit regime-dependent behavior where prediction models optimized for stable conditions often fail during volatile periods",
-      "Existing approaches typically treat all market states uniformly or require manual regime labeling, which is expensive and quickly becomes stale as market dynamics evolve"
+      "We present FinRL-X, a modular and deployment-consistent trading architecture that unifies data processing, strategy construction, backtesting, and broker execution under a weight-centric interface",
+      "While existing open-source platforms are often backtesting- or model-centric, they rarely provide system-level consistency between research evaluation and live deployment"
     ],
     "key_findings": [
       "见论文详细内容"
     ],
     "data_and_scope": [
-      "Stock markets exhibit regime-dependent behavior where prediction models optimized for stable conditions often fail during volatile periods",
-      "This paper introduces an adaptive prediction framework that adaptively identifies deviations from normal market conditions and routes data through specialized prediction pathways"
+      "We present FinRL-X, a modular and deployment-consistent trading architecture that unifies data processing, strategy construction, backtesting, and broker execution under a weight-centric interface"
     ],
     "limitations": [
       "基于论文摘要无法判断"
@@ -44,11 +45,11 @@
   },
   "evaluation": {
     "innovation": "一般 - 主要是对现有方法的应用或比较",
-    "practical_value": "一般 - 主要是理论性研究",
+    "practical_value": "高 - 具有很强的实际应用价值",
     "theoretical_contribution": "中 - 有一定的理论贡献",
-    "data_quality": "中 - 数据集较为充分",
-    "applicability": "中 - 模型有一定的适用性",
-    "overall_rating": "⭐⭐⭐ 一般 - 可以了解"
+    "data_quality": "无法判断 - 摘要中未详细描述数据",
+    "applicability": "一般 - 需要进一步验证泛化能力",
+    "overall_rating": "⭐⭐ 较低 - 按需阅读"
   },
-  "analysis_date": "2026-03-24 08:30:01"
+  "analysis_date": "2026-03-25 08:30:02"
 }
