@@ -6,7 +6,7 @@ _This file stores distilled, curated memories that persist across sessions._
 
 ## Workspace Status
 
-- **Last Updated**: 2026-03-08
+- **Last Updated**: 2026-03-26
 - **Status**: Active workspace, regular BTC monitoring running, Arxiv daily analysis configured
 - **Location**: /root/.openclaw/workspace
 
@@ -72,6 +72,7 @@ _This file stores distilled, curated memories that persist across sessions._
 - **Location**: `/opt/openclaw/skills/deepreseach-search-skill/`
 - **Use Cases**: Multi-round web searches, complex analysis, market research
 - **Output**: Markdown reports with citations
+- **Status**: ⚠️ Technical issues with Playwright (page.evaluate crashes), search-complete.mjs unreliable
 
 ### Tavily Search API
 - **API Key**: Configured and working
@@ -113,6 +114,18 @@ _This file stores distilled, curated memories that persist across sessions._
 - **Data Types**: Tick orders (逐笔委托), Tick executions (逐笔成交), Level-2 depth
 - **Access Methods**: CTP MD API (free with trading account), Commercial providers (Wind, iFind), VNPY (open-source)
 - **Reference**: VNPY documentation at https://www.vnpy.com/docs/cn/community/info/gateway.html
+
+### Circle & USDC Business Model (2026-03-26)
+- **Company**: Circle ( issuer of USDC stablecoin)
+- **Primary Revenue Source**: Interest from USDC reserve assets invested in US Treasuries
+- **Revenue Streams**:
+  1. **USDC Reserve Yields (Primary)**: 100% fiat reserves in short-term US Treasuries
+  2. **Transaction Fees**: Minor fees on minting/redemption
+  3. **Bank Interest**: Interest on reserves held in partner banks
+  4. **Cross-border Services**: Enterprise payment solution fees
+  5. **Account Services**: Enterprise management, custody, API fees
+- **Growth Drivers**: Interest rate environment, USDC circulation growth, institutional adoption
+- **Key Advantage**: Regulated, fully backed stablecoin with strong enterprise trust
 
 ---
 
@@ -174,6 +187,9 @@ _This file stores distilled, curated memories that persist across sessions._
 - Provide data first, then interpretation
 - Include specific price targets and stop-loss levels
 - Acknowledge uncertainty, use probabilities not predictions
+
+### Technical Troubleshooting
+- **MiroMind Issues**: When Playwright crashes ("Target crashed"), search-fixed.mjs may help but has stability issues. Workaround: Provide analysis based on known information and note the technical limitation to user.
 
 ---
 
