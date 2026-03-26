@@ -11531,5 +11531,14 @@
     "stop_loss": 70302.048,
     "take_profit": 71081.60699999999,
     "strategy": "逢低做多，控制仓位"
+  },
+  {
+    "timestamp": "2026-03-26T12:00:16.311007",
+    "datetime": "2026-03-26 12:00:16",
+    "action": "LONG_DIP",
+    "price": 70902.3,
+    "stop_loss": 70335.0816,
+    "take_profit": 71115.0069,
+    "strategy": "逢低做多，控制仓位"
   }
 ]
