@@ -893,3 +893,15 @@ Node.js v20.20.0
 [2026-03-26 08:30:13] 🔍 开始搜索 arXiv 论文...
 [2026-03-26 08:30:28] ❌ 搜索 arXiv 论文失败: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=cat%3Aq-fin.%2A&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending
 [2026-03-26 08:30:28] ❌ 未找到论文，任务结束
+[2026-03-27 08:30:02] ============================================================
+[2026-03-27 08:30:02] 🚀 Arxiv 量化投资论文日报任务开始
+[2026-03-27 08:30:02] ============================================================
+[2026-03-27 08:30:02] 🔍 开始搜索 arXiv 论文...
+[2026-03-27 08:30:02] ❌ 搜索 arXiv 论文失败: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=cat%3Aq-fin.%2A&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending
+[2026-03-27 08:30:02] ❌ 未找到论文，任务结束
+[2026-03-27 08:30:12] ============================================================
+[2026-03-27 08:30:12] 🚀 Arxiv 量化投资论文日报任务开始
+[2026-03-27 08:30:12] ============================================================
+[2026-03-27 08:30:12] 🔍 开始搜索 arXiv 论文...
+[2026-03-27 08:30:13] ❌ 搜索 arXiv 论文失败: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=cat%3Aq-fin.%2A&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending
+[2026-03-27 08:30:13] ❌ 未找到论文，任务结束
