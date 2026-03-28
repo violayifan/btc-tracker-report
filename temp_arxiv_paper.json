@@ -1,43 +1,39 @@
 {
   "basic_info": {
-    "title": "FinRL-X: An AI-Native Modular Infrastructure for Quantitative Trading",
+    "title": "Portfolio Optimization under Recursive Utility via Reinforcement Learning",
     "authors": [
-      "Hongyang Yang",
-      "Boyu Zhang",
-      "Yang She",
-      "Xinyu Liao",
-      "Xiaoli Zhang"
+      "Minkey Chang"
     ],
-    "published": "2026-03-22T17:13:10Z",
-    "url": "https://arxiv.org/abs/2603.21330v1",
-    "category": "q-fin.TR"
+    "published": "2026-03-24T07:25:30Z",
+    "url": "https://arxiv.org/abs/2603.22880v1",
+    "category": "q-fin.GN"
   },
-  "summary": "We present FinRL-X, a modular and deployment-consistent trading architecture that unifies data processing, strategy construction, backtesting, and broker execution under a weight-centric interface. While existing open-source platforms are often backtesting- or model-centric, they rarely provide system-level consistency between research evaluation and live deployment. FinRL-X addresses this gap through a composable strategy pipeline that integrates stock selection, portfolio allocation, timing, and portfolio-level risk overlays within a unified protocol. The framework supports both rule-based and AI-driven components, including reinforcement learning allocators and LLM-based sentiment signals, without altering downstream execution semantics. FinRL-X provides an extensible foundation for reproducible, end-to-end quantitative trading research and deployment. The official FinRL-X implementation is available at https://github.com/AI4Finance-Foundation/FinRL-Trading.",
+  "summary": "We study whether a risk-sensitive objective from asset-pricing theory -- recursive utility -- improves reinforcement learning for portfolio allocation. The Bellman equation under recursive utility involves a certainty equivalent (CE) of future value that has no closed form under observed returns; we approximate it by $K$-sample Monte Carlo and train actor-critic (PPO, A2C) on the resulting value target and an approximate advantage estimate (AAE) that generalizes the Bellman residual to multi-step with state-dependent weights. This formulation applies only to critic-based algorithms. On 10 chronological train/test splits of South Korean ETF data, the recursive-utility agent improves on the discounted (naive) baseline in Sharpe ratio, max drawdown, and cumulative return. Derivations, world model and metrics, and full result tables are in the appendices.",
   "key_contributions": [
-    "We present FinRL-X, a modular and deployment-consistent trading architecture that unifies data processing, strategy construction, backtesting, and broker execution under a weight-centric interface.",
-    "We present FinRL-X, a modular and deployment-consistent trading architecture that unifies data processing, strategy construction, backtesting, and broker execution under a weight-centric interface",
-    "While existing open-source platforms are often backtesting- or model-centric, they rarely provide system-level consistency between research evaluation and live deployment"
+    "We study whether a risk-sensitive objective from asset-pricing theory -- recursive utility -- improves reinforcement learning for portfolio allocation",
+    "The Bellman equation under recursive utility involves a certainty equivalent (CE) of future value that has no closed form under observed returns; we approximate it by $K$-sample Monte Carlo and train actor-critic (PPO, A2C) on the resulting value target and an approximate advantage estimate (AAE) that generalizes the Bellman residual to multi-step with state-dependent weights",
+    "This formulation applies only to critic-based algorithms"
   ],
   "methodology": [
     "强化学习",
     "投资组合优化",
-    "回测分析"
+    "夏普比率优化"
   ],
   "potential_applications": [
-    "量化交易",
-    "交易执行"
+    "投资组合优化"
   ],
   "detailed_summary": {
-    "research_objective": "研究量化投资相关的理论和方法问题",
+    "research_objective": "We study whether a risk-sensitive objective from asset-pricing theory -- recursive utility -- improves reinforcement learning for portfolio allocation.",
     "approach": [
-      "We present FinRL-X, a modular and deployment-consistent trading architecture that unifies data processing, strategy construction, backtesting, and broker execution under a weight-centric interface",
-      "While existing open-source platforms are often backtesting- or model-centric, they rarely provide system-level consistency between research evaluation and live deployment"
+      "This formulation applies only to critic-based algorithms",
+      "Derivations, world model and metrics, and full result tables are in the appendices"
     ],
     "key_findings": [
       "见论文详细内容"
     ],
     "data_and_scope": [
-      "We present FinRL-X, a modular and deployment-consistent trading architecture that unifies data processing, strategy construction, backtesting, and broker execution under a weight-centric interface"
+      "The Bellman equation under recursive utility involves a certainty equivalent (CE) of future value that has no closed form under observed returns; we approximate it by $K$-sample Monte Carlo and train actor-critic (PPO, A2C) on the resulting value target and an approximate advantage estimate (AAE) that generalizes the Bellman residual to multi-step with state-dependent weights",
+      "On 10 chronological train/test splits of South Korean ETF data, the recursive-utility agent improves on the discounted (naive) baseline in Sharpe ratio, max drawdown, and cumulative return"
     ],
     "limitations": [
       "基于论文摘要无法判断"
@@ -45,11 +41,11 @@
   },
   "evaluation": {
     "innovation": "一般 - 主要是对现有方法的应用或比较",
-    "practical_value": "高 - 具有很强的实际应用价值",
+    "practical_value": "中 - 有一定的实用价值",
     "theoretical_contribution": "中 - 有一定的理论贡献",
     "data_quality": "无法判断 - 摘要中未详细描述数据",
-    "applicability": "一般 - 需要进一步验证泛化能力",
+    "applicability": "中 - 模型有一定的适用性",
     "overall_rating": "⭐⭐ 较低 - 按需阅读"
   },
-  "analysis_date": "2026-03-25 08:30:02"
+  "analysis_date": "2026-03-28 08:30:03"
 }
