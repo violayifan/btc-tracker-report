@@ -2537,6 +2537,18 @@
       "action": "LONG",
       "entry_price": 66770,
       "reason": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a"
+    },
+    {
+      "timestamp": "2026-03-28T22:00:55.574732",
+      "action": "LONG",
+      "entry_price": 66770,
+      "reason": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a"
+    },
+    {
+      "timestamp": "2026-03-28T23:00:21.367713",
+      "action": "LONG",
+      "entry_price": 66707,
+      "reason": "\u8d8b\u52bf\u5411\u4e0a + \u6050\u614c\u60c5\u7eea = \u505a\u591a\u673a\u4f1a"
     }
   ],
   "accuracy": {
