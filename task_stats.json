@@ -1,10 +1,15 @@
 {
   "tasks": {
     "btc_analysis": {
-      "last_run": "2026-03-30T05:00:24Z",
+      "last_run": "2026-03-30T06:00:16Z",
       "status": "success",
-      "duration": 23,
+      "duration": 15,
       "history": [
+        {
+          "time": "2026-03-30T06:00:16Z",
+          "status": "success",
+          "duration": 15
+        },
         {
           "time": "2026-03-30T05:00:24Z",
           "status": "success",
@@ -49,19 +54,19 @@
           "time": "2026-03-29T21:00:07Z",
           "status": "success",
           "duration": 6
-        },
-        {
-          "time": "2026-03-29T20:00:09Z",
-          "status": "success",
-          "duration": 8
         }
       ]
     },
     "html_generation": {
-      "last_run": "2026-03-30T05:00:35Z",
+      "last_run": "2026-03-30T06:00:26Z",
       "status": "success",
-      "duration": 11,
+      "duration": 10,
       "history": [
+        {
+          "time": "2026-03-30T06:00:26Z",
+          "status": "success",
+          "duration": 10
+        },
         {
           "time": "2026-03-30T05:00:35Z",
           "status": "success",
@@ -106,19 +111,19 @@
           "time": "2026-03-29T21:00:17Z",
           "status": "success",
           "duration": 10
-        },
-        {
-          "time": "2026-03-29T20:00:19Z",
-          "status": "success",
-          "duration": 10
         }
       ]
     },
     "github_push": {
-      "last_run": "2026-03-30T04:00:45Z",
+      "last_run": "2026-03-30T05:00:39Z",
       "status": "success",
-      "duration": 3,
+      "duration": 4,
       "history": [
+        {
+          "time": "2026-03-30T05:00:39Z",
+          "status": "success",
+          "duration": 4
+        },
         {
           "time": "2026-03-30T04:00:45Z",
           "status": "success",
@@ -163,11 +168,6 @@
           "time": "2026-03-29T20:00:20Z",
           "status": "success",
           "duration": 1
-        },
-        {
-          "time": "2026-03-29T19:00:43Z",
-          "status": "success",
-          "duration": 0
         }
       ]
     },
