@@ -1,10 +1,15 @@
 {
   "tasks": {
     "btc_analysis": {
-      "last_run": "2026-03-30T15:00:09Z",
+      "last_run": "2026-03-30T16:00:22Z",
       "status": "success",
-      "duration": 7,
+      "duration": 20,
       "history": [
+        {
+          "time": "2026-03-30T16:00:22Z",
+          "status": "success",
+          "duration": 20
+        },
         {
           "time": "2026-03-30T15:00:09Z",
           "status": "success",
@@ -49,19 +54,19 @@
           "time": "2026-03-30T07:00:32Z",
           "status": "success",
           "duration": 31
-        },
-        {
-          "time": "2026-03-30T06:00:16Z",
-          "status": "success",
-          "duration": 15
         }
       ]
     },
     "html_generation": {
-      "last_run": "2026-03-30T15:00:19Z",
+      "last_run": "2026-03-30T16:00:32Z",
       "status": "success",
       "duration": 10,
       "history": [
+        {
+          "time": "2026-03-30T16:00:32Z",
+          "status": "success",
+          "duration": 10
+        },
         {
           "time": "2026-03-30T15:00:19Z",
           "status": "success",
@@ -106,19 +111,19 @@
           "time": "2026-03-30T07:00:42Z",
           "status": "success",
           "duration": 10
-        },
-        {
-          "time": "2026-03-30T06:00:26Z",
-          "status": "success",
-          "duration": 10
         }
       ]
     },
     "github_push": {
-      "last_run": "2026-03-30T14:00:28Z",
+      "last_run": "2026-03-30T15:00:20Z",
       "status": "success",
-      "duration": 7,
+      "duration": 1,
       "history": [
+        {
+          "time": "2026-03-30T15:00:20Z",
+          "status": "success",
+          "duration": 1
+        },
         {
           "time": "2026-03-30T14:00:28Z",
           "status": "success",
@@ -163,11 +168,6 @@
           "time": "2026-03-30T06:00:27Z",
           "status": "success",
           "duration": 1
-        },
-        {
-          "time": "2026-03-30T05:00:39Z",
-          "status": "success",
-          "duration": 4
         }
       ]
     },
