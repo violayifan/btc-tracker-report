@@ -1,10 +1,15 @@
 {
   "tasks": {
     "btc_analysis": {
-      "last_run": "2026-03-30T18:00:08Z",
+      "last_run": "2026-03-30T19:00:18Z",
       "status": "success",
-      "duration": 7,
+      "duration": 16,
       "history": [
+        {
+          "time": "2026-03-30T19:00:18Z",
+          "status": "success",
+          "duration": 16
+        },
         {
           "time": "2026-03-30T18:00:08Z",
           "status": "success",
@@ -49,19 +54,19 @@
           "time": "2026-03-30T10:00:32Z",
           "status": "success",
           "duration": 31
-        },
-        {
-          "time": "2026-03-30T09:00:07Z",
-          "status": "success",
-          "duration": 5
         }
       ]
     },
     "html_generation": {
-      "last_run": "2026-03-30T18:00:18Z",
+      "last_run": "2026-03-30T19:00:28Z",
       "status": "success",
       "duration": 10,
       "history": [
+        {
+          "time": "2026-03-30T19:00:28Z",
+          "status": "success",
+          "duration": 10
+        },
         {
           "time": "2026-03-30T18:00:18Z",
           "status": "success",
@@ -106,19 +111,19 @@
           "time": "2026-03-30T10:00:42Z",
           "status": "success",
           "duration": 10
-        },
-        {
-          "time": "2026-03-30T09:00:17Z",
-          "status": "success",
-          "duration": 10
         }
       ]
     },
     "github_push": {
-      "last_run": "2026-03-30T17:00:22Z",
+      "last_run": "2026-03-30T18:00:20Z",
       "status": "success",
-      "duration": 1,
+      "duration": 2,
       "history": [
+        {
+          "time": "2026-03-30T18:00:20Z",
+          "status": "success",
+          "duration": 2
+        },
         {
           "time": "2026-03-30T17:00:22Z",
           "status": "success",
@@ -161,11 +166,6 @@
         },
         {
           "time": "2026-03-30T09:00:18Z",
-          "status": "success",
-          "duration": 1
-        },
-        {
-          "time": "2026-03-30T08:00:43Z",
           "status": "success",
           "duration": 1
         }
