@@ -1,51 +1,51 @@
 {
   "basic_info": {
-    "title": "Portfolio Optimization under Recursive Utility via Reinforcement Learning",
+    "title": "Modeling and Forecasting Tail Risk Spillovers: A Component-Based CAViaR Approach",
     "authors": [
-      "Minkey Chang"
+      "Demetrio Lacava"
     ],
-    "published": "2026-03-24T07:25:30Z",
-    "url": "https://arxiv.org/abs/2603.22880v1",
-    "category": "q-fin.GN"
+    "published": "2026-03-26T09:17:14Z",
+    "url": "https://arxiv.org/abs/2603.25217v1",
+    "category": "q-fin.RM"
   },
-  "summary": "We study whether a risk-sensitive objective from asset-pricing theory -- recursive utility -- improves reinforcement learning for portfolio allocation. The Bellman equation under recursive utility involves a certainty equivalent (CE) of future value that has no closed form under observed returns; we approximate it by $K$-sample Monte Carlo and train actor-critic (PPO, A2C) on the resulting value target and an approximate advantage estimate (AAE) that generalizes the Bellman residual to multi-step with state-dependent weights. This formulation applies only to critic-based algorithms. On 10 chronological train/test splits of South Korean ETF data, the recursive-utility agent improves on the discounted (naive) baseline in Sharpe ratio, max drawdown, and cumulative return. Derivations, world model and metrics, and full result tables are in the appendices.",
+  "summary": "This paper introduces a new extension of the Conditional Autoregressive Value at Risk (CAViaR) model aimed at improving tail risk forecasting across assets. The proposed component-based model, CAViaR with Spillover Effects (CAViaR-SE), decomposes the conditional Value at Risk into a proper-risk component and a spillover component driven by a linear combination of tail risks from influential assets. These assets are selected via a recursive partial correlation algorithm, allowing multiple spillover sources with minimal parameterization. The spillover component acts as a predictable quantile shifter, directly affecting the conditional quantile dynamics rather than the volatility scale. Empirical results on Dow Jones Industrial Average stocks show that spillover effects account for a substantial share of total tail risk and significantly improve out-of-sample tail risk forecasts. Backtesting procedures, together with Model Confidence Set (MCS) analysis, confirm that CAViaR-SE provides well-calibrated risk measures and statistically superior forecasts compared to standard and augmented CAViaR models.",
   "key_contributions": [
-    "We study whether a risk-sensitive objective from asset-pricing theory -- recursive utility -- improves reinforcement learning for portfolio allocation",
-    "The Bellman equation under recursive utility involves a certainty equivalent (CE) of future value that has no closed form under observed returns; we approximate it by $K$-sample Monte Carlo and train actor-critic (PPO, A2C) on the resulting value target and an approximate advantage estimate (AAE) that generalizes the Bellman residual to multi-step with state-dependent weights",
-    "This formulation applies only to critic-based algorithms"
+    "This paper introduces a new extension of the Conditional Autoregressive Value at Risk (CAViaR) model aimed at improving tail risk forecasting across assets",
+    "The proposed component-based model, CAViaR with Spillover Effects (CAViaR-SE), decomposes the conditional Value at Risk into a proper-risk component and a spillover component driven by a linear combination of tail risks from influential assets",
+    "These assets are selected via a recursive partial correlation algorithm, allowing multiple spillover sources with minimal parameterization"
   ],
   "methodology": [
-    "强化学习",
-    "投资组合优化",
-    "夏普比率优化"
+    "风险价值 (VaR)",
+    "回测分析",
+    "样本外测试",
+    "预测模型"
   ],
   "potential_applications": [
-    "投资组合优化"
+    "量化金融研究"
   ],
   "detailed_summary": {
-    "research_objective": "We study whether a risk-sensitive objective from asset-pricing theory -- recursive utility -- improves reinforcement learning for portfolio allocation.",
+    "research_objective": "研究量化投资相关的理论和方法问题",
     "approach": [
-      "This formulation applies only to critic-based algorithms",
-      "Derivations, world model and metrics, and full result tables are in the appendices"
+      "This paper introduces a new extension of the Conditional Autoregressive Value at Risk (CAViaR) model aimed at improving tail risk forecasting across assets",
+      "The proposed component-based model, CAViaR with Spillover Effects (CAViaR-SE), decomposes the conditional Value at Risk into a proper-risk component and a spillover component driven by a linear combination of tail risks from influential assets"
     ],
     "key_findings": [
       "见论文详细内容"
     ],
     "data_and_scope": [
-      "The Bellman equation under recursive utility involves a certainty equivalent (CE) of future value that has no closed form under observed returns; we approximate it by $K$-sample Monte Carlo and train actor-critic (PPO, A2C) on the resulting value target and an approximate advantage estimate (AAE) that generalizes the Bellman residual to multi-step with state-dependent weights",
-      "On 10 chronological train/test splits of South Korean ETF data, the recursive-utility agent improves on the discounted (naive) baseline in Sharpe ratio, max drawdown, and cumulative return"
+      "Empirical results on Dow Jones Industrial Average stocks show that spillover effects account for a substantial share of total tail risk and significantly improve out-of-sample tail risk forecasts"
     ],
     "limitations": [
       "基于论文摘要无法判断"
     ]
   },
   "evaluation": {
-    "innovation": "一般 - 主要是对现有方法的应用或比较",
-    "practical_value": "中 - 有一定的实用价值",
+    "innovation": "中 - 在现有方法基础上有所改进",
+    "practical_value": "一般 - 主要是理论性研究",
     "theoretical_contribution": "中 - 有一定的理论贡献",
-    "data_quality": "无法判断 - 摘要中未详细描述数据",
+    "data_quality": "中 - 数据集较为充分",
     "applicability": "中 - 模型有一定的适用性",
-    "overall_rating": "⭐⭐ 较低 - 按需阅读"
+    "overall_rating": "⭐⭐⭐⭐⭐ 优秀 - 强烈推荐阅读"
   },
-  "analysis_date": "2026-03-28 08:30:03"
+  "analysis_date": "2026-03-31 08:30:02"
 }
