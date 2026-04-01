@@ -1,10 +1,15 @@
 {
   "tasks": {
     "btc_analysis": {
-      "last_run": "2026-04-01T20:00:33Z",
+      "last_run": "2026-04-01T21:00:33Z",
       "status": "success",
       "duration": 31,
       "history": [
+        {
+          "time": "2026-04-01T21:00:33Z",
+          "status": "success",
+          "duration": 31
+        },
         {
           "time": "2026-04-01T20:00:33Z",
           "status": "success",
@@ -49,19 +54,19 @@
           "time": "2026-04-01T12:00:39Z",
           "status": "success",
           "duration": 38
-        },
-        {
-          "time": "2026-04-01T11:00:32Z",
-          "status": "success",
-          "duration": 30
         }
       ]
     },
     "html_generation": {
-      "last_run": "2026-04-01T20:00:43Z",
+      "last_run": "2026-04-01T21:00:43Z",
       "status": "success",
       "duration": 10,
       "history": [
+        {
+          "time": "2026-04-01T21:00:43Z",
+          "status": "success",
+          "duration": 10
+        },
         {
           "time": "2026-04-01T20:00:43Z",
           "status": "success",
@@ -106,19 +111,19 @@
           "time": "2026-04-01T12:00:49Z",
           "status": "success",
           "duration": 10
-        },
-        {
-          "time": "2026-04-01T11:00:42Z",
-          "status": "success",
-          "duration": 10
         }
       ]
     },
     "github_push": {
-      "last_run": "2026-04-01T19:00:39Z",
+      "last_run": "2026-04-01T20:00:44Z",
       "status": "success",
       "duration": 1,
       "history": [
+        {
+          "time": "2026-04-01T20:00:44Z",
+          "status": "success",
+          "duration": 1
+        },
         {
           "time": "2026-04-01T19:00:39Z",
           "status": "success",
@@ -161,11 +166,6 @@
         },
         {
           "time": "2026-04-01T11:00:43Z",
-          "status": "success",
-          "duration": 1
-        },
-        {
-          "time": "2026-04-01T10:00:43Z",
           "status": "success",
           "duration": 1
         }
