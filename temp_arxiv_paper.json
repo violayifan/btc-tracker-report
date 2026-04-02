@@ -1,51 +1,62 @@
 {
   "basic_info": {
-    "title": "Modeling and Forecasting Tail Risk Spillovers: A Component-Based CAViaR Approach",
+    "title": "Model Predictive Control For Trade Execution",
     "authors": [
-      "Demetrio Lacava"
+      "Thomas P. McAuliffe",
+      "Samuel Liew",
+      "Yuchao Li",
+      "Andrey Ushenin",
+      "Chihang Wang",
+      "Alexandros Tasos",
+      "Jack Pearce",
+      "Dimitris Tasoulis",
+      "Dimitri P. Bertsekas",
+      "Theodoros Tsagaris"
     ],
-    "published": "2026-03-26T09:17:14Z",
-    "url": "https://arxiv.org/abs/2603.25217v1",
-    "category": "q-fin.RM"
+    "published": "2026-03-30T18:25:52Z",
+    "url": "https://arxiv.org/abs/2603.28898v1",
+    "category": "q-fin.TR"
   },
-  "summary": "This paper introduces a new extension of the Conditional Autoregressive Value at Risk (CAViaR) model aimed at improving tail risk forecasting across assets. The proposed component-based model, CAViaR with Spillover Effects (CAViaR-SE), decomposes the conditional Value at Risk into a proper-risk component and a spillover component driven by a linear combination of tail risks from influential assets. These assets are selected via a recursive partial correlation algorithm, allowing multiple spillover sources with minimal parameterization. The spillover component acts as a predictable quantile shifter, directly affecting the conditional quantile dynamics rather than the volatility scale. Empirical results on Dow Jones Industrial Average stocks show that spillover effects account for a substantial share of total tail risk and significantly improve out-of-sample tail risk forecasts. Backtesting procedures, together with Model Confidence Set (MCS) analysis, confirm that CAViaR-SE provides well-calibrated risk measures and statistically superior forecasts compared to standard and augmented CAViaR models.",
+  "summary": "We address the problem of executing large client orders in continuous double-auction markets under time and liquidity constraints. We propose a model predictive control (MPC) framework that balances three competing objectives: order completion, market impact, and opportunity cost. Our algorithm is guided by a trading schedule (such as time-weighted average price or volume-weighted average price) but allows for deviations to reduce the expected execution cost, with due regard to risk.\n  Our MPC algorithm executes the order progressively, and at each decision step it solves a fast quadratic program that trades off expected transaction cost against schedule deviation, while incorporating a residual cost term derived from a simple base policy. Approximate schedule adherence is maintained through explicit bounds, while variance constraints on deviation provide direct risk control. The resulting system is modular, data-driven, and suitable for deployment in production trading infrastructure.\n  Using six months of NASDAQ 'level 3' data and simulated orders, we show that our MPC approach reduces schedule shortfall by approximately 40-50% relative to spread-crossing benchmarks and achieves significant reductions in slippage. Moreover, augmenting the base policy with predictive price information further enhances performance, highlighting the framework's flexibility for integration with forecasting components.",
   "key_contributions": [
-    "This paper introduces a new extension of the Conditional Autoregressive Value at Risk (CAViaR) model aimed at improving tail risk forecasting across assets",
-    "The proposed component-based model, CAViaR with Spillover Effects (CAViaR-SE), decomposes the conditional Value at Risk into a proper-risk component and a spillover component driven by a linear combination of tail risks from influential assets",
-    "These assets are selected via a recursive partial correlation algorithm, allowing multiple spillover sources with minimal parameterization"
+    "We propose a model predictive control (MPC) framework that balances three competing objectives: order completion, market impact, and opportunity cost.",
+    "we show that our MPC approach reduces schedule shortfall by approximately 40-50% relative to spread-crossing benchmarks and achieves significant reductions in slippage.",
+    "We address the problem of executing large client orders in continuous double-auction markets under time and liquidity constraints"
   ],
   "methodology": [
-    "风险价值 (VaR)",
-    "回测分析",
-    "样本外测试",
+    "基准测试",
     "预测模型"
   ],
   "potential_applications": [
-    "量化金融研究"
+    "量化交易",
+    "风险控制",
+    "交易执行"
   ],
   "detailed_summary": {
     "research_objective": "研究量化投资相关的理论和方法问题",
     "approach": [
-      "This paper introduces a new extension of the Conditional Autoregressive Value at Risk (CAViaR) model aimed at improving tail risk forecasting across assets",
-      "The proposed component-based model, CAViaR with Spillover Effects (CAViaR-SE), decomposes the conditional Value at Risk into a proper-risk component and a spillover component driven by a linear combination of tail risks from influential assets"
+      "We propose a model predictive control (MPC) framework that balances three competing objectives: order completion, market impact, and opportunity cost",
+      "Our algorithm is guided by a trading schedule (such as time-weighted average price or volume-weighted average price) but allows for deviations to reduce the expected execution cost, with due regard to risk"
     ],
     "key_findings": [
-      "见论文详细内容"
+      "we show that our MPC approach reduces schedule shortfall by approximately 40-50% relative to spread-crossing benchmarks and achieves significant reductions in slippage."
     ],
     "data_and_scope": [
-      "Empirical results on Dow Jones Industrial Average stocks show that spillover effects account for a substantial share of total tail risk and significantly improve out-of-sample tail risk forecasts"
+      "The resulting system is modular, data-driven, and suitable for deployment in production trading infrastructure",
+      "Using six months of NASDAQ 'level 3' data and simulated orders, we show that our MPC approach reduces schedule shortfall by approximately 40-50% relative to spread-crossing benchmarks and achieves significant reductions in slippage"
     ],
     "limitations": [
-      "基于论文摘要无法判断"
+      "We address the problem of executing large client orders in continuous double-auction markets under time and liquidity constraints",
+      "Approximate schedule adherence is maintained through explicit bounds, while variance constraints on deviation provide direct risk control"
     ]
   },
   "evaluation": {
-    "innovation": "中 - 在现有方法基础上有所改进",
-    "practical_value": "一般 - 主要是理论性研究",
+    "innovation": "一般 - 主要是对现有方法的应用或比较",
+    "practical_value": "中 - 有一定的实用价值",
     "theoretical_contribution": "中 - 有一定的理论贡献",
-    "data_quality": "中 - 数据集较为充分",
-    "applicability": "中 - 模型有一定的适用性",
-    "overall_rating": "⭐⭐⭐⭐⭐ 优秀 - 强烈推荐阅读"
+    "data_quality": "无法判断 - 摘要中未详细描述数据",
+    "applicability": "一般 - 需要进一步验证泛化能力",
+    "overall_rating": "⭐⭐⭐ 一般 - 可以了解"
   },
-  "analysis_date": "2026-04-01 08:30:08"
+  "analysis_date": "2026-04-02 08:30:02"
 }

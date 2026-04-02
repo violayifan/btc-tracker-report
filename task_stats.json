@@ -1,10 +1,15 @@
 {
   "tasks": {
     "btc_analysis": {
-      "last_run": "2026-04-02T00:00:27Z",
+      "last_run": "2026-04-02T01:00:10Z",
       "status": "success",
-      "duration": 26,
+      "duration": 9,
       "history": [
+        {
+          "time": "2026-04-02T01:00:10Z",
+          "status": "success",
+          "duration": 9
+        },
         {
           "time": "2026-04-02T00:00:27Z",
           "status": "success",
@@ -49,19 +54,19 @@
           "time": "2026-04-01T16:00:32Z",
           "status": "success",
           "duration": 31
-        },
-        {
-          "time": "2026-04-01T15:00:16Z",
-          "status": "success",
-          "duration": 15
         }
       ]
     },
     "html_generation": {
-      "last_run": "2026-04-02T00:00:37Z",
+      "last_run": "2026-04-02T01:00:20Z",
       "status": "success",
       "duration": 10,
       "history": [
+        {
+          "time": "2026-04-02T01:00:20Z",
+          "status": "success",
+          "duration": 10
+        },
         {
           "time": "2026-04-02T00:00:37Z",
           "status": "success",
@@ -106,19 +111,19 @@
           "time": "2026-04-01T16:00:42Z",
           "status": "success",
           "duration": 10
-        },
-        {
-          "time": "2026-04-01T15:00:26Z",
-          "status": "success",
-          "duration": 10
         }
       ]
     },
     "github_push": {
-      "last_run": "2026-04-01T23:00:24Z",
+      "last_run": "2026-04-02T00:00:39Z",
       "status": "success",
-      "duration": 1,
+      "duration": 2,
       "history": [
+        {
+          "time": "2026-04-02T00:00:39Z",
+          "status": "success",
+          "duration": 2
+        },
         {
           "time": "2026-04-01T23:00:24Z",
           "status": "success",
@@ -163,19 +168,19 @@
           "time": "2026-04-01T15:00:28Z",
           "status": "success",
           "duration": 2
-        },
-        {
-          "time": "2026-04-01T14:00:33Z",
-          "status": "success",
-          "duration": 1
         }
       ]
     },
     "arxiv_analysis": {
-      "last_run": "2026-04-01T00:30:09Z",
+      "last_run": "2026-04-02T00:30:02Z",
       "status": "success",
-      "duration": 8,
+      "duration": 1,
       "history": [
+        {
+          "time": "2026-04-02T00:30:02Z",
+          "status": "success",
+          "duration": 1
+        },
         {
           "time": "2026-04-01T00:30:09Z",
           "status": "success",
@@ -220,11 +225,6 @@
           "time": "2026-03-24T00:30:01Z",
           "status": "success",
           "duration": 0
-        },
-        {
-          "time": "2026-03-23T00:30:04Z",
-          "status": "success",
-          "duration": 3
         }
       ]
     }

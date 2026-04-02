@@ -1,48 +1,49 @@
-# Arxiv 量化投资论文日报 - 2026-04-01
+# Arxiv 量化投资论文日报 - 2026-04-02
 
 ## 论文信息
 
-- 标题: Modeling and Forecasting Tail Risk Spillovers: A Component-Based CAViaR Approach
-- 作者: Demetrio Lacava
-- 链接: https://arxiv.org/abs/2603.25217v1
-- 类别: q-fin.RM
+- 标题: Model Predictive Control For Trade Execution
+- 作者: Thomas P. McAuliffe, Samuel Liew, Yuchao Li 等
+- 链接: https://arxiv.org/abs/2603.28898v1
+- 类别: q-fin.TR
 
 ---
 
 ## 核心贡献
 
-1. This paper introduces a new extension of the Conditional Autoregressive Value at Risk (CAViaR) model aimed at improving tail risk forecasting across assets
-2. The proposed component-based model, CAViaR with Spillover Effects (CAViaR-SE), decomposes the conditional Value at Risk into a proper-risk component and a spillover component driven by a linear combination of tail risks from influential assets
-3. These assets are selected via a recursive partial correlation algorithm, allowing multiple spillover sources with minimal parameterization
+1. We propose a model predictive control (MPC) framework that balances three competing objectives: order completion, market impact, and opportunity cost.
+2. we show that our MPC approach reduces schedule shortfall by approximately 40-50% relative to spread-crossing benchmarks and achieves significant reductions in slippage.
+3. We address the problem of executing large client orders in continuous double-auction markets under time and liquidity constraints
 
 ---
 
 ## 研究方法
 
-- 风险价值 (VaR)
-- 回测分析
-- 样本外测试
+- 基准测试
 - 预测模型
 
 
 ## 主要发现
 
-- 综合评价: 优秀-强烈推荐阅读
-- 创新性: 中
-- 实用价值: 一般
+- 综合评价: 一般-可以了解
+- 创新性: 一般
+- 实用价值: 中
 - 理论贡献: 中
-- 数据质量: 中
+- 数据质量: 无法判断
 
 ---
 
 ## 潜在应用
 
-- 量化金融研究
+- 量化交易
+- 风险控制
+- 交易执行
 
 
 ## 摘要
 
-This paper introduces a new extension of the Conditional Autoregressive Value at Risk (CAViaR) model aimed at improving tail risk forecasting across assets. The proposed component-based model, CAViaR with Spillover Effects (CAViaR-SE), decomposes the conditional Value at Risk into a proper-risk component and a spillover component driven by a linear combination of tail risks from influential assets. These assets are selected via a recursive partial correlation algorithm, allowing multiple spillov...
+We address the problem of executing large client orders in continuous double-auction markets under time and liquidity constraints. We propose a model predictive control (MPC) framework that balances three competing objectives: order completion, market impact, and opportunity cost. Our algorithm is guided by a trading schedule (such as time-weighted average price or volume-weighted average price) but allows for deviations to reduce the expected execution cost, with due regard to risk.
+  Our MPC a...
 
 ---
 
